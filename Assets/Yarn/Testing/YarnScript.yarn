@@ -1,0 +1,148 @@
+title: FirstDialogueBoat
+---
+<<declare $sashaDick = false>>
+The air is thicker here, damp. It may be the water that laps easily by the shoreside, but you think that the giant dark lake is likely the cause of it. As you pass by the pier, a sudden hiss cuts through your thoughts.
+
+
+Boat: “Psst, hey, kid. Over here!”
+
+
+It’s a wayfarer, or ferryman. You remember when you were growing up this was one of the jobs you desperately wanted to have as your own. It was once a specialty, a task only delegated to those most well-versed with rivers and in line with religious ideals. Now, it seems to be booming business-- and they have to fight for your attention.
+
+That, or this particular ferryman has an eye for the dramatics.
+
+
+Boat: “Just ten moneys, I’ll give you a ride from all the way point A to B. What are points A and B? That’s up to you- but I’m the cheapest. Don’t listen to the others. Seriously, they’ll chat your ear off. Real annoying if you ask me.”
+
+
+->Who are you?
+->Why are you like this?
+    <<set $sashaDick = true>>
+
+
+Boat: “Hm? Oh! I’m dr. Boatguy Phd. Quite the celebrity around here if you ask me- but you can ask me a lot, really.”
+
+
+They spread out their arms in a theatrical fashion, referring to the invisible crowd around them. Of course, there’s no one really there, but they seem to be very amused by their own joke.
+
+
+
+
+->You have a doctorate?
+->Boatguy? Is that your real name?
+ Boat: “Allegedly.”
+
+
+Their grin gets wider, if that’s even possible. They seem to be having a great time pulling your leg- though after a moment it falls when they see how utterly unamused you are.
+
+
+Boat: “Anyway. So kid, since you’re not begging me to consider you for a ride in my boat, what else can I do ya for? Really, you can ask me a lot. I’m a bit of a….”
+
+
+They trail off, attempting to figure out the possible name as they squint at you. It’s like they think you’re going to fill in the blanks.
+Though, they don’t wait for you to.
+
+
+Boat: “Tour guide! Right. Anyway, what can I do ya for?”
+<<jump tree1>>
+
+
+===
+title: tree1
+---
+//Dialogue Tree 1
+<<if $sashaDick is true>>
+    ->What’s the best place to go here?
+        <<jump bestplacetogo>>
+    ->Okay but- why are you like this?
+        <<jump sashawhywouldyousaythat>>
+    ->I’m looking for my brother, Dmitriy.
+        <<jump wheresdmitriyi>>
+<<else>>
+    ->What’s the best place to go here?
+        <<jump bestplacetogo>>
+    ->I’m looking for my brother, Dmitriy.
+        <<jump wheresdmitriy>>
+<<endif>>
+   
+
+
+===
+title: bestplacetogo
+---
+Boat: “Well damn, kid. You’re asking me a lot just by one question. The best, the best? Solster is always the best, know that?”
+
+They let out a long, thoughtful hum, stroking their imaginary beard before their finger jots up.
+
+
+Boat: “So you’d think, right, that the best thing is the parade? Naw, naw, ‘round here, it’s the food! Good stuff, really.”
+
+
+They point at you, the movement is wholly dramatic.
+
+
+Boat: “You look new here, and I don’t mean in the ‘you’re an outsider’ new, but like in the ‘you look like a newborn foal who’s seeing the greenest pasture of its life’ new. Is this your first time in Solster?”
+
+
+//Dialogue Tree 2
+-> I’m not new, I grew up here.
+    Boat: “..Seriously? Then why are you asking me what the best place to go is?”
+    <<jump tree1>>
+-> Well, sort of.
+    Boat: “Hell yeah! I’ve got an eye for this stuff, really. My mother always told me; Boats- she’d call me that, Boats. It’s hilarious- but she said, Boats! You’re too damn perceptive for your own good. And I’d tell her- yeah well ma! I do like lookin’ at people and figurin’ out what their mind’s all about. Riveting stuff.”
+Boat: “..What did you ask again?”
+
+
+Before you can open your mouth to reply, Boatguy continues talking.
+
+
+Boat: “Right! Right. Where you gotta go.. You can try the local café this side of the river! It’s not nearly as good as half of the other ones otherside, but they blocked off the road ‘cos of the parade.”
+
+
+Boat juts their chin in the direction of a small, dimly lit restaurant on the cornerstone of the street. The title says SHOPNAMEHERE. It’s surprisingly packed inside- and you’d need some luck to get in and get food. Regardless, the ferryman sniffs in disdain when they continue speaking.
+
+
+Boat: “Look, I aint sayin’ it’s bad- it’s edible, really! Just folks think they’re.. Well, we’ve all got our opinions on what’s the best food, eh? Just think the train supply is always a bit too eager to give them first pick. But whatever- I’m just a ferryman, what do I know?”
+<<jump tree1>>
+
+
+===
+title: sashawhywouldyousaythat
+---
+
+
+Boat: “Uh,”
+
+
+Boatguy looks around as if referring to their aforementioned invisible audience for moral support. Though after finding none, they stare at you blankly.
+
+
+Boat: “Because it’s funny?”
+
+
+Now even they sound unsure.
+<<set $sashaDick = false>>
+<<jump tree1>>
+
+
+===
+title: wheresdmitriy
+---
+
+
+Boat: “Oh! Dmi-”
+Boat: “Dmi-”
+Boat: “Your broth-”
+Boat: “You’re–”
+Boat: “Huh?”
+
+
+Boatguy seems.. Genuinely startled by the information you’ve just given them. They fall uncharacteristically silent, face blank as they process this information.
+Then, their face breaks out into a wide, beaming smile.
+
+
+Boat: “You’re Dmitriy’s sibling, are you? Oh my goodness! He’ll be so excited to see you’re back!”
+===
+
+
+
