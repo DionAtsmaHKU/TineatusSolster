@@ -1,0 +1,9 @@
+﻿title: TriggerTest
+tags:
+---
+Conquest: Yo you just triggered this dialogue
+-> Hell yeah
+    << ChangeFloat "$TestStat" 1 >>
+-> Hell yeah
+    << ChangeFloat "$TestStat" 2 >>
+===
