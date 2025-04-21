@@ -20,20 +20,20 @@ MonoBehaviour:
     outputTexture: {fileID: 0}
     outputMipmap: 0
     CamMotion: 0.12
-    ColorIntensity: 0.745
-    ColorSpread: 0.43
+    ColorIntensity: 0.625
+    ColorSpread: 0.08
     Lines: 1
     LinesDist: 0.2
     LinesVert: 1
     MasterFade: 1
-    Noise: 0.43
+    Noise: 0.454
     NumSamples: 16
     PaperTint: {r: 1, g: 0.98, b: 0.95, a: 1}
-    PencilSize: 0.22
-    StrokeAngle: 0
+    PencilSize: 0.079
+    StrokeAngle: 2.49
     StrokeBend: 1
-    StrokeNum: 3
-    StrokeOffs: 0
+    StrokeNum: 5.1
+    StrokeOffs: 0.05
     StrokeSpread: 0
     Vignette: 1
     flipY: 0
