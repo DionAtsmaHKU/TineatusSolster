@@ -1,6 +1,43 @@
 ﻿title: Start
 ---
-<<declare $TestStat = 0>>
+<< declare $TestStat = 0 >>
+<< declare $ArtMajor = false >>
+<< declare $TechMajor = false >>
+<< declare $PsychMajor = false >>
 
+Dion: Hi this is a placeholder for picking your major at the start of the game :D
+-> Art
+    << set $ArtMajor = true >>
+-> Tech
+    << set $TechMajor = true >>
+-> Psych 
+    << set $PsychMajor = true >>
+
+<<if $ArtMajor == true>>
+    <<jump ArtDialogue>>
+<<endif>>
+
+<<if $TechMajor == true>>
+    <<jump TechDialogue>>
+<<endif>>
+
+<<if $PsychMajor == true>>
+    <<jump PsychDialogue>>
+<<endif>>
+===
+
+title: ArtDialogue
+---
+art time
+===
+
+title: TechDialogue
+---
+Tech time
+===
+
+title: PsychDialogue
+---
+psych time
 ===
 
