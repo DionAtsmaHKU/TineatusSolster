@@ -29,15 +29,18 @@ Dion: Hi this is a placeholder for picking your major at the start of the game :
 title: ArtDialogue
 ---
 art time
+<< Learn "InfoA" >>
 ===
 
 title: TechDialogue
 ---
 Tech time
+<< Learn "InfoB" >>
 ===
 
 title: PsychDialogue
 ---
 psych time
+<< Learn "InfoC" >>
 ===
 
