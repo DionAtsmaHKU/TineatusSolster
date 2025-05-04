@@ -5,12 +5,13 @@ using Yarn.Unity;
 public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField] string eventName;
-    private DialogueRunner runner; 
+    [SerializeField] Sprite characterPortrait;
+    [SerializeField] DialogueRunner runner;
+    [SerializeField] Portraits portraits;
     private bool player_present = false;
 
     private void Awake()
     {
-        runner = FindObjectOfType<DialogueRunner>();
         PlayerMovement.OnInteract += TriggerDialogue;
     }
 
@@ -39,6 +40,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (player_present == true)
         {
+            portraits.SetOtherPortrait(characterPortrait);
             Debug.Log("Lets talk to / about:" + eventName);
             runner.StartDialogue(eventName);
         }
