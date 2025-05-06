@@ -11,7 +11,7 @@ public class Knowledge : MonoBehaviour
     [SerializeField] CustomObjectDictionary customObjectDictionary;
     private bool inMenu;
     private Dictionary<string, GameObject> knowledgeList;
-    private Dictionary<string, bool> knowledgeBools;
+    private Dictionary<string, bool> knowledgeBools = new Dictionary<string, bool>();
 
     private void Awake()
     {

@@ -31,7 +31,7 @@ title: ArtDialogue
 << SetSashaSprite 0 >>
 Sasha: Art!
 art time
-<< Learn "InfoA" >>
+<< Learn InfoA >>
 ===
 
 title: TechDialogue
@@ -39,7 +39,7 @@ title: TechDialogue
 << SetSashaSprite 1 >>
 Sasha: Technology!
 Tech time
-<< Learn "InfoB" >>
+<< Learn InfoB >>
 ===
 
 title: PsychDialogue
@@ -47,6 +47,6 @@ title: PsychDialogue
 << SetSashaSprite 2 >>
 Sasha: Psychology!
 psych time
-<< Learn "InfoC" >>
+<< Learn InfoC >>
 ===
 
