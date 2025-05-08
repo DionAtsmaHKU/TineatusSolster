@@ -11,10 +11,15 @@ public class Knowledge : MonoBehaviour
     [SerializeField] CustomObjectDictionary customObjectDictionary;
     private bool inMenu;
     private Dictionary<string, GameObject> knowledgeList;
+    private Dictionary<string, bool> knowledgeBools = new Dictionary<string, bool>();
 
     private void Awake()
     {
         knowledgeList = customObjectDictionary.ToDictionary();
+        foreach (var k in knowledgeList)
+        {
+            knowledgeBools.Add(k.Key, false);
+        }
         dialogueRunner.AddCommandHandler<string>("Learn", Learn);
     }
 
@@ -38,7 +43,16 @@ public class Knowledge : MonoBehaviour
 
     private void Learn(string key)
     {
+        knowledgeBools[key] = true;
         knowledgeList[key].SetActive(true);
+    }
+
+    public bool DoesHeKnow(string key)
+    {
+        if (knowledgeBools[key])
+            return true;
+
+        return false;
     }
 }
 

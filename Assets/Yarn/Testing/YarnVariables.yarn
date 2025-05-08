@@ -6,11 +6,11 @@
 << declare $PsychMajor = false >>
 
 Dion: Hi this is a placeholder for picking your major at the start of the game :D
--> Art
+-> Art!
     << set $ArtMajor = true >>
--> Tech
+-> Tech!
     << set $TechMajor = true >>
--> Psych 
+-> Psych!
     << set $PsychMajor = true >>
 
 <<if $ArtMajor == true>>
@@ -28,19 +28,25 @@ Dion: Hi this is a placeholder for picking your major at the start of the game :
 
 title: ArtDialogue
 ---
+<< SetSashaSprite 0 >>
+Sasha: Art!
 art time
-<< Learn "InfoA" >>
+<< Learn InfoA >>
 ===
 
 title: TechDialogue
 ---
+<< SetSashaSprite 1 >>
+Sasha: Technology!
 Tech time
-<< Learn "InfoB" >>
+<< Learn InfoB >>
 ===
 
 title: PsychDialogue
 ---
+<< SetSashaSprite 2 >>
+Sasha: Psychology!
 psych time
-<< Learn "InfoC" >>
+<< Learn InfoC >>
 ===
 
