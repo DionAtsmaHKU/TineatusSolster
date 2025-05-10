@@ -2006,6 +2006,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventName: 
+  characterPortrait: {fileID: 0}
+  runner: {fileID: 0}
+  portraits: {fileID: 0}
 --- !u!4 &825715205 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 076604dee86808846bf163e9e6798fe2, type: 3}
