@@ -8,6 +8,7 @@ public class Portraits : MonoBehaviour
 {
     [SerializeField] DialogueRunner dialogueRunner;
     [SerializeField] GameObject canvas;
+    [SerializeField] GameObject historyView;
     [SerializeField] Image sashaPortrait;
     [SerializeField] Image otherPortrait;
     [SerializeField] List<Sprite> sashaSprites = new List<Sprite>();
@@ -24,11 +25,14 @@ public class Portraits : MonoBehaviour
     {
         if (inDialogue)
         {
+            historyView.SetActive(false);
             canvas.SetActive(false);
             inDialogue = false;
         }
         else
         {
+            historyView.GetComponent<HistoryView>().ClearHistory();
+            historyView.SetActive(true);
             canvas.SetActive(true);
             inDialogue = true;
         }

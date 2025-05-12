@@ -21,7 +21,7 @@ public class VariableManager : MonoBehaviour
             Instance = this;
         }
 
-        runner.AddCommandHandler<string, float>("ChangeFloat", ChangeYarnFloat);
+        //runner.AddCommandHandler<string, float>("ChangeFloat", ChangeYarnFloat);
     }
 
     // Start is called before the first frame update
@@ -39,7 +39,7 @@ public class VariableManager : MonoBehaviour
     {
         variables.SetValue(var, value);
     }
-
+    /*
     public void ChangeYarnFloat(string var, float value)
     {
         float oldValue = GetYarnFloat(var);
@@ -47,7 +47,7 @@ public class VariableManager : MonoBehaviour
         variables.SetValue(var, newValue);
         Debug.Log("Set variable " + var + " from " + oldValue + " to " + newValue);
     }
-
+    */
     public float GetYarnFloat(string var)
     {
         float result;

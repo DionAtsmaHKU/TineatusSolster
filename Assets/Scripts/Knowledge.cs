@@ -43,6 +43,10 @@ public class Knowledge : MonoBehaviour
 
     private void Learn(string key)
     {
+        if (knowledgeBools[key])
+            return;
+
+        // Play diegetic notebook writing sfx, as if Sasha is taking notes
         knowledgeBools[key] = true;
         knowledgeList[key].SetActive(true);
     }

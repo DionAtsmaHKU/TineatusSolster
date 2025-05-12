@@ -11,7 +11,8 @@ using System.Runtime.CompilerServices;
 public class HistoryView : DialogueViewBase
 {
     DialogueRunner runner;
-
+    private List<GameObject> oldMessages = new List<GameObject>();
+    
     public TMPro.TextMeshProUGUI text;
 
     [Tooltip("This is the chat message bubble UI object (what we are cloning for each message!)... NOT the container group for all chat bubbles")]
@@ -60,6 +61,7 @@ public class HistoryView : DialogueViewBase
                 dialogueBubblePrefab.transform.rotation,
                 dialogueBubblePrefab.transform.parent
             );
+            oldMessages.Add(oldClone);
             dialogueBubblePrefab.transform.SetAsLastSibling();
         }
         isFirstMessage = false;
@@ -83,12 +85,21 @@ public class HistoryView : DialogueViewBase
         text.text = dialogueLine.Text.Text;
 
         currentTypewriterEffect = StartCoroutine(ShowTextAndNotify());
-
         IEnumerator ShowTextAndNotify()
         {
             yield return StartCoroutine(Effects.Typewriter(text, lettersPerSecond, null));
             currentTypewriterEffect = null;
             onDialogueLineFinished();
         }
+    }
+
+    public void ClearHistory()
+    {
+        CloneMessageBoxToHistory();
+        foreach (GameObject o in oldMessages)
+        {
+            Destroy(o);
+        }
+        oldMessages.Clear();
     }
 }
