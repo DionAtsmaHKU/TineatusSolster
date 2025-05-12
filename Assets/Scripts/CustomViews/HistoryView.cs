@@ -39,7 +39,7 @@ public class HistoryView : DialogueViewBase
     void UpdateMessageBoxSettings()
     {
         var bg = dialogueBubblePrefab.GetComponentInChildren<Image>();
-        bg.color = currentBGColor;
+        //bg.color = currentBGColor;
         var message = dialogueBubblePrefab.GetComponentInChildren<TMPro.TextMeshProUGUI>();
         message.text = "";
         message.color = currentTextColor;
