@@ -1,0 +1,43 @@
+﻿title: FabianIntroLoop1-2
+tags:
+---
+
+The man is still waving, even as you approach him. He stands next to a bench overlooking the void lake, Solster standing behind him.
+-> "Hello?"
+    Sasha: "Hello?"
+    << if $PsychMajor == true >>
+        The man seems relieved to be able to stop waving. He was afraid of making a bad first impression. Perhaps not an unfounded fear.
+    << else >>
+        The man seems relieved to be able to stop waving.
+    << endif >>
+    ???: Hello to you too! It's a pleasure to finally meet you Sasha. 
+    Fabian: I'm Fabian Goldhirsch, and I'm here to pick you up from station
+    << set $FabianMood += 1 >>
+-> "Who are you?"
+    Sasha: "Who are you?"
+    << if $PsychMajor == true >>
+        The man seems relieved to be able to stop waving. He's quick to answer your question. He's picking his words carefully. He really wants to make a good impression
+    << else >>
+        The man seems relieved to be able to stop waving. He's quick to answer your question.
+    << endif >>
+
+-> "Stop waving. I can see you."
+    Sasha: "Stop waving. I can see you."
+    << if $PsychMajor == true >>
+        The man is quick to obey. He seems stunned for a second, his cheery demeanour is a little soured, before he replies to you. 
+        He's picking his words carefully. He really wants to make a good impression
+    << else >>
+        The man is quick to obey. He seems stunned for a second, his cheery demeanour is a little soured, before he replies to you.
+    << endif >>
+
+-> Ignore him.
+    Sasha: (Ignore him)
+    << if $PsychMajor == true >>
+        The man continues waving for just a little too long, before gradually stopping. Hesitantly, he speaks up for the first time
+        You rattled him. He's off-center now, physically and mentally. 
+    << else >>
+        The man continues waving for just a little too long, before gradually stopping. Hesitantly, he speaks up for the first time
+    << endif >>
+    << set $FabianMood -= 1 >>
+
+===

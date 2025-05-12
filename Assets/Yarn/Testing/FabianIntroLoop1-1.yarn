@@ -1,10 +1,6 @@
-﻿title: FabianIntroLoop1
+﻿title: FabianIntroLoop1-1
 tags:
 ---
-
-//<< declare $ArtMajorPicked = false >>
-//<< declare $TechMajorPicked = false >>
-//<< declare $PsychMajorPicked = false >>
 
 FABIAN DIALOGUE TEST! Choose your major first
 -> Art!
@@ -34,39 +30,16 @@ What was going through your mind the last time you stepped foot on these cobbles
     Now that your explorative journey has met a dead end, you return back to the start. You may bear no resentment, but does Solster bear resentment towards you?
 
 <<if $PsychMajor == true>>
-    <<jump Intro1Psych>>
+    There is just a single other occupant of the square besides you. A young peppy man, no older than 30. Dressed in a cloak you recognise as one of a priest or pastor of the Faith of Solster.
+    His clothes are a mix of formal and casual, trying to make an official attire as down to earth as possible. He's smiling, and genuinely so.
+    Yet there's still a nervous disposition in his posture that he barely manages to mask. This is a man who is terrified of disappointing people. An archetypal People-Pleaser perhaps?
+    He looks completely unfamiliar. You have never seen this man before at all.
+    He is waving at you.
+<<else>>
+    There is just a single other occupant of the square besides you. A young peppy man, no older than 30. Dressed in a cloak you recognise as one of a priest or pastor of the Faith of Solster.
+    His clothes are a mix of formal and casual, trying to make an official attire as down to earth as possible. He's smiling, and genuinely so.
+    He looks completely unfamiliar. You have never seen this man before at all.
+    He is waving at you.
 <<endif>>
-
-There is just a single other occupant of the square besides you. A young peppy man, no older than 30. Dressed in a cloak you recognise as one of a priest or pastor of the Faith of Solster.
-His clothes are a mix of formal and casual, trying to make an official attire as down to earth as possible. He's smiling, and genuinely so.
-He looks completely unfamiliar. You have never seen this man before at all.
-He is waving at you.
-
-<<jump Intro1Choice2>>
-
-===
-
-title: Intro1Psych
----
-There is just a single other occupant of the square besides you. A young peppy man, no older than 30. Dressed in a cloak you recognise as one of a priest or pastor of the Faith of Solster.
-His clothes are a mix of formal and casual, trying to make an official attire as down to earth as possible. He's smiling, and genuinely so.
-Yet there's still a nervous disposition in his posture that he barely manages to mask. This is a man who is terrified of disappointing people. An archetypal People-Pleaser perhaps?
-He looks completely unfamiliar. You have never seen this man before at all.
-He is waving at you.
-
-<<jump Intro1Choice2>>
-
-===
-
-title: Intro1Choice2
----
--> "Hello?"
-    Sasha: "Hello?"
--> "Who are you?"
-    Sasha: "Who are you?"
--> "Stop waving. I can see you."
-    Sasha: "Stop waving. I can see you."
--> Ignore him.
-    Sasha: (Ignore him)
 
 ===

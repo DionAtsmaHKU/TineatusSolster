@@ -5,6 +5,11 @@
 << declare $TechMajor = false >>
 << declare $PsychMajor = false >>
 
+
+// Fabian Related Variables
+<< declare $FabianMood = 0 >> // Higher number means happier, lower means sadder
+<< declare $FabianFamiliarity = 0 >> // Increases as you talk to him and he gets to know you. Does not go below 0. Resets only on loop
+
 Dion: Hi this is a placeholder for picking your major at the start of the game :D
 -> Art!
     << set $ArtMajor = true >>
