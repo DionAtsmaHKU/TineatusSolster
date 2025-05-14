@@ -12,15 +12,18 @@ public class Knowledge : MonoBehaviour
     private bool inMenu;
     private Dictionary<string, GameObject> knowledgeList;
     private Dictionary<string, bool> knowledgeBools = new Dictionary<string, bool>();
+    private Func<string, bool> DoesHeKnowFunc;
 
     private void Awake()
     {
+        DoesHeKnowFunc += DoesHeKnow;
         knowledgeList = customObjectDictionary.ToDictionary();
         foreach (var k in knowledgeList)
         {
             knowledgeBools.Add(k.Key, false);
         }
         dialogueRunner.AddCommandHandler<string>("Learn", Learn);
+        dialogueRunner.AddFunction<string, bool>("DoesHeKnow", DoesHeKnowFunc);
     }
 
     // Update is called once per frame
