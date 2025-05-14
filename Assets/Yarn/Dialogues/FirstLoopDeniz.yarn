@@ -43,7 +43,9 @@ Deniz: “Do you need something?”
 -> Why are you sitting all the way out here?
 	Sasha: "Why are you sitting all the way out here?"
 	They shrug, the move long and languid. As if they’re trying to very unsubtly show their disinterest in the conversation. 
-	//Psych They probably just came here to sit alone.
+	<<if $PsychMajor == true>>
+		They probably just came here to sit alone.
+	<<endif>>
 	-> Gotcha.
 	-> See you around.
 -> Nope, sorry for bothering.

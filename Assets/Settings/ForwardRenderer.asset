@@ -111,14 +111,14 @@ MonoBehaviour:
   settings:
     anisotropicKuwaharaFilterSettings:
       filterKernelSectors: 3
-      filterKernelSmoothness: 0.14
-      filterRadius: 5.5
+      filterKernelSmoothness: 0.08
+      filterRadius: 4.4
       filterSharpness: 16
       eccentricity: 8
       iterations: 1
     edgeFlowSettings:
       noiseTexture: {fileID: 2800000, guid: cdae602bec35910478d4e9f06cd0ee54, type: 3}
-      streamLineLength: 48
+      streamLineLength: 55
       streamKernelStrength: 0.23
     compositorSettings:
       edgeContribution: 1

@@ -15,10 +15,13 @@ Dmitriy: “Oh, hey. You’re back.”
 
 
 His voice is level, calm. 
-//ART He doesn’t seem that impressed to see you, strangely apathetic.. Is he upset with you? 
-//TECH Your brother is wearing newer clothes than when you last saw him, even if they are an odd, shabby style. Has he become well-off in your absence? You remember not being able to afford new clothes. 
-//PSYCH You note that he seems weary, there are deep circles beneath his eyes. The way he’s standing, back to the commotion of the town, it’s almost like he’s taking a break from the festivities.
-
+<< if $PsychMajor == true >>
+	You note that he seems weary, there are deep circles beneath his eyes. The way he’s standing, back to the commotion of the town, it’s almost like he’s taking a break from the festivities.
+<< elseif $ArtMajor == true >>
+	He doesn’t seem that impressed to see you, strangely apathetic.. Is he upset with you?
+<< elseif $TechMajor == true >>
+	Your brother is wearing newer clothes than when you last saw him, even if they are an odd, shabby style. Has he become well-off in your absence? You remember not being able to afford new clothes.
+<< endif >>
 
 There’s a cigarette in his hand. You don’t remember him ever smoking before.
 
@@ -49,7 +52,9 @@ Do you? Is the parade being hectic enough for your own brother not to come see y
 	There’s a long silence between the two of you, the only sound cutting through it being the distant cheering of the parade.
 	Dmitriy: “I know, kiddo. I know. I wish I had the time to come and get you myself, but I didn’t. I’ve been swamped with work and everything.”
 	He looks at you, pursing his lips for a moment, then looks away again. 
-	//PSYCH By the way his shoulders slump and the dark circles under his eyes seem to get darker with how his eyebrows overcast them, you don’t think he’s lying about how overworked he’s been.
+	<< if $PsychMajor == true >>
+		 By the way his shoulders slump and the dark circles under his eyes seem to get darker with how his eyebrows overcast them, you don’t think he’s lying about how overworked he’s been.
+	<<endif>>
 	Dmitriy: “At least you’re back, though.”
 -> I understand.
 	He smiles wryly, glancing over his shoulder at you as he takes in the state of your appearance. Satisfied with what he sees- or perhaps unable to keep your eyes on you any longer out of lingering shame- he looks away again, thinking.
@@ -98,7 +103,10 @@ Dmitriy: “Was Pastor Fabian kind to you? I know you haven’t seen him before,
 ===
 title: EndingFirstDmi
 ---
-He looks back into the distance one last time, letting the silence stretch between you both like an uncomfortable blanket that muffles your ears. It feels much like hiding beneath a blanket, too. Too warm, too clammy, too everything. Yet there’s an innate sense of comfort from standing beside your brother like this. He’s different, sure, but he’s still your brother. Grounded, soothing, alive. This is without a doubt your Mitya.
+He looks back into the distance one last time, letting the silence stretch between you both like an uncomfortable blanket that muffles your ears. 
+It feels much like hiding beneath a blanket, too. Too warm, too clammy, too everything. Yet there’s an innate sense of comfort from standing beside your brother like this. 
+He’s different, sure, but he’s still your brother. Grounded, soothing, alive. 
+This is without a doubt your Mitya.
 
 
 Then, he turns to you.
@@ -112,13 +120,17 @@ Dmitriy: “Is there anything I can do for you, kid? I’ve gotta go back to wor
 
 -> Where’s the parade this year?
 	He nods to a point over your shoulder, not quite meeting your eyes when he glances in your direction. 
-	//TECH You know he’s not doing it on purpose, he’s just like you from time to time. Lost in his thoughts, he’s working out some sort of plan or mechanism to make the rest of the day run smoother.
+	<<if $TechMajor == true >>
+		You know he’s not doing it on purpose, he’s just like you from time to time. Lost in his thoughts, he’s working out some sort of plan or mechanism to make the rest of the day run smoother.
+	<<endif>>
 	Dmitriy: “They’re holding it just past Nauka Square this time. Elegy said they wanna celebrate their new architectural feat.. Because the doctors care, of course.”
 	-> Architectural feat?
 		He lets out a snort- or a snort-adjacent noise.  It’s not quite a scoff, but it’s got just the slightest amount of amusement to keep it from being negative.
 		Dmitriy: “Oh yes, you should go see it... It’s quite the spectacle. Hope it was worth it, really. That’s all we can hope for.”
 		His words, though ominous, don’t feel like he wants to speak any more on the matter. 
-		//ART Was that a tremor in his tone? You could swear there was a moment that his melodic rumble hitched from a twitch in his breathing. Does he not like the building? He never was much for the arts. 
+		<<if $ArtMajor == true>>
+			Was that a tremor in his tone? You could swear there was a moment that his melodic rumble hitched from a twitch in his breathing. Does he not like the building? He never was much for the arts. 
+		<<endif>>
 	-> Ok, thanks.
 		Dmitriy: “Mhm.”
 -> Will you have some time for me later?
