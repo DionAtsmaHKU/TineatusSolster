@@ -1,0 +1,137 @@
+title: FirstLoopDmi
+---
+<<declare $DmiAnnoyed = 0>>
+A cold chill sweeps over you now that some of the buildings have given way to the open air. 
+Hugging your coat tighter to your body, you approach the man you’ve been trying to find this whole time. 
+Like a lighthouse, his large frame breaks through the expanse of the void before him, a familiar and comforting sight- yet hauntingly dispassionate.
+
+
+Your brother is turned with his back to you, as tall as imposing as he’s always been. He’s not paying attention to his surroundings, but turns as the sound of your footsteps break the eerie silence that the wind brought here. 
+His shoulders tense briefly- though they drop when he recognizes you.
+
+
+Dmitriy: “..Sasha?”
+Dmitriy: “Oh, hey. You’re back.”
+
+
+His voice is level, calm. 
+//ART He doesn’t seem that impressed to see you, strangely apathetic.. Is he upset with you? 
+//TECH Your brother is wearing newer clothes than when you last saw him, even if they are an odd, shabby style. Has he become well-off in your absence? You remember not being able to afford new clothes. 
+//PSYCH You note that he seems weary, there are deep circles beneath his eyes. The way he’s standing, back to the commotion of the town, it’s almost like he’s taking a break from the festivities.
+
+
+There’s a cigarette in his hand. You don’t remember him ever smoking before.
+
+
+-> Hi.
+	Dmitriy: “Hey kiddo.”
+	He smiles at you, though it doesn’t quite reach his eyes. In fact, it seems more like an uncomfortable grimace than a smile in earnest- though your brother has always just been like that. 
+	You don’t think you remember ever seeing him push past a smirk before, and his eyebrows never lifted to make him seem happier. 
+	Maybe a squint would be added, if he was pleased.
+	This smile, though, is completely impersonal.
+	Dmitriy: “I’m sure you’re wondering why I didn’t come see you at the station.”
+-> Why didn’t you come to see me at the station?
+	<<set $DmiAnnoyed = $DmiAnnoyed + 1>>
+
+
+He takes a long drag of his cigarette, closing his eyes for a moment before exhaling. He doesn’t quite look at you when he starts speaking again, gaze set off far off into the distance.
+
+
+Dmitriy: “Yeah, sorry about that. Shi-- Stuff was a bit hectic with the parade, you know how it is.”
+
+
+Do you? Is the parade being hectic enough for your own brother not to come see you after four years of absence?
+
+
+-> You should’ve come to see me.
+	<<set $DmiAnnoyed = $DmiAnnoyed + 1>>
+	He has the decency to look a little apologetic at your remark, his eyes opening for a moment as he looks into the eternal darkness of the void before him. 
+	There’s a long silence between the two of you, the only sound cutting through it being the distant cheering of the parade.
+	Dmitriy: “I know, kiddo. I know. I wish I had the time to come and get you myself, but I didn’t. I’ve been swamped with work and everything.”
+	He looks at you, pursing his lips for a moment, then looks away again. 
+	//PSYCH By the way his shoulders slump and the dark circles under his eyes seem to get darker with how his eyebrows overcast them, you don’t think he’s lying about how overworked he’s been.
+	Dmitriy: “At least you’re back, though.”
+-> I understand.
+	He smiles wryly, glancing over his shoulder at you as he takes in the state of your appearance. Satisfied with what he sees- or perhaps unable to keep your eyes on you any longer out of lingering shame- he looks away again, thinking.
+-> What’s the parade like this year?
+	He shrugs, the movement slow and calculated- like he’s putting great effort into it.
+	Dmitriy: “It’s same old, really. People die, we throw ‘em into the water. I can’t really make any special notes about it.”
+	-> Alfonz died, though.
+		Dmitriy: “Yeup, that he did.”
+	-> Fair enough.
+
+
+He takes another long drag of the cigarette. The smoke billows from his mouth in wisps, tight and controlled. 
+Then, he drops the cigarette to the cobblestone below, grinding it beneath the ball of his foot and turning to you with an air of nonchalance.
+Dmitriy: “Was Pastor Fabian kind to you? I know you haven’t seen him before, but he’s a good man.”
+
+
+-> It should’ve been you, not him, to get me.
+	<<if $DmiAnnoyed == 2 >>
+		He turns towards you, gaze sharp and lips pressed into a fine line. Like a storm breaking over the horizon in the blink of an eye, a sudden thunderclap of an expression alerts you to his overwhelming irritation.
+		Dmitriy: “I get it, Sasha. Drop it.”
+		And just like that, his annoyance has vanished, his face steeled into its usual apathy. It’s as if he’s decided in a blink of an eye he doesn’t care that much, and thus let the anger wash out of his body with a single breath.
+		<<jump EndingFirstDmi>>
+	<<else>>
+		Dmitriy slowly shakes his head, stuffing his hands deep into his pockets as he lets out a low sigh.
+		Dmitriy: “I’m sorry, kiddo. Sometimes things just turn out this way. If I had a bit of free time I would’ve, but this is my first five minute break the whole day- and I had to have my own moment to think.”
+		That, at least, you can consider fair. The walk to the station is five minutes by itself, and you’re sure the townspeople wouldn’t be too pleased if he was off-schedule on a momentous celebration like this one.
+		It doesn’t help that he never seemed that excited to see you to begin with, though.
+	<<endif>>
+-> He seems nice.
+	He seems pleased at your remark, relaxing just slightly as he rocks back on his heels. It’s as if your remark, however baseline and unremarkable it was, was way more positive than he could have ever dreamed of.
+	Dmitriy: “He is nice. Pastor Fabian may be new, but he’s been picking up everything just about as fast as you could ever expect of an outsider. He’s a believer, through and through.”
+	You don’t remember your brother ever caring any particular amount about being faithful, but the way he mentions it like it’s the weather- it seems to just be one of those things that may have shifted just a little in the time that you were away.
+	Dmitriy: “But he’s good, though. He’s good with the kids, which is what matters as far as I’m aware. Not that we have that many kids to begin with. You’re still among the youngest kids here, I think.”
+-> Is this the guy replacing Alfonzo?
+	He looks over at you, gaze thoughtful.
+	Dmitriy: “Is everything alright? You sound..”
+	-> Disappointed?
+	-> I don’t sound like anything. Stop it.
+		He raises his hands in a placating manner, averting his gaze from what seems to be your scathing look. 
+		You can’t really help it, but somewhere in your heart, deep down there, there’s a flicker of despair that your beloved Alfonzo was replaced so soon.
+		Dmitriy: “Look, I get it. I was a little surprised how quick they decided this guy could be the new Youth Pastor no problem- but he’s doing his best! Sure, he’s no Alfonzo, but I don’t think anyone could be.”
+		Dmitriy: “Especially not to you, Sasha.”
+		A cold shiver runs down your spine the moment Dmitriy’s voice drops into something softer, more pitying. It’s as if he dropped his nonchalant pretending for just a moment to speak to you as a person who’s lost something- as if he hasn’t lost someone, too.
+<<jump EndingFirstDmi>>
+
+===
+title: EndingFirstDmi
+---
+He looks back into the distance one last time, letting the silence stretch between you both like an uncomfortable blanket that muffles your ears. It feels much like hiding beneath a blanket, too. Too warm, too clammy, too everything. Yet there’s an innate sense of comfort from standing beside your brother like this. He’s different, sure, but he’s still your brother. Grounded, soothing, alive. This is without a doubt your Mitya.
+
+
+Then, he turns to you.
+
+
+Dmitriy: “Is there anything I can do for you, kid? I’ve gotta go back to work soon, so..”
+
+
+..Which is Dmitriy speak for ‘Leave me be, please.’ And don’t forget the please- he’d never say it, but he thinks it.
+
+
+-> Where’s the parade this year?
+	He nods to a point over your shoulder, not quite meeting your eyes when he glances in your direction. 
+	//TECH You know he’s not doing it on purpose, he’s just like you from time to time. Lost in his thoughts, he’s working out some sort of plan or mechanism to make the rest of the day run smoother.
+	Dmitriy: “They’re holding it just past Nauka Square this time. Elegy said they wanna celebrate their new architectural feat.. Because the doctors care, of course.”
+	-> Architectural feat?
+		He lets out a snort- or a snort-adjacent noise.  It’s not quite a scoff, but it’s got just the slightest amount of amusement to keep it from being negative.
+		Dmitriy: “Oh yes, you should go see it... It’s quite the spectacle. Hope it was worth it, really. That’s all we can hope for.”
+		His words, though ominous, don’t feel like he wants to speak any more on the matter. 
+		//ART Was that a tremor in his tone? You could swear there was a moment that his melodic rumble hitched from a twitch in his breathing. Does he not like the building? He never was much for the arts. 
+	-> Ok, thanks.
+		Dmitriy: “Mhm.”
+-> Will you have some time for me later?
+	He frowns at your words, turning to face you as his stance shifts just the slightest bit, as if he’s taking a closer look at you. 
+	Dmitriy: “Kid, I- of course I will. I’m just busy right now, don’t you get that?”
+	He’s deflecting.
+	He’s guilty.
+	He thinks you’re stupid.
+	Dmitriy searches your gaze for a moment, as if he’s looking for some sort of answer of an internal question, before he just sighs and shakes his head.
+	Dmitriy: “Look, right now I’m busy. Even you can get that, can’t you? After the parade, sure, we’ll hang out, but right now..”
+	He gestures vaguely around him, his sentence trailing off midway. You’ve lost him.
+His attention is now fully elsewhere, even if he would have never done it on purpose. His eyes are unfocused, gazing deep into the endless darkness of the void before him as if wishing it for his answers. 
+Unfortunately, when Dmitriy gets like this, the best thing you can do is to just leave it be.
+-> “Bye, Mitya.”
+-> Leave.
+===

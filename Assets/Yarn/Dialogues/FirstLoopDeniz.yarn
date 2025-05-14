@@ -1,0 +1,51 @@
+title: FirstLoopDeniz
+
+
+---
+
+There’s a person sitting by the water’s edge, all by themselves. They don’t notice you, but the adorable little white dog beside them wags its tail when you approach. 
+You don’t remember there being many dogs in Solster, is it an import?
+Finally, the person looks up. You’ve seen them only a few times before, so their name escapes you.. But they were one of Dmitriy’s friends, you’re sure.
+
+//<<if DoesHeKnow("DenizKnown") == true>>
+	//Then, you remember. This is who the doctor mentioned before, wasn’t it? Deniz Cansel.
+	//<<endif>>
+-> Who are you?
+	Sasha: "Who are you?"
+	Deniz: “Deniz.”
+	They eye you for a moment, as if waiting for you to react in a certain way when they tell you your name. When you don’t, they just look away.
+-> Hello.
+	Sasha: "Hello."
+	They nod in greeting, waiting for you to say more. It's a little awkward.
+
+-> What’s your dog’s name?
+	Deniz: “She’s not mine.”
+	-> Then whose is it?
+		Sasha: "Then whose is it?"
+		Deniz: “I don’t wanna talk about it.”
+		-> What?
+			Sasha: "What?"
+			Deniz: “God is a bootlicker.”
+				-> What???
+					Sasha: "What??"
+				-> Excuse me?
+					Sasha: "Excuse me?"
+				-> Checks out.
+					Sasha: "Checks out."
+		->Got it.
+			Sasha: "Got it."
+	-> Oh, okay.
+		Sasha: "Oh, okay."
+-> Are you a doctor?
+	You’ve noted their garb, half a medical coat, half a trenchcoat. It’s an almost horrifying mismatch of fabrics. You’d be grossed out, if it wasn’t such spectacular fashion design.
+	They notice you looking, their eyes darting over your body in return as a quick once-over before they nod as an answer.
+Deniz: “Do you need something?”
+-> Why are you sitting all the way out here?
+	Sasha: "Why are you sitting all the way out here?"
+	They shrug, the move long and languid. As if they’re trying to very unsubtly show their disinterest in the conversation. 
+	//Psych They probably just came here to sit alone.
+	-> Gotcha.
+	-> See you around.
+-> Nope, sorry for bothering.
+
+===
