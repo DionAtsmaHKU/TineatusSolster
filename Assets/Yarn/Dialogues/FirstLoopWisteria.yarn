@@ -1,0 +1,33 @@
+﻿title: FirstLoopWisteria
+tags:
+---
+
+<< declare $FirstLoopWisteriaOptionsPicked = 0 >>
+
+You see a woman dressed in a white lab coat, standing around with her hands in her pockets.
+The id-card on her lapel says “Dr. Wisteria - General Practitioner - Star Hospital”. 
+There are some dark red stains at the bottom of her coat that imply she may do some more practical medicine than just consulting.
+She gives you a quick look up and down as you approach, before resuming looking around at nothing in particular.
+<< jump FirstLoopWisteriaTree1 >>
+===
+
+title: FirstLoopWisteriaTree1
+---
+-> “Hello.”
+-> “Do you know where Dmitriy Yildiz is?”
+<< if $FirstLoopWisteriaOptionsPicked == 0 >>
+She stares at you, as if it had been her that just spoke rather than you. 
+There is not even an attempt at a reply.
+<< set $FirstLoopWisteriaOptionsPicked = 1 >>
+<< jump FirstLoopWisteriaTree1 >>
+<< else >>
+Wisteria: “Are you hurt, wounded, or dying?”
+-> “...No?”
+-> “Not physically.”
+Wisteria: “Then we have nothing to talk about.”
+Wisteria: “You can leave now.”
+She says that both as if she is granting permission to, as well as a demand.
+You won’t get any kinder words from her than this. Perhaps you can come back to her sometime if you have something that you specifically need from her.
+<< endif >>
+
+===

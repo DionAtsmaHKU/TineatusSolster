@@ -1,0 +1,43 @@
+﻿title: FirstLoopAaldenburg
+tags:
+---
+
+<< declare $FirstLoopAaldenburgSaidHello = false >>
+<< declare $FirstLoopAaldenburgSaidDmitriy = false >>
+
+You see a woman before you that stands out. 
+Her lab coat, her tidied hair bun, and the notebook she is frantically writing in would all place her in a laboratorium, rather than a parade.
+An id-card on her lapel identifies her as “Dr. Aaldenburg - Naturalist Physicist - Nauka Square”. 
+She makes no sign of noticing your presence. Her eyes are laser-focused on her notebook, occasionally looking up towards the lake.
+
+<< jump FirstLoopAaldenburgTree1 >>
+===
+
+title: FirstLoopAaldenburgTree1
+---
+-> “Hello.” << if $FirstLoopAaldenburgSaidHello == false >>
+    She does not react. Unless turning to a new page in her notebook is a greeting in her language.
+	-> ”Dr. Aaldenburg?”
+	    Either she cannot hear you over the sounds of her own writing, or she is too focused on it to pay attention to you.
+	    Or she is just ignoring you. Who can say?
+        << set $FirstLoopAaldenburgSaidHello = true >>
+        << jump FirstLoopAaldenburgTree1 >>
+-> “Do you know where Dmitriy Yildiz is?” << if $FirstLoopAaldenburgSaidDmitriy == false >>
+    If she does, she doesn’t tell you. Her writing stays constant, completely uninterrupted by your question.
+	-> “Big guy, black hair, was setting things up around here?”
+	    No reply. You have a feeling that she hasn’t seen him anyway. She has no eyes for anything besides her notebook, and the lake.
+        << set $FirstLoopAaldenburgSaidDmitriy = true >>
+        << jump FirstLoopAaldenburgTree1 >>
+-> “What are you writing in that notebook?” << if $FirstLoopAaldenburgSaidHello == true && $FirstLoopAaldenburgSaidDmitriy == true >>
+    The woman turns towards you for the first time.
+    Aaldenburg: “Leave me alone. I am occupied.”
+    Then she turns back to her notebook and resumes work.
+    You might have to wait until after the parade if you want to know who she is, from the looks of it.
+-> “I’ve done a technical study too. Just graduated.” << if $TechMajor == true && $FirstLoopAaldenburgSaidHello == true && $FirstLoopAaldenburgSaidDmitriy == true >>
+    The woman stops writing for a brief moment. She resumes at a faster pace, as if realising she betrayed the fact she did in fact notice you were present.
+    Aaldenburg: Come talk to me at Nauka Square then later.
+    Aaldenburg: I am engaged in field work at this moment. I cannot chit-chat.
+    You have an inkling that she will not elaborate on what that field work consists of at this moment.
+    You’ll have to wait until after the parade if you want to know who she is, then.
+
+===
