@@ -1,0 +1,70 @@
+title: FirstLoop_Babushka
+---
+In Front of you sits a woman whose shriveled skin and trembling hands can't help but reveal her old age. One of those shaky hands rests firmly on an old leather bag while the other cradles a dull looking Matryoshka doll.
+
+<< if $PsychMajor == true >>
+Whatever is in the bag and whoever is in the doll means a lot to her, she holds the items close as if the wind can blow them away at any moment, she seems terrified to lose them.
+
+<< elseif $ArtMajor == true >>
+Brighter colors are often reserved for those born in Solster. The flimsy painted lines on the doll tell you the old woman painted it fairly recently 
+
+<< elseif $TechMajor == true >>
+The straps that are attached to the leather bag have almost completely rotted off; it wont stay functional for long. It could be easily replaced or mended right now but in solster you only fix something after it is broken, not while it's still ‘functional’.
+<< endif >>
+
+Her gaze is fixed on the mine entrance close by and her mind seems occupied, it takes a while for the woman to notice you while shrouded in her own darkness, but when she does you are hit with a smile as bright as the sun a sun you started missing the second you step foot back in solster. And like a moth to a flame you are enraptured by it.
+
+Babushka: Oh. Bless mothers threads. Hello there, child. It is not often mother blesses us with visitors from outside the void 
+
+Her bright smile mellows down a little while speaking but her eyes remain ever so radiant
+
+Babushka: And! On the day of the parade nonetheless. Oh! How incredibly wonderful!
+
+The woman's glowing smile returns fully yet again, filling your soul with warmth.
+
+Babushka: it has been years since we have had someone from outside of solster join the parade 
+
+She looks down at the doll cradled in her lap
+
+Babushka: How incredibly wonderful, and today of all days..
+
+-> Oh... well i was actually born here in solster. 
+    Im back fo-..
+    The Woman looks up and quickly interrupts you
+-> Say nothing
+    The woman looks up at you, excited to keep talking
+
+Babushka: Most people around here won't be as kind to an outsider like you. An odd thing really. considering our most cherished things come from the outside.
+
+Babushka: Without Brave Dynnra we would have never learned the power of the void. Without the radiant Elegy and the Everwatcher we would be lost in the dark, we would have no power, and no one to look up to for protection.
+
+-> I  understand… but like i said im from! solster
+    The woman pauses for a second but only to continue speaking as if she did not hear you. However she most definitely did hear you
+-> Say nothing
+
+Babushka: Who knowns
+Babushka: Maybe you will be the next outsider to make a difference
+
+-> But i...
+-> Say nothing
+
+Trying to convince the woman of your connection to solster appears to be hopeless. She is sure of her belief that you are not from solster. And maybe she is not that far off. It has been a long time since you have been back. Did the Outside world really change you beyond recognition?
+
+Babushka: Since you are new here, many things must still be confusing to you.If you have any questions about Solster and its customs, i will be here for you child.
+Babushka: Don't be afraid to ask something, anything. It can get a bit lonely here sometimes… haha….
+
+Her awkward laugh hides a great pain. However the more you look at her the more you slowly start to remember the woman, it was hard to recognise her at first with her discolored, marbling and plastic looking skin. Her nose seems sharper and her eyes and cheeks are sunken in. But behind all of that sits a woman who would always give out bandaids and  quick prayers to the kids who scraped their knees while playing. the woman who would watch over  them while their parents worked hard to put food on the table. The woman whose freshly baked goods would sit in the window sill spreading a sweat smell of cinnamon, vanilla and roasted nuts throughout the brittle streets of the River District
+
+Babushka: Oh but do make sure to catch the parade today. It is quite a sight to behold i tell you!
+
+The woman looks back at the mine before quickly turning her head around to face you again as she does this you look around as well. The streets of the river district seem more quiet than usual, it looks almost abandoned. You want to tell yourself it is because of the parade but deep down you know it's not. The Silence feels heavier than it has to be
+
+Babushka: Oh mother forgive me. I almost forgot! The name is Maacah, …. but please just call me Babushka
+
+Reaching old age is rare in Solster, especially in the river district. Therefore it makes sense for her to become the district's shared “grandmother.Much like she was its babysitter before
+
+===
+title: OtherNode
+---
+dont really need nodes yet i think
+===
