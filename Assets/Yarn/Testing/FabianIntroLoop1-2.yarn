@@ -1,4 +1,4 @@
-﻿title: FabianIntroLoop1-2
+title: FabianIntroLoop1-2
 tags:
 ---
 
@@ -11,7 +11,7 @@ The man is still waving, even as you approach him. He stands next to a bench ove
         The man seems relieved to be able to stop waving.
     << endif >>
     ???: Hello to you too! It's a pleasure to finally meet you Sasha. 
-    Fabian: I'm Fabian Goldhirsch, and I'm here to pick you up from station
+    Fabian: I'm Pastor Fabian Goldhirsch, and I'm here to pick you up from station
     << set $FabianMood += 1 >>
 -> "Who are you?"
     Sasha: "Who are you?"
@@ -20,7 +20,9 @@ The man is still waving, even as you approach him. He stands next to a bench ove
     << else >>
         The man seems relieved to be able to stop waving. He's quick to answer your question.
     << endif >>
-
+    ???: Oh right, I forgot, you must've never seen me before!
+    Fabian: I'm Pastor Fabian Goldhirsch. I came here to pick you up from the station! Sasha, right?
+    << set $FabianMood += 1 >>
 -> "Stop waving. I can see you."
     Sasha: "Stop waving. I can see you."
     << if $PsychMajor == true >>
@@ -29,15 +31,61 @@ The man is still waving, even as you approach him. He stands next to a bench ove
     << else >>
         The man is quick to obey. He seems stunned for a second, his cheery demeanour is a little soured, before he replies to you.
     << endif >>
-
+    ???: Right, I can see that you’ve seen me!
+    Fabian: I'm Pastor Fabian Goldhirsch. I came here to pick you up from the station! Sasha, right?
 -> Ignore him.
     Sasha: (Ignore him)
     << if $PsychMajor == true >>
         The man continues waving for just a little too long, before gradually stopping. Hesitantly, he speaks up for the first time
-        You rattled him. He's off-center now, physically and mentally. 
+        You've rattled him. He's off-center now, physically and mentally. 
     << else >>
         The man continues waving for just a little too long, before gradually stopping. Hesitantly, he speaks up for the first time
     << endif >>
+    ???: Uhm... Hi. You are Sasha, right? Sasha Yildiz?
+    Fabian: I'm Pastor Fabian Goldhirsch. I came to pick you up from the station.
     << set $FabianMood -= 1 >>
 
+<< if $FabianMood lte -1 >>
+The man extends his hand in greeting, hesitantly as well.
+<< elif $FabianMood gte 1>>
+The man enthusiastically extends his hand in greeting. 
+<< else >>
+The man extends his hand in greeting. 
+<< endif>>
+<< if $PsychMajor == true >>
+    Solster pastors and other religious authorities usually greet strangers with a hug, as a sign of welcome to the community.
+    Is he unfamiliar with this tradition? Or does he think that you'd be more comfortable with this?
+<< elseif $ArtMajor == true >>
+    Seeing his cloak up-close, it is clearly a hand-me-down, not something he bought himself. 
+    It's too big for him, and clearly unfitting for him aesthetically. Something pastel would more his style.
+<< elseif $TechMajor == true >>
+    His words and actions are pre-planned, as an automaton following its programming. //Is this too modern? Nah, they got computers at the science park
+    He must have spent his time waiting for you preparing his whole introduction.
+<< endif >>
+-> Shake his hand.
+<< if $FabianMood <= -1 >>
+His hand trembles slightly. He adds his other hand to the handshake to keep it steady.
+<< else >>
+His handshake is enthusiastic too, but more restrained. A pastor's decorum.
+<< endif >>
+Fabian: I hope you had good travels! It must have been a long journey to get here.
+Fabian: I know myself how slow the train can feel when you're excited to get to your destination.
+<< if $FabianMood lte -1 >>
+    He finishes off his sentence with a nervous chuckle.
+<< elif $FabianMood gte 1>>
+    He finishes off his sentence with a hearty chuckle
+<< else >>
+    He finishes off his sentence with a bright smile
+<< endif >>
+<< if $FabianMood <= -1 >>
+-> Continue ignoring him.
+
+<< else >>
+-> Ignore him.
+
+<< endif >>
+
+-> “I’m still not entirely sure who you are, or why you’re here.”
+
+-> ""
 ===
