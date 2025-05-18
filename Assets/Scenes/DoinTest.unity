@@ -924,10 +924,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2be1febb1c8ec458856360cef90456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spotlightDict:
-    items:
-    - name: Conquest
-      spotlight: {fileID: 0}
   dialogueRunner: {fileID: 2074839901}
 --- !u!4 &221656100
 Transform:
@@ -7139,6 +7135,10 @@ PrefabInstance:
     - target: {fileID: 1663705641020790159, guid: 5388a8a61b0b12c49ab0c7b3c8105402, type: 3}
       propertyPath: m_Name
       value: SpotlightPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677634225942127585, guid: 5388a8a61b0b12c49ab0c7b3c8105402, type: 3}
+      propertyPath: lightName
+      value: Conquest
       objectReference: {fileID: 0}
     - target: {fileID: 4584176840677510068, guid: 5388a8a61b0b12c49ab0c7b3c8105402, type: 3}
       propertyPath: m_RootOrder
