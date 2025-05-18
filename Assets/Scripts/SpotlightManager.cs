@@ -13,12 +13,18 @@ public class SpotlightManager : MonoBehaviour
     {
         spotlights = spotlightDict.ToDictionary();
         dialogueRunner.AddCommandHandler<string>("LightOff", DeactivateSpotlight);
+        dialogueRunner.AddCommandHandler<string>("LightOn", ReactivateSpotlight);
     }
 
     private void DeactivateSpotlight(string key)
     {
         spotlights[key].active = false;
         spotlights[key].stageLight.enabled = false;
+    }
+
+    private void ReactivateSpotlight(string key)
+    {
+        spotlights[key].active = true;
     }
 }
 
