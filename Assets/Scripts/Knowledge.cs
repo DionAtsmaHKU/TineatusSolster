@@ -2,13 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn;
 using Yarn.Unity;
 
 public class Knowledge : MonoBehaviour
 {
     [SerializeField] DialogueRunner dialogueRunner;
     [SerializeField] GameObject knowledgeMenu;
-    [SerializeField] CustomObjectDictionary customObjectDictionary;
+    [SerializeField] CustomObjectDictionary knowledgeDict;
     private bool inMenu;
     private Dictionary<string, GameObject> knowledgeList;
     private Dictionary<string, bool> knowledgeBools = new Dictionary<string, bool>();
@@ -17,7 +18,7 @@ public class Knowledge : MonoBehaviour
     private void Awake()
     {
         DoesHeKnowFunc += DoesHeKnow;
-        knowledgeList = customObjectDictionary.ToDictionary();
+        knowledgeList = knowledgeDict.ToDictionary();
         foreach (var k in knowledgeList)
         {
             knowledgeBools.Add(k.Key, false);
