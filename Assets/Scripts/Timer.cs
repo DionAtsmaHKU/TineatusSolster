@@ -32,7 +32,6 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Vector3.Distance(events[0].objToDeactivate[0].transform.position, playerTransform.position));
         UpdateTime();
         CheckTimedEvents();
     }
