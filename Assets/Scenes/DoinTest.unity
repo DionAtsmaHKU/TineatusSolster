@@ -5547,7 +5547,6 @@ MonoBehaviour:
   timerUI: {fileID: 705380243}
   playerTransform: {fileID: 1073508770}
   timeMultiplier: 2
-  range: 10
   events:
   - objToDeactivate:
     - {fileID: 281094444}
@@ -6061,7 +6060,7 @@ GameObject:
   - component: {fileID: 1842732095}
   - component: {fileID: 1842732096}
   m_Layer: 5
-  m_Name: Constrain
+  m_Name: Content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6103,7 +6102,7 @@ MonoBehaviour:
   m_IgnoreLayout: 0
   m_MinWidth: -1
   m_MinHeight: -1
-  m_PreferredWidth: 600
+  m_PreferredWidth: 1000
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
@@ -7147,6 +7146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2102556577}
   - component: {fileID: 2102556578}
+  - component: {fileID: 2102556579}
   m_Layer: 5
   m_Name: Dialogue Bubble
   m_TagString: Untagged
@@ -7172,8 +7172,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 300, y: -15.000002}
-  m_SizeDelta: {x: 400, y: 47.29}
+  m_AnchoredPosition: {x: 300, y: 0}
+  m_SizeDelta: {x: 420, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2102556578
 MonoBehaviour:
@@ -7201,6 +7201,20 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
+--- !u!114 &2102556579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102556576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
 --- !u!1 &2104867750
 GameObject:
   m_ObjectHideFlags: 0
