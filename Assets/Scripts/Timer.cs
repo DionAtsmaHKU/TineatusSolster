@@ -8,9 +8,11 @@ using static UnityEngine.Rendering.DebugUI;
 
 public class Timer : MonoBehaviour
 {
+	[SerializeField] DialogueRunner dialogueRunner;
     [SerializeField] TextMeshProUGUI timerUI;
     [SerializeField] Transform playerTransform;
     public float timeMultiplier = 2f;
+	public float timeToAdd = 0;
     public List<TimedEvent> events = new List<TimedEvent>();
     
     private List<string> DontActivate = new List<string>();
@@ -19,6 +21,7 @@ public class Timer : MonoBehaviour
     private float totalTimer = 0;
     private int timeInMinutes;
     private int hours = 9;
+	private bool paused = false;
 
     private void Start()
     {
@@ -27,6 +30,8 @@ public class Timer : MonoBehaviour
             ev.ToMinutes();
         }
         totalTimer = hours * 60;
+		dialogueRunner.onDialogueStart.AddListener(Pause);
+		dialogueRunner.onDialogueComplete.AddListener(UnPause);
     }
 
     // Update is called once per frame
@@ -38,6 +43,9 @@ public class Timer : MonoBehaviour
 
     void UpdateTime()
     {
+		if (paused)
+			return;
+		
         totalTimer += Time.deltaTime * timeMultiplier;
         timer += Time.deltaTime * timeMultiplier;
 
@@ -98,6 +106,18 @@ public class Timer : MonoBehaviour
     {
         return name.Substring(0, name.Length - 1);
     }
+	
+	public void Pause() 
+	{
+		paused = true;
+	}
+
+	public void UnPause() 
+	{
+		totalTimer += timeToAdd;
+		timer += timeToAdd;
+		paused = false;
+	}
 }
 
 [Serializable]
