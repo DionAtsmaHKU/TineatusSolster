@@ -11,10 +11,14 @@ public class Spotlight : MonoBehaviour
 
     private SpotlightManager spotlightManager;
 
-    private void Start()
+    private void OnEnable()
     {
         spotlightManager = FindObjectOfType<SpotlightManager>();
         spotlightManager.spotlights.Add(lightName, this);
+        if (spotlightManager.inactiveSpotlights.Contains(RemoveLastLetter(lightName)))
+        {
+            active = false;
+        }
     }
 
     private void Update()
@@ -31,7 +35,7 @@ public class Spotlight : MonoBehaviour
 
     private void ActivateSpotlight()
     {
-        if (!active && stageLight.enabled == true)
+        if (!active || stageLight.enabled == true)
             return;
 
         stageLight.enabled = true;
@@ -43,5 +47,10 @@ public class Spotlight : MonoBehaviour
             return;
 
         stageLight.enabled = false;
+    }
+
+    private string RemoveLastLetter(string name)
+    {
+        return name.Substring(0, name.Length - 1);
     }
 }

@@ -1036,6 +1036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueRunner: {fileID: 2074839901}
   playerTransform: {fileID: 1073508770}
+  inactiveSpotlights: []
 --- !u!4 &221656100
 Transform:
   m_ObjectHideFlags: 0
@@ -1806,7 +1807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3677634225942127585, guid: 5388a8a61b0b12c49ab0c7b3c8105402, type: 3}
       propertyPath: lightName
-      value: ConquestTWO
+      value: ConquestB
       objectReference: {fileID: 0}
     - target: {fileID: 4584176840677510068, guid: 5388a8a61b0b12c49ab0c7b3c8105402, type: 3}
       propertyPath: m_RootOrder
@@ -7587,7 +7588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3677634225942127585, guid: 5388a8a61b0b12c49ab0c7b3c8105402, type: 3}
       propertyPath: lightName
-      value: Conquest
+      value: ConquestA
       objectReference: {fileID: 0}
     - target: {fileID: 4584176840677510068, guid: 5388a8a61b0b12c49ab0c7b3c8105402, type: 3}
       propertyPath: m_RootOrder
