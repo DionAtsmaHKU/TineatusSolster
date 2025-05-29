@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class SpeechView : LineView
 {
+    public DialogueAudio dialogueAudio;
     public HorizontalLayoutGroup layoutGroup;
 
     public override void RunLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
@@ -25,7 +26,7 @@ public class SpeechView : LineView
             layoutGroup.padding.right = 0;
             layoutGroup.padding.left = 80;
         }
-
+        dialogueAudio.PlayNext();
         base.RunLine(dialogueLine, onDialogueLineFinished);
     }
 }

@@ -15,6 +15,9 @@ public class Knowledge : MonoBehaviour
     private Dictionary<string, bool> knowledgeBools = new Dictionary<string, bool>();
     private Func<string, bool> DoesHeKnowFunc;
 
+    // Sound Stuff
+    private string newInfoPath = "event:/ui/new_info_noted";
+
     private void Awake()
     {
         DoesHeKnowFunc += DoesHeKnow;
