@@ -4540,6 +4540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1407549359}
   - component: {fileID: 1407549360}
+  - component: {fileID: 1407549361}
   m_Layer: 0
   m_Name: AudioTest
   m_TagString: Untagged
@@ -4574,25 +4575,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
+  CollisionTag: Player
   EventReference:
     Guid:
-      Data1: 868538063
-      Data2: 1167609248
-      Data3: 431846324
-      Data4: -946290896
-    Path: event:/environment/electronics/lamp_post
+      Data1: -1457252795
+      Data2: 1298184109
+      Data3: 1597675706
+      Data4: -152118493
+    Path: event:/music/theatre_scene
   Event: 
-  EventPlayTrigger: 1
-  EventStopTrigger: 0
+  EventPlayTrigger: 3
+  EventStopTrigger: 4
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
   NonRigidbodyVelocity: 0
   Params: []
-  OverrideAttenuation: 1
+  OverrideAttenuation: 0
   OverrideMinDistance: 1
-  OverrideMaxDistance: 10
+  OverrideMaxDistance: 20
+--- !u!135 &1407549361
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407549358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1435547052
 MonoBehaviour:
   m_ObjectHideFlags: 0
