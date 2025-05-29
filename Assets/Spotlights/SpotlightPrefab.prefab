@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 3677634225942127584}
   - component: {fileID: 3677634225942127588}
   - component: {fileID: 3677634225942127591}
-  - component: {fileID: 3677634225942127590}
   - component: {fileID: 3677634225942127585}
   m_Layer: 0
   m_Name: Spotting
@@ -117,19 +116,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3677634225942127590
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3677634225942127587}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3677634225942127585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e805f90223aaf474f9a42d6835026c04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lightName: 
   stageLight: {fileID: 1695244314900219993}
   active: 1
 --- !u!1 &8043140022458434799

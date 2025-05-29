@@ -6,6 +6,7 @@ using Yarn.Unity;
 public class SpotlightManager : MonoBehaviour
 {
     [SerializeField] DialogueRunner dialogueRunner;
+    public Transform playerTransform;
     public Dictionary<string, Spotlight> spotlights = new Dictionary<string, Spotlight>();
 
     private void Start()

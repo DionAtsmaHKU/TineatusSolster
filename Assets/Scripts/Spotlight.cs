@@ -17,16 +17,31 @@ public class Spotlight : MonoBehaviour
         spotlightManager.spotlights.Add(lightName, this);
     }
 
-    private void OnBecameVisible()
+    private void Update()
     {
-        if (!active)
+        if (Vector3.Distance(transform.position, spotlightManager.playerTransform.position) < 15f)
+        {
+            ActivateSpotlight();
+        }
+        else
+        {
+            DeactivateSpotlight();
+        }
+    }
+
+    private void ActivateSpotlight()
+    {
+        if (!active && stageLight.enabled == true)
             return;
 
         stageLight.enabled = true;
     }
 
-    private void OnBecameInvisible()
+    private void DeactivateSpotlight()
     {
+        if (stageLight.enabled == false)
+            return;
+
         stageLight.enabled = false;
     }
 }

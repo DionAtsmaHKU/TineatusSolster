@@ -1035,6 +1035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueRunner: {fileID: 2074839901}
+  playerTransform: {fileID: 1073508770}
 --- !u!4 &221656100
 Transform:
   m_ObjectHideFlags: 0
@@ -5613,7 +5614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6c07119435c2447a30c9bdd65abd74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueRunner: {fileID: 0}
+  dialogueRunner: {fileID: 2074839901}
   timerUI: {fileID: 705380243}
   playerTransform: {fileID: 1073508770}
   timeMultiplier: 2
