@@ -10,6 +10,8 @@ public class StarProximity : MonoBehaviour
     private StudioEventEmitter emitter;
     private EventInstance theaterMusic;
     private float starProximity;
+    [Range(0.01f, 0.05f)]
+    [SerializeField] float multiplier;
 
     private void Start()
     {
@@ -20,7 +22,7 @@ public class StarProximity : MonoBehaviour
     private void Update()
     {
         float distance = Vector3.Distance(transform.position, playerTransform.position);
-        starProximity = 1f - 0.01f * distance;
+        starProximity = 1f - multiplier * distance;
         theaterMusic.setParameterByName("star_proximity", starProximity);
     }
 }
