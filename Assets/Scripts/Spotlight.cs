@@ -43,7 +43,7 @@ public class Spotlight : MonoBehaviour
 
     private void DeactivateSpotlight()
     {
-        if (stageLight.enabled == false)
+        if (active || stageLight.enabled == false)
             return;
 
         stageLight.enabled = false;

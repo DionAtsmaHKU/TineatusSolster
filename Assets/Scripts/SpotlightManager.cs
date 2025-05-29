@@ -24,14 +24,22 @@ public class SpotlightManager : MonoBehaviour
         {
             if (k.Contains(key))
             {
-                spotlights[k].active = false;
                 spotlights[k].stageLight.enabled = false;
+                spotlights[k].active = false;
             }
         }
     }
 
     private void ReactivateSpotlight(string key)
     {
-        spotlights[key].active = true;
+        inactiveSpotlights.Remove(key);
+
+        foreach (string k in spotlights.Keys)
+        {
+            if (k.Contains(key))
+            {
+                spotlights[k].active = true;
+            }
+        }
     }
 }
