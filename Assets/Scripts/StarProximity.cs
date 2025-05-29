@@ -13,6 +13,7 @@ public class StarProximity : MonoBehaviour
 
     private void Start()
     {
+        emitter = GetComponent<StudioEventEmitter>();
         theaterMusic = emitter.EventInstance;
     }
 
