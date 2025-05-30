@@ -1,3 +1,5 @@
+using FMOD.Studio;
+using FMODUnity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,9 +19,12 @@ public class Knowledge : MonoBehaviour
 
     // Sound Stuff
     private string newInfoPath = "event:/ui/new_info_noted";
+    private EventInstance newInfoEvent;
 
     private void Awake()
     {
+        newInfoEvent = RuntimeManager.CreateInstance(newInfoPath);
+
         DoesHeKnowFunc += DoesHeKnow;
         knowledgeList = knowledgeDict.ToDictionary();
         foreach (var k in knowledgeList)
@@ -53,7 +58,8 @@ public class Knowledge : MonoBehaviour
         if (knowledgeBools[key])
             return;
 
-        // Play diegetic notebook writing sfx, as if Sasha is taking notes
+        Debug.Log("New info event");
+        newInfoEvent.start();
         knowledgeBools[key] = true;
         knowledgeList[key].SetActive(true);
     }

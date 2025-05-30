@@ -21,11 +21,11 @@ public class DialogueAudio : MonoBehaviour
 
     public void PlayContinue()
     {
-        continueEv.start();
+        //continueEv.start();
     }
 
     public void PlayNext()
     {
-        newTextBoxEv.start();
+        //newTextBoxEv.start();
     }
 }
