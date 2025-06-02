@@ -55,7 +55,8 @@ public class Knowledge : MonoBehaviour
 
     private void Learn(string key)
     {
-        if (knowledgeBools[key])
+        Debug.Log("LEARN" + key);
+        if (knowledgeBools.ContainsKey(key) && knowledgeBools[key] == true)
             return;
 
         Debug.Log("New info event");

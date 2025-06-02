@@ -14,11 +14,12 @@ public class Spotlight : MonoBehaviour
     private void OnEnable()
     {
         spotlightManager = FindObjectOfType<SpotlightManager>();
-        spotlightManager.spotlights.Add(lightName, this);
+
+        if (!spotlightManager.spotlights.ContainsKey(lightName)) 
+            spotlightManager.spotlights.Add(lightName, this);
+
         if (spotlightManager.inactiveSpotlights.Contains(RemoveLastLetter(lightName)))
-        {
             active = false;
-        }
     }
 
     private void Update()

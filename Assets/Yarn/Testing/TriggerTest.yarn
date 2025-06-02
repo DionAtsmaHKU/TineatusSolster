@@ -8,7 +8,8 @@ Conquest: Yo you just triggered this dialogue
 -> HELL YEAH!!!
     Sasha: HELL YEAH!!!
 
-<<if DoesHeKnow("InfoA") == true>>
+<< if DoesHeKnow("InfoA") == true >>
     i mean HEEEEEEEEEEEELLLLLLLLL YEAHHHHHHHH
+    << Loop >>
 << endif >>
 ===

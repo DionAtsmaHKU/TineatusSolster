@@ -5605,6 +5605,8 @@ MonoBehaviour:
     minutes: 15
     timeInMinutes: 0
     triggered: 0
+  originalObjects:
+  - {fileID: 281094444}
 --- !u!4 &1725120022
 Transform:
   m_ObjectHideFlags: 0

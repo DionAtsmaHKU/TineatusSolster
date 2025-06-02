@@ -1,12 +1,15 @@
 using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using Yarn.Unity;
+using System;
 
 public class VariableManager : MonoBehaviour
 {
     public static VariableManager Instance { get; private set; }
     private InMemoryVariableStorage variables;
     [SerializeField] DialogueRunner runner;
+
+    public static event Action onLoop;
 
     private void Awake()
     {
@@ -20,14 +23,18 @@ public class VariableManager : MonoBehaviour
         {
             Instance = this;
         }
-
-        //runner.AddCommandHandler<string, float>("ChangeFloat", ChangeYarnFloat);
+        runner.AddCommandHandler("Loop", Loop);
     }
 
     // Start is called before the first frame update
     void Start()
     {
         variables = FindObjectOfType<InMemoryVariableStorage>();
+    }
+
+    public void Loop()
+    {
+        onLoop?.Invoke();
     }
 
     public void SetYarnFloat(string var, float value)
@@ -39,15 +46,7 @@ public class VariableManager : MonoBehaviour
     {
         variables.SetValue(var, value);
     }
-    /*
-    public void ChangeYarnFloat(string var, float value)
-    {
-        float oldValue = GetYarnFloat(var);
-        float newValue = oldValue + value;
-        variables.SetValue(var, newValue);
-        Debug.Log("Set variable " + var + " from " + oldValue + " to " + newValue);
-    }
-    */
+
     public float GetYarnFloat(string var)
     {
         float result;

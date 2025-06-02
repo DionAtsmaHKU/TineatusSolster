@@ -10,6 +10,16 @@ public class SpotlightManager : MonoBehaviour
     public Dictionary<string, Spotlight> spotlights = new Dictionary<string, Spotlight>();
     public List<string> inactiveSpotlights = new List<string>();
 
+    private void Awake()
+    {
+        VariableManager.onLoop += ResetSpotlights;
+    }
+
+    private void OnDestroy()
+    {
+        VariableManager.onLoop -= ResetSpotlights;
+    }
+
     private void Start()
     {
         dialogueRunner.AddCommandHandler<string>("LightOff", DeactivateSpotlight);
@@ -41,5 +51,14 @@ public class SpotlightManager : MonoBehaviour
                 spotlights[k].active = true;
             }
         }
+    }
+
+    public void ResetSpotlights()
+    {
+        foreach (Spotlight spotlight in spotlights.Values)
+        {
+            spotlight.active = true;
+        }
+        inactiveSpotlights.Clear();
     }
 }

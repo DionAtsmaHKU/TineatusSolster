@@ -14,6 +14,7 @@ public class Timer : MonoBehaviour
     public float timeMultiplier = 2f;
 	public float timeToAdd = 0;
     public List<TimedEvent> events = new List<TimedEvent>();
+    public List<GameObject> originalObjects = new List<GameObject>();
     
     private List<string> DontActivate = new List<string>();
     private float range = 20f;
@@ -22,6 +23,16 @@ public class Timer : MonoBehaviour
     private int timeInMinutes;
     private int hours = 9;
 	private bool paused = false;
+
+    private void Awake()
+    {
+        VariableManager.onLoop += Reset;
+    }
+
+    private void OnDestroy()
+    {
+        VariableManager.onLoop -= Reset;
+    }
 
     private void Start()
     {
@@ -118,6 +129,31 @@ public class Timer : MonoBehaviour
 		timer += timeToAdd;
 		paused = false;
 	}
+
+    public void Reset()
+    {
+        timer = 0;
+        hours = 9;
+        totalTimer = hours * 60;
+
+        foreach (TimedEvent e in events)
+        {
+            foreach (GameObject obj in e.objToActivate)
+            {
+                obj.SetActive(false);
+            }
+            foreach (GameObject obj in e.objToDeactivate)
+            {
+                obj.SetActive(false);
+            }
+            e.triggered = false;
+        }
+
+        foreach (GameObject obj in originalObjects)
+        {
+            obj.SetActive(true);
+        }
+    }
 }
 
 [Serializable]
