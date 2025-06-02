@@ -1,0 +1,252 @@
+﻿title: SecondLoopWisteria1
+tags:
+---
+
+<< declare $FirstWisteriaOptionsPicked = 0 >>
+<< declare $SecondWisteriaOptionsPicked = 0 >>
+
+<< if $KnowWisteria == true && $ThisLoopMetWisteria== false >> //Met her in a previous loop 
+	Before you is a woman you have met before, if briefly, during the “parade”.
+    Dr. Wisteria looks exactly how she did in your previous encounter. 
+    Same outfit, same name tag, same small bloodstains at the bottom of the labcoat. 
+    Her expression has not changed much either. She looks very unamused, even annoyed at your entrance. 
+<< if $ArtMajor == true >>
+    Other than those bloodstains, her appearance is immaculate and well prepared.
+    Half-black, half-soft-red lipstick. Brushed and neat hair. Every button on her coat is fastened. She has created her image very purposely.
+<< endif >>
+Wisteria: Oh good. I was worried nobody would get maimed on the day of the Parade. 
+Wisteria: So, what is wrong with you? 
+<< elseif $ThisLoopMetWisteria == true >> // Already talked to her this loop 
+Dr. Wisteria hasn't moved from where you left her. 
+She is still reading some documents on the table, and she does not bother stopping when you approach her.
+-> Dr. Wisteria?
+	Wisteria: Did I not tell you to leave? Go away.
+You are not going to get any more conversation from her right now.
+// END CONVERSATION
+<< else >> //Haven’t met her at all yet
+	You see a woman dressed in a white lab coat, reading some documents on the table.
+    << if $ArtMajor == true >>
+	    Half-black, half-soft-red lipstick. Brushed and neat hair. Every button on her coat is fastened. She has created her image very purposely.
+    << endif >>
+The id-card on her lapel says “Dr. Wisteria - General Practitioner - Star Hospital”. 
+There are some dark red stains at the bottom of her coat that imply she may do some more practical medicine than just consulting.
+She turns towards you as she notices you enter, and looks you up-and-down.
+Wisteria: Oh good. I was worried nobody would get maimed on the day of the Parade. 
+Wisteria: So, what is wrong with you?
+<< set $ThisLoopMetWisteria = true >>
+<< set $KnowWisteria = true >>
+<< endif >> 
+
+-> I have experienced a hallucination of living through this entire day until the world ended, then going back in time to the start of it.
+    << set $FirstWisteriaOptionsPicked = 0 >>
+	Wisteria: Yeah, I’ve had dreams like that before.
+	Wisteria: You sound pretty distressed by it though. I’ll take a look.
+	You made the right choice to call it a hallucination, because otherwise she would not have listened to a single other thing you’d say afterwards.
+	Wisteria turns to a nearby filing cabinet, while murmuring.
+	Wisteria: Let’s see… Delusions, confusion, difficulty distinguishing reality from fiction…
+-> I just experienced the end of the world and then traveled back in time.
+    << set $FirstWisteriaOptionsPicked = 1 >>
+	Before she can even respond, you already regret your choice of wording.
+	Her stone-faced expression turns into a disgusted grimace.
+	Not only does she not believe you, but she might never take you seriously ever again after this.
+	Wisteria. Okay. I am going to give you the benefit of the doubt, and assume that you genuinely believe what you just said.
+	Wisteria turns to a nearby filing cabinet, while murmuring.
+	Wisteria: Let’s see… Delusions, confusion, difficulty distinguishing reality from fiction…
+-> I think there is something wrong with my brain.
+    << set $FirstWisteriaOptionsPicked = 2 >>
+	Wisteria: Yeah, I noticed.
+	Wisteria: Does your brain hurt you when you give comprehensive descriptions?
+	She doesn't sound angry or annoyed. Well, not anymore annoyed than she already seemed from seeing you enter her office.
+	Maybe she is used to people giving such vague descriptions of symptoms.
+        Wisteria turns to a nearby filing cabinet, while murmuring.
+        Wisteria: Let’s see… I’m thinking standard psychological evaluation…
+-> Fabian told me to come here. I am very confused and I’m not sure what is going on.
+    << set $FirstWisteriaOptionsPicked = 3 >>
+	Wisteria: How kind of him, offloading lost tourists to me.
+	Wisteria: I’m going to assume you mean you got some brain problems going on, because otherwise there is not much we can do here.
+	Wisteria: I can charge the consultation either way, so not my problem.
+	Wisteria turns to a nearby filing cabinet, while murmuring.
+	Wisteria: Let’s see… Confusion, difficulty distinguishing reality from fiction, Delusions maybe…
+
+Wisteria opens a drawer to reveal a stack of forms inside. 
+She takes one out, then pulls out a pen from her pocket and clicks it in one motion. 
+//<< set $ArtMajor = true >>
+Wisteria: First question, have you suffered any head trauma recently? 
+->Yes 
+    << set $SecondWisteriaOptionsPicked = 0 >>
+->No 
+    << set $SecondWisteriaOptionsPicked = 1 >>
+->What? 
+    Wisteria: It means, did you get hit on the head recently? 
+    Wisteria: Or as a child? That's the next question. You can answer that one in advance.
+    ->Yes 
+        << set $SecondWisteriaOptionsPicked = 0 >>
+    ->No 
+        << set $SecondWisteriaOptionsPicked = 1 >>
+
+She marks down your response on the form, then moves on to the next question without a pause.
+Wisteria: Second question: Do you have any psychological problems?
+Wisteria: That means disorders, mental illness, or just general personality defects.
+She is staring at you intensely as she says this. 
+
+<< if $ArtMajor == true >>
+-> Yes.
+	Wisteria: This wasn't a yes or no question. I meant if you could actually name what you have.
+	Wisteria: Whatever. I can take a guess at what you have.
+	She takes a moment to think while looking at you with narrowed eyes, then takes some notes on the form.
+	Is she always this unprofessional, or does she just specifically want you out of her office quickly right now?
+        << if $PsychMajor == true >>
+	        Judging by her impatient foot tapping, you suspect the latter. She does genuinely think that she has something better to be doing now, but you don’t discount the possibility that she just doesn't like you.
+        << endif >>
+-> No.
+	Wisteria: Good, less work to do. Or bad, if it means you have problems you are just now discovering. But that isn’t my problem.
+	She quickly takes another note on the form before continuing.
+	Is she always this unprofessional, or does she just specifically want you out of her office quickly right now?
+        << if $PsychMajor == true >>
+	        Judging by her impatient foot tapping, you suspect the latter. She does genuinely think that she has something better to be doing now, but you don’t discount the possibility that she just doesn't like you.
+        << endif >>
+-> I think so?
+	Wisteria: This wasn't a yes or no question. I meant if you could actually name what you have.
+	Wisteria: Though if it had been a yes or no question, that would still have been a terrible answer.
+	Wisteria: Whatever. I can take a guess at what you have.
+	She takes a moment to think while looking at you with narrowed eyes, then takes some notes on the form.
+	Is she always this unprofessional, or does she just specifically want you out of her office quickly right now?
+        << if $PsychMajor == true >>
+	        Judging by her impatient foot tapping, you suspect the latter. She does genuinely think that she has something better to be doing now, but you don’t discount the possibility that she just doesn't like you.
+        << endif >>
+-> I’m an artist, does that count?
+	She does not appreciate the joke.
+    Wisteria: No, it does not. But I'm marking down "Other/ Unidentified Mental Disorder” here.
+	She takes some more notes on the form. She really is writing something down, damn.
+	You can note down “No sense of humour” in your own notes for her too.
+<< else >>
+-> Yes.
+	Wisteria: This wasn't a yes or no question. I meant if you could actually name what you have.
+	Wisteria: Whatever. I can take a guess at what you have.
+	She takes a moment to think while looking at you with narrowed eyes, then takes some notes on the form.
+	Is she always this unprofessional, or does she just specifically want you out of her office quickly right now?
+        << if $PsychMajor == true >>
+	        Judging by her impatient foot tapping, you suspect the latter. She does genuinely think that she has something better to be doing now, but you don’t discount the possibility that she just doesn't like you.
+        << endif >>
+-> No.
+	Wisteria: Good, less work to do. Or bad, if it means you have problems you are just now discovering. But that isn’t my problem.
+	She quickly takes another note on the form before continuing.
+	Is she always this unprofessional, or does she just specifically want you out of her office quickly right now?
+        << if $PsychMajor == true >>
+	        Judging by her impatient foot tapping, you suspect the latter. She does genuinely think that she has something better to be doing now, but you don’t discount the possibility that she just doesn't like you.
+        << endif >>
+-> I think so?
+	Wisteria: This wasn't a yes or no question. I meant if you could actually name what you have.
+	Wisteria: Though if it had been a yes or no question, that would still have been a terrible answer.
+	Wisteria: Whatever. I can take a guess at what you have.
+	She takes a moment to think while looking at you with narrowed eyes, then takes some notes on the form.
+	Is she always this unprofessional, or does she just specifically want you out of her office quickly right now?
+        << if $PsychMajor == true >>
+	        Judging by her impatient foot tapping, you suspect the latter. She does genuinely think that she has something better to be doing now, but you don’t discount the possibility that she just doesn't like you.
+        << endif >>
+<< endif >>
+Wisteria: Okay, do you have a history of delusions, hallucinations or other similar symptoms?
+Wisteria: Actually, hold on. This form is going to take way too long like this.
+She hands you the form and a pen as she says this. Not her pen, but a different cheaper-looking one from her desk.
+Wisteria: You can fill yes or no on all the items on this list, then give me the form back.
+The first half of the form is filled out in a neat clinical handwriting. 
+“Patient name” is empty. You never did tell her your name, huh. It might be a little awkward to bring that up now.
+//Depending on your previous answers:
+<< if $FirstLoopWisteriaOptionsPicked == 0 >>
+    The first section says ”Symptoms: Hallucinations, confusion, disorientation, potential dyschronometria.”
+<< elseif $FirstLoopWisteriaOptionsPicked == 1 >>
+    The first section says ”Symptoms: Vivid imagination”, followed by a little drawing of a stick figure stabbing itself in the head.
+<< elseif $FirstLoopWisteriaOptionsPicked == 2 >>
+    The first section says ”Symptoms: Unclear. Possible disorientation, confusion.”
+<< elseif $FirstLoopWisteriaOptionsPicked == 3 >>
+    The first section says ”Symptoms: Disorientation, confusion, general discomfort.”
+<< endif >>
+
+<< if $SecondLoopWisteriaOptionsPicked == 0 >>
+    It is followed by ”Recent head trauma, potential concussion”
+<< elseif $SecondLoopWisteriaOptionsPicked == 1 >>
+    It is followed by “No recent head trauma. No physical signs of injury.”
+<< endif >>
+
+<< if $ArtMajor == true >>
+    She also wrote “Signs of unspecified developmental disorder, potentially Adult Autism. Not enough symptoms for diagnosis test. Brain damage cannot be sufficiently ruled out.” 
+    She really did write “Other/ Unidentified Mental Disorder” too. Ouch.
+<< else >>
+    She also wrote “Signs of unspecified developmental disorder, potentially Adult Autism. Not enough symptoms for diagnosis test. Brain damage cannot be sufficiently ruled out.”
+<< endif >>
+
+Wisteria: Don’t read the rest of the form, that’s not for you. Just fill in the list.
+There are a lot of items on this list. “History of substance abuse”, “History of familial abuse”, “History of abandonment”...
+You feel your stomach shrink a little the further you read. Not pleasant topics to think about. Suddenly, you want to be done with this form quickly as much as she does.
+-> Fill in Yes on everything
+    Wisteria eyes you with a furrowed brow as you hastily fill out the rest of the entire form. Her brow furrows further when she takes the form and pen from you.
+    Wisteria: You have had a real shitty life, huh? 
+    Wisteria: Or you didn’t read any of this. 
+    Wisteria: Considering you marked that you’ve been divorced with children, I think I can count all of this as “prefer not to say”.
+-> Fill in No on everything
+    Wisteria eyes you with a furrowed brow as you hastily fill out the rest of the entire form. Her brow furrows further when she takes the form and pen from you.
+    Wisteria: Really? Nothing? What a perfect little life you’ve had.
+    She sounds incredulous, but you suspect she does not care if you were dishonest as long as that dishonesty makes this evaluation go faster.
+She makes some final notes at the bottom of the form, before unclicking her pen back in her pocket, and leaving the form on her table.
+Wisteria: Alright, that’s a wrap. I’ve got good news for you: You are discharged.
+Wisteria: You can leave now. Close the door.
+She turns back to her table without waiting for a reaction.
+-> Wait, that's it?
+    Wisteria: What exactly were you expecting? Nothing's hurting you, threatening you, or making you bleed. 
+    Wisteria: Be thankful I indulged you enough to grab this form. I'm not a psychologist, this isn't my job. 
+    Wisteria: If the results indicated you could be unstable or a danger to others I can give you a referral for one. 
+    Wisteria: Unfortunately for you, you seem pretty normal to me. You won't get to go to the loony bin. Bummer.
+    << if $PsychMajor == true >>
+        In your own opinion as a psychology graduate, you’re quite sure that you haven’t gone insane too.
+    << endif >>
+        -> I am unstable and dangerous, I swear! 
+            Wisteria: You're a great actor, I can almost believe it. 
+            Nothing about her expression or tone has changed. 
+            Wisteria: If you're trying to get me to prescribe you drugs, you're barking up the wrong tree. As I said, not a psychologist. I can’t give you any of the fun ones.
+            << if $PsychMajor == true >>
+                She is wrong. Psychologists cannot prescribe medication. She means a psychiatrist. She certainly knows the distinction, and she certainly thinks that you don’t.
+            << elseif $ArtMajor == true >>
+                What about morphine? She does surgery right? She definitely must have painkillers. There are many, many ‘fun’ drugs a doctor like her should have access to.
+            << elseif $TechMajor == true >>
+                Chemistry is not your expertise, but you don’t believe there is a drug that can negate the effects of ‘time travel’.
+            << endif >>
+-> What are the results?
+    Wisteria: Nothing. Whatever you think happened to you doesn’t seem to have had any lingering effects.
+	Wisteria: I can speculate on some potential causes, but without any more information or symptoms I can’t diagnose you with anything.
+	Wisteria: I indulged you and your story, but if I actually go and I diagnose anything based on it, that would be close to medical malpractice.
+	Wisteria: So you can leave and stop wasting the time of Solster’s most qualified medical practitioner now.
+	Wisteria: I’m not a psychologist anyways, so unless you have actual physical brain worms in your head, I can’t do much for you.
+    << if $PsychMajor == true >>
+        You on the other hand are a psychologist. You’re quite sure that you haven’t gone insane, or as sure as someone could possibly be.
+        Whatever happened to you was not in your mind, at least not in the form of a mental illness. Even though she is being facetious, brain worms might not be that far-fetched.
+    << endif >>
+-> What should I do now?
+	Wisteria: I just told you. Do you want me to test your hearing too?
+	Wisteria: That was a rhetorical question. I don’t want to test your hearing.
+	Wisteria: There isn’t anything for you to do. Isolated incidents happen. Whatever you think happened to you doesn’t seem to have had any lingering effects.
+	Wisteria: You should be happy. You can just go live your life now, far away from me. Not everyone is so lucky.
+    << if $ArtMajor == true >>
+	    She subtly closes her fist as she says this, gripping the table. There is a real anger behind her sarcasm, but it has nothing to do with you.
+    << endif >>
+	Wisteria: And if you want more practical advice, go find a psychologist. And maybe another doctor to write you a referral for it.
+    << if $PsychMajor == true >>
+	    You already have a psychologist at hand. Namely, yourself.
+	    You’re quite sure that you haven’t gone insane, or as sure as someone could possibly be. Whatever happened to you was not in your brain or imagination.
+    << endif >>
+
+-> Well, where can I find a psychologist then?
+    Wisteria: Well if you are quick, you can catch another train out of Solster in time to go looking for one in the nearest city.
+    << if $PsychMajor == true >>
+	    In other words, you are currently the only psychologist in all of Solster.
+    << endif >>
+-> Is there anyone else I can talk to?
+    Wisteria: Yes, anybody else but me.
+	By her increasingly impatient fidgeting, as soon as possible ideally.
+
+Wisteria: If you want a second opinion, go bother Deniz. I’m sure they’ll be delighted to hear about your dreams that felt “so real”.
+Wisteria: Now, leave.
+Her tone is intimidating and succinct. No more sarcastic retorts, just pure finality.
+You know before even trying that she is not going to tell you who Deniz is or where to find them.
+It’s time to go before she starts pushing you out the door.
+
+===

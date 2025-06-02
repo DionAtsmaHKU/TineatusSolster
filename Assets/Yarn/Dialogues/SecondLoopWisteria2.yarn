@@ -1,0 +1,57 @@
+﻿title: SecondLoopWisteria2
+tags:
+---
+
+???: BZZTTTTTT…
+As you head towards the hall outside, you are stopped by a strange vibration coming from your pockets.
+Immediately afterwards, a hellish cacophony of loud, abrasive static erupts from it.
+You cover your ears instinctively. The constant barrage of screeching, violent noise makes it hard to think.
+You put one hand in your pocket and take out the culprit: Your radio.
+You bought this while outside of Solster, and brought it here to keep informed with the outside world still. It has never done anything like this before.
+You take the radio closer to you, against your ears’ pleads.
+-> Hello?
+    No response. Not at first.
+	As you fiddle with the dial and try to tune the radio, you can barely hear a voice coming through amongst all the static.
+	???: ….H..P…HEL..ME….
+	The voice sounds in distress. The abrasive static heightens it, making it sounds almost like someone being tortured.
+	Something feels very wrong about this. This isn’t regular radio static from being attuned to the wrong channel. It is as if something is directly interfering with the radio.
+        << if $TechMajor == true >>
+	        The radio itself shows no signs of wear, tear, or malfunction. The problem is completely external.
+        << endif >>
+    Wisteria: What in the mother is that screaming noise?
+	You turn towards Wisteria. She is covering her ears and closing her eyes as you turn to her.
+        << if $PsychMajor == true >>
+	        She is sensitive to loud sounds. Maybe she should get tested for Adult Autism herself.
+        << elseif $TechMajor == true >>
+	        She seems to be sensitive to loud sounds. An exploitable weakness, if you really wanted to cause her discomfort.
+        << endif >>
+-> (Turn back to Wisteria) Can you hear this too?
+    Wisteria is covering her ears and closing her eyes as you turn to her.
+    << if $PsychMajor == true >>
+	    She is sensitive to loud sounds. Maybe she should get tested for Adult Autism herself.
+    << elseif $TechMajor == true >>
+	    She seems to be sensitive to loud sounds. An exploitable weakness, if you really wanted to cause her discomfort.
+    << endif >>
+	Wisteria: What in the mother is that screaming noise?
+	You take that as a yes. It is reassuring at least to know for sure this isn’t a hallucination this time.
+	She is right, though. There is a voice screaming in the static, though hard to make out.
+	???: ….H..P…HEL..ME….
+	The voice sounds in distress. The abrasive static heightens it, making it sounds almost like someone being tortured.
+	Something feels very wrong about this. This isn’t regular radio static from being attuned to the wrong channel. It is as if something is directly interfering with the radio.
+    << if $TechMajor == true >>
+	    The radio itself shows no signs of wear, tear, or malfunction. The problem is completely external.
+    << endif >>
+
+        -> My radio is making some crazy static noises on its own.
+            Wisteria: Yeah, I can hear that, you moron. Take that thing out of my office!
+	        Wisteria: Just go to Nauka Square or something, I’m sure they can figure out what’s wrong with it there.
+        -> Do you know what might be up with my radio?
+            Wisteria: Do I look like a mechanic to you? Drag me down if I know.
+	        Wisteria: Go to Nauka Square. I’m sure they’ll know what to do with it.
+	        Wisteria: Now take that screeching thing out of my office!
+Nauka Square. You remember Fabian mentioned it briefly, back in… Well in your “first” first day back in Solster.
+You had never heard of it in your youth. Is it a new place? Or was it just not that relevant to you back then?
+Fabian mentioned that there was a scientist there. Maybe going to Nauka Square could help you with figuring out what in the world happened with your ‘time travel’.
+You don’t have much better leads right now, unless you want to hunt down who “Deniz” is. Nauka Square it is.
+
+===
