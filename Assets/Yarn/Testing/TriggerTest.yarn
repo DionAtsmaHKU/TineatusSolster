@@ -10,6 +10,5 @@ Conquest: Yo you just triggered this dialogue
 
 << if DoesHeKnow("InfoA") == true >>
     i mean HEEEEEEEEEEEELLLLLLLLL YEAHHHHHHHH
-    << Loop >>
 << endif >>
 ===

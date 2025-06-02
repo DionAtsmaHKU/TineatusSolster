@@ -1,7 +1,9 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using Yarn.Unity;
 using static UnityEngine.Rendering.DebugUI;
@@ -13,6 +15,8 @@ public class Timer : MonoBehaviour
     [SerializeField] Transform playerTransform;
     public float timeMultiplier = 2f;
 	public float timeToAdd = 0;
+    public TimeStamp startTime;
+    public TimeStamp endTime;
     public List<TimedEvent> events = new List<TimedEvent>();
     public List<GameObject> originalObjects = new List<GameObject>();
     
@@ -21,7 +25,7 @@ public class Timer : MonoBehaviour
     private float timer = 0;
     private float totalTimer = 0;
     private int timeInMinutes;
-    private int hours = 9;
+    private int hours;
 	private bool paused = false;
 
     private void Awake()
@@ -38,9 +42,12 @@ public class Timer : MonoBehaviour
     {
         foreach (TimedEvent ev in events)
         {
-            ev.ToMinutes();
+            ev.time.ToMinutes();
         }
-        totalTimer = hours * 60;
+        endTime.ToMinutes();
+        startTime.ToMinutes();
+        SetTime();
+        SetText();
 		dialogueRunner.onDialogueStart.AddListener(Pause);
 		dialogueRunner.onDialogueComplete.AddListener(UnPause);
     }
@@ -67,6 +74,23 @@ public class Timer : MonoBehaviour
         }
         timeInMinutes = (int)timer;
 
+        SetText();
+
+        if (totalTimer > endTime.timeInMinutes) 
+        {
+            LoopCutscene();
+        }
+    }
+
+    void SetTime()
+    {
+        hours = startTime.hours;
+        timer = startTime.minutes;
+        totalTimer = startTime.hours * 60 + startTime.minutes;
+    }
+
+    void SetText()
+    {
         if (timeInMinutes < 10)
         {
             timerUI.text = "Time: " + hours.ToString() + ":0" + timeInMinutes.ToString();
@@ -81,7 +105,7 @@ public class Timer : MonoBehaviour
     {
         foreach(TimedEvent ev in events)
         {
-            if (totalTimer > ev.timeInMinutes && !ev.triggered)
+            if (totalTimer > ev.time.timeInMinutes && !ev.triggered)
             {
                 ActivateEvent(ev);
             }
@@ -132,9 +156,8 @@ public class Timer : MonoBehaviour
 
     public void Reset()
     {
-        timer = 0;
-        hours = 9;
-        totalTimer = hours * 60;
+        SetTime();
+        SetText();
 
         foreach (TimedEvent e in events)
         {
@@ -149,10 +172,42 @@ public class Timer : MonoBehaviour
             e.triggered = false;
         }
 
+        DontActivate.Clear();
         foreach (GameObject obj in originalObjects)
         {
             obj.SetActive(true);
         }
+    }
+
+    public void LoopCutscene()
+    {
+        StartCoroutine(LoopCutsceneRoutine());
+    }
+
+    IEnumerator LoopCutsceneRoutine()
+    {
+        paused = true; // Pause timer
+        // Fade to black here
+        yield return new WaitForSeconds(2f);
+        // Cutscene here 
+        yield return new WaitForSeconds(5f);
+        VariableManager.Instance.Loop(); // Reset PlayerPos, NPC's, Timer, Events
+        dialogueRunner.StartDialogue("Start");
+    }
+}
+
+[Serializable]
+public class TimeStamp
+{
+    public int hours;
+    public int minutes;
+
+    [HideInInspector]
+    public float timeInMinutes;
+
+    public void ToMinutes()
+    {
+        timeInMinutes = hours * 60 + minutes;
     }
 }
 
@@ -161,17 +216,8 @@ public class TimedEvent
 {
     public List<GameObject> objToDeactivate;
     public List<GameObject> objToActivate;
-    public int hours;
-    public int minutes;
-
-    [HideInInspector]
-    public float timeInMinutes;
+    public TimeStamp time;
 
     [HideInInspector]
     public bool triggered;
-
-    public void ToMinutes()
-    {
-        timeInMinutes = hours * 60 + minutes;
-    }
 }

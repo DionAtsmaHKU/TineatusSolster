@@ -23,7 +23,6 @@ public class VariableManager : MonoBehaviour
         {
             Instance = this;
         }
-        runner.AddCommandHandler("Loop", Loop);
     }
 
     // Start is called before the first frame update
