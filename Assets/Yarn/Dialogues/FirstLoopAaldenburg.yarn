@@ -9,7 +9,7 @@ You see a woman before you that stands out.
 Her lab coat, her tidied hair bun, and the notebook she is frantically writing in would all place her in a laboratorium, rather than a parade.
 An id-card on her lapel identifies her as “Dr. Aaldenburg - Naturalist Physicist - Nauka Square”. 
 She makes no sign of noticing your presence. Her eyes are laser-focused on her notebook, occasionally looking up towards the lake.
-
+<< set $KnowAaldenburg = true >>
 << jump FirstLoopAaldenburgTree1 >>
 ===
 

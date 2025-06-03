@@ -8,6 +8,7 @@ You see a woman dressed in a white lab coat, standing around with her hands in h
 The id-card on her lapel says “Dr. Wisteria - General Practitioner - Star Hospital”. 
 There are some dark red stains at the bottom of her coat that imply she may do some more practical medicine than just consulting.
 She gives you a quick look up and down as you approach, before resuming looking around at nothing in particular.
+<< set $KnowWisteria = true >>
 << jump FirstLoopWisteriaTree1 >>
 ===
 

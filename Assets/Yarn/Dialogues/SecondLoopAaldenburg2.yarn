@@ -5,6 +5,9 @@ tags:
 << declare $AaldenburgLoop2Tree1Identity = false >>
 << declare $AaldenburgLoop2Tree1Time = false >>
 
+<< declare $RadioQuestStarted = false >>
+<< declare $RadioQuestComplete = false >>
+
 Aaldenburg has not stopped tinkering since you last saw her. Does she ever take a break?
 The sound of the door opening gets her attention, and she turns to you to greet you.
 Aaldenburg: Sasha, my new assistant returns. Have you completed your task?
@@ -35,7 +38,8 @@ You try not to show it, but being called her assistant is quite exciting.
             Aaldenburg: Hold on, hold on. Don’t be so fast.
             She moves on to her own notebook, and starts noting down the numbers as you read them out.
             It takes a couple minutes to get through them all. You are unsure if she really needs all these decimals, but better to play it safe and be precise.
-        
+
+<< set $RadioQuestComplete = true >>        
 Aaldenburg: Interesting… This might confirm my suspicions.
 She moves on to the map of Solster hanging on a nearby wall, and starts marking down the coordinates that you gave her.
 Wasn’t the reason why she asked you to use the GPS because using a map would be “too imprecise?” Did she just not trust you to use the map correctly?

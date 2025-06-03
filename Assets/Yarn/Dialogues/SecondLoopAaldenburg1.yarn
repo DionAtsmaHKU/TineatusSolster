@@ -2,6 +2,9 @@
 tags:
 ---
 
+<< declare $KnowAaldenburg = false >>
+<< declare $ThisLoopMetAaldenburg = false >>
+
 // plays when first talking to Aaldenburg, when getting the radio quest
 
 There is not an idle moment for the woman in the scorched lab coat you see before you. 
@@ -20,9 +23,13 @@ She is robotic, following a program of stimuli and response, a set of rules of h
 << endif >>
 You stand still just outside the range of her work area, waiting for her to be done and to acknowledge your presence. 
 After a few minutes, the flaws in this hypothesis become clear.
+<< if $ThisLoopMetWisteria == false >>
+    << jump SecondLoopAaldenburgQuit >>
+<< endif >>
+<< set $ThisLoopMetAaldenburg = true >>
 
 //If the player knows her name from Loop 1
--> “Excuse me, Dr. Aaldenburg?”
+-> “Excuse me, Dr. Aaldenburg?” << if $KnowAaldenburg == true >>
     There is no sign that she has heard you, for a full minute afterwards.
 	Eventually however, she slowly comes to a stop, after finishing a few more tasks and clicking her pen for a last time.
 	Aaldenburg: What is the matter?
@@ -232,6 +239,7 @@ Aaldenburg: You are going to do some field work. Take this GPS, and go into the 
 	<< endif >>
 	
 	For now, it is time to leave this lab, and go out into Solster.
+    << set $RadioQuestStarted = true >>
 
 
 ===

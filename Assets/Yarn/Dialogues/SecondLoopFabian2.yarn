@@ -1,0 +1,134 @@
+﻿title: SecondLoopFabian2
+tags:
+---
+Fabian raises his hand in greeting and smiles upon seeing you. 
+Fabian: Hello again, Sasha. How is your first day back in Solster going?
+<< if $ThisLoopMetWisteria == true >>
+    Fabian: I hope you are feeling a little better now than you were back when you came off the train.
+<< endif >>
+<< jump SecondLoopFabian2Tree >>
+===
+
+title: SecondLoopFabian2Tree
+tags:
+---
+-> “I’m doing a little better than earlier.” << if $ThisLoopMetWisteria == true >>
+        Fabian seems relieved to hear that. That is good. A worried Fabian is a Fabian that gets in your way. And there is no reason to give the man more stress today.
+	    Fabian: Lucky you! I hope that continues that way, so you’ll be feeling fully good for the parade this evening.
+	    Fabian: If I can do anything else to help you on your first day back in Solster, I’m all ears! 
+        Fabian: And hands, and a mouth too. Whatever the nature of the help you need is I am here, yes.
+-> “Don’t you have somewhere to be?” << if $ThisLoopMetWisteria == true >>
+    Fabian: Why, are you trying to get rid of me? Ha, I’m just pulling your leg.
+	A quite optimistic assumption that you were joking as well, given how shortly you two have ‘known’ each other from his perspective.
+	Fabian: I will be at the parade this evening, taking part in the ceremony. You might have guessed it, but I will be depositing Alfonz’s urn on the lake.
+	Fabian: He wanted me to do it, on his will. It was a rather unexpected honour… But I will be up to the task I am sure.
+	You almost forgot about Alfonz, with the commotion of the world’s end. But nothing could really truly make you forget that.
+	You have successfully compartmentalized this for now. Change the topic. You don’t want to be unburying that right now, do you?
+-> “I need your help with something.”
+    Fabian: Oh, ask away! Whatever it is, I will do my best to aid.
+	<< jump FabianAskingHelp >>
+-> “I wanted to ask you about someone.”
+    Fabian: You’re looking for a little gossip? Well, who better to ask than the vicar, eh?
+	He chuckles lightly at his own joke. His providence from outside Solster shows, because you don’t understand the joke at all, and you suspect no other Solsterian would either.
+	<< jump FabianAskingPeople >>
+-> “I need to go now.”
+    Fabian: Oh, alright. It was a pleasure to talk to you again, Sasha.
+	He caps off his goodbye with his typical smile.
+===
+
+
+title: FabianAskingHelp
+tags:
+---
+-> “Where is Star hospital? I can’t quite find it.” << if $ThisLoopMetWisteria == false >>
+    Fabian: It’s not too far from here. It is at the entrance of the Earth district, south-East from the train station.
+	Fabian: Do you have a map of Solster? Well, you can find the way without it I’m sure. The building is hard to miss.
+	Fabian: I hope you can find it quickly. I would walk with you to it, but I am afraid I still need to handle some preparations for the parade.
+	Fabian: I just hope they haven’t cut off the road yet for the parade. If so, you might just have to find the good doctor wherever she is around there.
+    << jump FabianAskingHelp >>
+-> “Do you know where ‘Nauka Square’ is? << if $ThisLoopMetWisteria == true && $ThisLoopMetAaldenburg == false >>
+    Fabian: Nauka Square? That’s south-east from here, same direction as the Star, in Earth district.
+	Fabian: Once you see the big gold antenna, you’ll know you’re there. It is hard to miss, unfortunately.
+	He cuts himself quickly at the end, as if he slipped up. Did he accidentally let an opinion out he didn’t want to?
+	Fabian: I’m not sure if it is open to the public. It’s all scientists there, doing their business. They won’t shoot you for trying though, so don’t feel too worried about going there.
+    << jump FabianAskingHelp >>
+-> “Dr. Aaldenburg sent me to find electromagnetic interferences on my radio. Do you have any idea where I could find those?” << if $ThisLoopMetWisteria == true && $ThisLoopMetAaldenburg == true >>
+    Fabian: Dr… who? What? Electromagnetic interference?
+	This is the most confused you have seen Fabian from anything you have told him today, which is quite saying something.
+	Fabian: Sorry Sasha, but I can’t even begin to understand what you’re asking me. Sounds like you got a job from one of the scientists at Nauka Square I assume?
+	Fabian: Well, I don’t know if those ‘interferences’ are something you can see or hear, but I guess you could look where there are other, uhm, ‘sciencey’ things? 
+	Fabian: You got me out of my depth here, Sasha. I don’t think I can be of much help, I’m sorry.
+    << jump FabianAskingHelp >>
+-> “Do you have any idea how I could get to the island?” << if $RadioQuestComplete == true >>
+    Fabian: The island? Why do you need to go there? Nobody’s there today, everyone is here on the mainland for the parade.
+	Fabian: If you really have to go there today, then you’ll have to find a ferryman. Boat Guy is probably your best choice. 
+	Fabian: I don’t know if any of the ferries are running today due to the parade, but they seem like the most likely one to take you. Boat Guy never misses a chance to do their name justice.
+	Fabian chuckles. He’s quite familiar with Boat Guy’s ‘unique’ mannerisms from the looks of it.
+    << jump FabianAskingHelp >>
+-> Talk about something else
+    << jump SecondLoopFabian2Tree >>
+===
+
+title: FabianAskingPeople
+tags:
+---
+-> “Do you know who Deniz is?” << if $ThisLoopMetWisteria == true >>
+    Fabian gives a light chuckle, before responding. 
+    Fabian: I sure hope I do, they are watching my dog! 
+    Fabian: They, uhm, aren't going to the Parade. So I asked them to keep an eye on her. 
+    Fabian: She's a good girl. My dog. Brought her to Solster when I moved here. 
+    Fabian: But yes, so Deniz. I don't know much about them, to be honest. 
+    Fabian: Boat Guy directed me to them while I was asking around for someone to watch Lexa. 
+    Fabian: I think they are a relative of Boat Guy, but they didn't give any detail on that. 
+    Fabian: I've never seen them at any sermons, and that's how I know most people in town. 
+    He doesn't seem to know where they are, besides just "not at the parade". 
+    Still, you are looking for someone with a dog. That is a clue. And Boat Guy knows them. 
+    Fabian: How do you know their name anyways? 
+	-> “Dr. Wisteria mentioned them.”
+        Sasha: “Dr. Wisteria mentioned them.”
+        Fabian: Oh, you talked to Dr. Wisteria? Do share!
+        << jump FabianAskingPeople >>
+	-> “That is private.”
+        Sasha: “That is private.”
+		Fabian: Alright, alright, that is your own business then.
+		Fabian: I just hope then that you can do something with what I told you.
+        << jump FabianAskingPeople >>
+-> I met Dr. Aaldenburg at Nauka Square. Do you know her? << if $ThisLoopMetAaldenburg == true >>
+    Fabian: Aaldenburg...? Uhm... Do you know her first name? 
+    Fabian: ...His first name? 
+    He looks puzzled, like he thinks he should know who you are talking to, but he truly has no idea. 
+    Fabian: Wait, you said Nauka Square? Then I might have heard about them, though not by name. 
+    Fabian: A scientist from there sent a request to build a diving bell on the lake. I think it might have been them. 
+    << if $TechMajor == true >>
+        A Naturalist, specifically. Fabian is speaking too quickly to correct him in time unfortunately.
+    << endif >>
+    Fabian: I only found out about this second hand, since the request was denied before I got to see it. 
+    Fabian: I think you might know them better than I do, if you've talked to them.
+    << jump FabianAskingPeople >>
+-> “So I talked to Dr. Wisteria…” << if $ThisLoopMetWisteria == true >>
+    Fabian: Great! I hope the doctor was able to help you with that whole mess you had. 
+    Fabian: I don't want to pry into private matters, though if I may ask, what did you think of Dr. Wisteria? 
+    Clearly he knows what she is like. It seems that Fabian can't resist a bit of gossiping. 
+    -> She was quite helpful. 
+	    Fabian: I am happy to hear that! I was certain that she would know what to do for you.
+	    Fabian: She can be a little rough, but deep down she cares deeply about Solster, though she might not show it.
+	    Fabian: She’s very intelligent too. All around, Solster could not ask for a better doctor.
+        << jump FabianAskingPeople >>
+    -> A tad unprofessional. 
+	    Fabian: Well, that is not an unpopular opinion for sure.
+	    Fabian: The head of medicine at the star no doubt receives plenty of complaints about her, but then again she is the head of medicine, so…
+	    Fabian: But though she can be a little rough, deep down she cares deeply about Solster, though she might not show it.
+	    Fabian: She’s very intelligent too. All around, Solster could not ask for a better doctor. 
+        << jump FabianAskingPeople >>
+    -> Rude, condescending, and generally an asshole. Is she always like that? 
+	    Fabian: Ah, well that is not the rudest description I’ve heard of her, no.
+	    Fabian: She has a reputation, for sure. And especially in recent times she has been quite rough to others.
+	    Fabian: But deep down, she cares deeply about Solster, though she might not show it.
+	    Fabian: She’s very intelligent too. All around, Solster could not ask for a better doctor if you ask me. Though perhaps we could ask for a kinder one…
+        << jump FabianAskingPeople >>
+    -> I don't think I want to talk about that.
+        Fabian: Understandable. I will respect your privacy.
+        << jump FabianAskingPeople >>
+-> Talk about something else
+    << jump SecondLoopFabian2Tree >>
+===

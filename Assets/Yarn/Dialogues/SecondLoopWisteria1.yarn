@@ -2,6 +2,8 @@
 tags:
 ---
 
+<< declare $KnowWisteria = false >>
+<< declare $ThisLoopMetWisteria = false >>
 << declare $FirstWisteriaOptionsPicked = 0 >>
 << declare $SecondWisteriaOptionsPicked = 0 >>
 
@@ -10,41 +12,44 @@ tags:
     Dr. Wisteria looks exactly how she did in your previous encounter. 
     Same outfit, same name tag, same small bloodstains at the bottom of the labcoat. 
     Her expression has not changed much either. She looks very unamused, even annoyed at your entrance. 
-<< if $ArtMajor == true >>
-    Other than those bloodstains, her appearance is immaculate and well prepared.
-    Half-black, half-soft-red lipstick. Brushed and neat hair. Every button on her coat is fastened. She has created her image very purposely.
-<< endif >>
-Wisteria: Oh good. I was worried nobody would get maimed on the day of the Parade. 
-Wisteria: So, what is wrong with you? 
+    << if $ArtMajor == true >>
+        Other than those bloodstains, her appearance is immaculate and well prepared.
+        Half-black, half-soft-red lipstick. Brushed and neat hair. Every button on her coat is fastened. She has created her image very purposely.
+    << endif >>
+    Wisteria: Oh good. I was worried nobody would get maimed on the day of the Parade. 
+    Wisteria: So, what is wrong with you? 
 << elseif $ThisLoopMetWisteria == true >> // Already talked to her this loop 
-Dr. Wisteria hasn't moved from where you left her. 
-She is still reading some documents on the table, and she does not bother stopping when you approach her.
--> Dr. Wisteria?
-	Wisteria: Did I not tell you to leave? Go away.
-You are not going to get any more conversation from her right now.
-// END CONVERSATION
+    Dr. Wisteria hasn't moved from where you left her. 
+    She is still reading some documents on the table, and she does not bother stopping when you approach her.
+    -> "Dr. Wisteria?"
+        Sasha: "Dr. Wisteria?"
+	    Wisteria: Did I not tell you to leave? Go away.
+    You are not going to get any more conversation from her right now.
+    << jump SecondLoopWisteria3 >>
 << else >> //Haven’t met her at all yet
 	You see a woman dressed in a white lab coat, reading some documents on the table.
     << if $ArtMajor == true >>
 	    Half-black, half-soft-red lipstick. Brushed and neat hair. Every button on her coat is fastened. She has created her image very purposely.
     << endif >>
-The id-card on her lapel says “Dr. Wisteria - General Practitioner - Star Hospital”. 
-There are some dark red stains at the bottom of her coat that imply she may do some more practical medicine than just consulting.
-She turns towards you as she notices you enter, and looks you up-and-down.
-Wisteria: Oh good. I was worried nobody would get maimed on the day of the Parade. 
-Wisteria: So, what is wrong with you?
+    The id-card on her lapel says “Dr. Wisteria - General Practitioner - Star Hospital”. 
+    There are some dark red stains at the bottom of her coat that imply she may do some more practical medicine than just consulting.
+    She turns towards you as she notices you enter, and looks you up-and-down.
+    Wisteria: Oh good. I was worried nobody would get maimed on the day of the Parade. 
+    Wisteria: So, what is wrong with you?
+<< endif >> 
 << set $ThisLoopMetWisteria = true >>
 << set $KnowWisteria = true >>
-<< endif >> 
 
--> I have experienced a hallucination of living through this entire day until the world ended, then going back in time to the start of it.
+-> "I have experienced a hallucination of living through this entire day until the world ended, then going back in time to the start of it."
+    Sasha: "I have experienced a hallucination of living through this entire day until the world ended, then going back in time to the start of it."
     << set $FirstWisteriaOptionsPicked = 0 >>
 	Wisteria: Yeah, I’ve had dreams like that before.
 	Wisteria: You sound pretty distressed by it though. I’ll take a look.
 	You made the right choice to call it a hallucination, because otherwise she would not have listened to a single other thing you’d say afterwards.
 	Wisteria turns to a nearby filing cabinet, while murmuring.
 	Wisteria: Let’s see… Delusions, confusion, difficulty distinguishing reality from fiction…
--> I just experienced the end of the world and then traveled back in time.
+-> "I just experienced the end of the world and then traveled back in time."
+    Sasha: "I just experienced the end of the world and then traveled back in time."
     << set $FirstWisteriaOptionsPicked = 1 >>
 	Before she can even respond, you already regret your choice of wording.
 	Her stone-faced expression turns into a disgusted grimace.
@@ -52,7 +57,8 @@ Wisteria: So, what is wrong with you?
 	Wisteria. Okay. I am going to give you the benefit of the doubt, and assume that you genuinely believe what you just said.
 	Wisteria turns to a nearby filing cabinet, while murmuring.
 	Wisteria: Let’s see… Delusions, confusion, difficulty distinguishing reality from fiction…
--> I think there is something wrong with my brain.
+-> "I think there is something wrong with my brain."
+    Sasha: "I think there is something wrong with my brain."
     << set $FirstWisteriaOptionsPicked = 2 >>
 	Wisteria: Yeah, I noticed.
 	Wisteria: Does your brain hurt you when you give comprehensive descriptions?
@@ -60,7 +66,8 @@ Wisteria: So, what is wrong with you?
 	Maybe she is used to people giving such vague descriptions of symptoms.
         Wisteria turns to a nearby filing cabinet, while murmuring.
         Wisteria: Let’s see… I’m thinking standard psychological evaluation…
--> Fabian told me to come here. I am very confused and I’m not sure what is going on.
+-> "Fabian told me to come here. I am very confused and I’m not sure what is going on."
+    Sasha: "Fabian told me to come here. I am very confused and I’m not sure what is going on."
     << set $FirstWisteriaOptionsPicked = 3 >>
 	Wisteria: How kind of him, offloading lost tourists to me.
 	Wisteria: I’m going to assume you mean you got some brain problems going on, because otherwise there is not much we can do here.
@@ -71,16 +78,21 @@ Wisteria: So, what is wrong with you?
 Wisteria opens a drawer to reveal a stack of forms inside. 
 She takes one out, then pulls out a pen from her pocket and clicks it in one motion. 
 Wisteria: First question, have you suffered any head trauma recently? 
-->Yes 
+-> "Yes"
+    Sasha: "Yes."
     << set $SecondWisteriaOptionsPicked = 0 >>
-->No 
+-> "No"
+    Sasha: "No."
     << set $SecondWisteriaOptionsPicked = 1 >>
-->What? 
+-> "What?"
+    Sasha: "What?"
     Wisteria: It means, did you get hit on the head recently? 
     Wisteria: Or as a child? That's the next question. You can answer that one in advance.
-    ->Yes 
+    -> "Yes"
+        Sasha: "Yes."
         << set $SecondWisteriaOptionsPicked = 0 >>
-    ->No 
+    -> "No" 
+        Sasha: "No."
         << set $SecondWisteriaOptionsPicked = 1 >>
 
 She marks down your response on the form, then moves on to the next question without a pause.
@@ -248,4 +260,11 @@ Her tone is intimidating and succinct. No more sarcastic retorts, just pure fina
 You know before even trying that she is not going to tell you who Deniz is or where to find them.
 It’s time to go before she starts pushing you out the door.
 
+===
+
+
+title: SecondLoopWisteria3
+tags:
+---
+-> Leave
 ===

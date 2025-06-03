@@ -2,7 +2,7 @@
 tags:
 ---
 
-For testing purposes: Choose which Major Sasha studied in college
+(Choose which Major Sasha studied in college.)
 -> Art
     << set $ArtMajor = true >>
 -> Engineering
