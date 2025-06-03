@@ -1,0 +1,237 @@
+﻿title: SecondLoopAaldenburg1
+tags:
+---
+
+// plays when first talking to Aaldenburg, when getting the radio quest
+
+There is not an idle moment for the woman in the scorched lab coat you see before you. 
+She tinkers with this gizmo, she twiddles with another gadget, dancing through the lab in a practised smooth continuous motion. 
+She is robotic, following a program of stimuli and response, a set of rules of how everything in the world should be touched, probed, read, and processed.
+<< if $PsychMajor == true >>
+    Her mannerisms are hard to parse without getting dizzy. 
+    Your psychology know-how might not get you very far with her, though you can definitely tell she must have some sort of neurodevelopmental disorder.
+<< elseif $ArtMajor == true >>
+    The message she broadcasts is clear: She’s a serious woman of numbers and facts, and she has no care for whimsical nonsense. 
+    It’s an ironic contrast with the way she hops between stations, almost like she is skipping. 
+    Her half-black, half-red lipstick is quite pretty too.
+<< elseif $TechMajor == true >>
+	Before you’ve even talked to her, you already feel a rare kinship with her. 
+    This is someone who sees the world exactly as it is, just like you: A huge complex machine, full of levers to pull, gears to oil, shiny lights to read and reactions to measure. 
+<< endif >>
+You stand still just outside the range of her work area, waiting for her to be done and to acknowledge your presence. 
+After a few minutes, the flaws in this hypothesis become clear.
+
+//If the player knows her name from Loop 1
+-> “Excuse me, Dr. Aaldenburg?”
+    There is no sign that she has heard you, for a full minute afterwards.
+	Eventually however, she slowly comes to a stop, after finishing a few more tasks and clicking her pen for a last time.
+	Aaldenburg: What is the matter?
+	She raises her eyebrows in surprise once she finally takes a focused look at you.
+	Aaldenburg: I have never seen you before. Are you from outside Solster?
+-> “Excuse me, Miss?”
+    She stops, abruptly, still holding a pen in one hand and a pipette in the other.
+	???: Doctor. Not miss.
+	Well, at least you got her to stop.
+	You can finally take a good look at her. An id-card on her lapel identifies her as “Dr. Aaldenburg - Naturalist Physicist - Nauka Square”.
+    << if $TechMajor == true >>
+	    Darn. You were hoping for another fellow engineer.
+    << endif >>
+	She raises her eyebrows in surprise now that she takes a good look at you as well.
+    Aaldenburg: I have never seen you before. Are you from outside Solster?
+-> “Could you stop for a second?”
+    Either she can’t, or she won’t. She continues her endless tinkering with no reaction to your presence. 
+    Just when you are about to talk again, she finally comes to a stop, after finishing a few more tasks and clicking her pen for the last time.
+    ???: What is the matter?
+    You can finally take a good look at her. An id-card on her lapel identifies her as “Dr. Aaldenburg - Naturalist Physicist - Nauka Square”.
+    << if $TechMajor == true >>
+	    Darn. You were hoping for another fellow engineer.
+    << endif >>
+    She raises her eyebrows in surprise now that she takes a good look at you as well.
+    Aaldenburg: I have never seen you before. Are you from outside Solster?
+
+-> “I’m Sasha. I was born here, but I went to college away from here.”
+    Aaldenburg: I suspected so. Your accent says Solster, your outfit says student. Graduate now I take it?
+	You can’t tell if that outfit comment was meant to be a dig at you or not. Having talked to Wisteria before might have predisposed you to see insults where none were intended.
+	Aaldenburg: Graduates of higher education are an uncommon, but welcome sight here in Solster. What did you major in?
+-> “No, I’m from here. My name is Sasha.”
+    Aaldenburg: I can tell from your accent, yes. Yet I have not seen you or heard from you before, and you seem hard to miss in a town this size.
+	Is she saying you look strange? You can’t tell if that comment was meant to be a dig at you or not. 
+    Having talked to Wisteria before might have predisposed you to see insults where none were intended.
+    Aaldenburg: Are you a college student by chance?
+        -> “I was. I graduated.”
+		She seems pleased with herself for having figured that out.
+		Aaldenburg: The hypothesis is proved correct. You do still have that rebellious college student aesthetic. It must have been a recent graduation. 
+        << if $ArtMajor == true >>
+		    Curious that she is familiar with the ‘college student’ aesthetic. It makes you wonder what she was like back in her own college days. You have a feeling she was quite different to how she is now…
+        << endif >>
+		Aaldenburg: Graduates of higher education are an uncommon, but welcome sight here in Solster. What did you major in?
+	-> “How did you guess that?”
+		Aaldenburg gives a light chuckle, or something close to it. Nothing about her face smiles at any moment of it.
+		Aaldenburg: I did not guess it, I hypothesised it based on the information I could gather.
+		Aaldenburg: You look college aged, and your outfit has some of that rebellious aesthetic that students love. It would explain why I had never seen you before, too.
+        << if $ArtMajor == true >>
+		    Curious that she is familiar with the ‘college student’ aesthetic. It makes you wonder what she was like back in her own college days. You have a feeling she was quite different to how she is now…
+        << endif >>
+		Aaldenburg: Since you are back at Solster, I can further hypothesise that you are either visiting family, or graduated. If I were to make an actual ‘guess’, I would say graduated.
+		Aaldenburg: This town is not a place one comes back to for the holidays. I could not imagine all that travel to come here, for what?
+		Her tone is dismissive, seemingly of the idea that anyone would enjoy coming to Solster at all. You wonder if she’s ever met Fabian.
+		Aaldenburg: Graduates of higher education are an uncommon, but welcome sight here in Solster. What did you major in?
+-> “I’m Sasha. I’m pretty much an outsider here.”
+    Aaldenburg: Pretty much? That is curiously non-committal language to use to describe your status. 
+	She looks at you, up and down. It reminds you of how Wisteria looked at you too, like she is analysing you through a microscope.
+	Aaldenburg: Your accent sounds quite Solsterian for an outsider too. Are you a college student by chance?
+        -> “I was. I graduated.”
+		    She seems pleased with herself for having figured that out.
+		    Aaldenburg: The hypothesis is proved correct. You do still have that rebellious college student aesthetic. It must have been a recent graduation. 
+		    Curious that she is familiar with the ‘college student’ aesthetic. It makes you wonder what she was like back in her own college days. You have a feeling she was quite different to how she is now…
+		    Aaldenburg: Graduates of higher education are an uncommon, but welcome sight here in Solster. What did you major in?
+	-> “How did you guess that?”
+		    Aaldenburg gives a light chuckle, or something close to it. Nothing about her face smiles at any moment of it.
+		    Aaldenburg: I did not guess it, I hypothesised it based on the information I could gather.
+		    Aaldenburg: You look college aged, and your outfit has some of that rebellious aesthetic that students love. It would explain why I had never seen you before, too.
+		    Curious that she is familiar with the ‘college student’ aesthetic. It makes you wonder what she was like back in her own college days. You have a feeling she was quite different to how she is now…
+		    Aaldenburg: Since you are back at Solster, I can further hypothesise that you are either visiting family, or graduated. If I were to make an actual ‘guess’, I would say graduated.
+		    Aaldenburg: This town is not a place one comes back to for the holidays. I could not imagine all that travel to come here, for what?
+		    Her tone is dismissive, seemingly of the idea that anyone would enjoy coming to Solster at all. You wonder if she’s ever met Fabian.
+		    Aaldenburg: Graduates of higher education are an uncommon, but welcome sight here in Solster. What did you major in?
+
+<< if $PsychMajor == true >>
+	-> Psychology.
+	    Aaldenburg: A people-person I see. I’m sure Dr. Wisteria will be delighted.
+	    She says this in a tone that lacks even the barest note of enthusiasm. Having met Dr. Wisteria yourself, you fully understand why.
+	    You feel the instinct to tell her that she was absolutely not delighted to meet you, but Aaldenburg seems like the type of person who doesn’t like being told things they already know.
+<< elseif $ArtMajor == true >>
+	-> I went to art school.
+	    A brief grimace washes over her face. She is equal parts incredulous and disappointed. As an art major, it's a reaction you are used to.
+	    Aaldenburg: Really? I took you for more of an intellectual sort. 
+        Aaldenburg: Well, at least you're bringing something new to the town. Artistic pursuits are still more stimulating than just staring at the lake, how most people spend their free time here.
+        Not a lot of people in Solster have hobbies. The Solsterian work ethic is ruthless. 
+        You’d have expected that Aaldenburg would be behind that, seeing how dedicated she seems to her work. Maybe passion is an important factor for her.
+<< elseif $TechMajor == true >>
+    -> Engineering.
+	    Her eyes barely widen, and her mouth open just ever so slightly. She fails to repress a momentary expression of glee over her face, before returning almost mechanically to her regular robotic look.
+	    Aaldenburg: It is always pleasant to meet another fellow professional in the field of the practical sciences.
+	    Aaldenburg: Perhaps you are still too green to call you  a professional, but I am sure we will get along well.
+	    Aaldenburg: My expertise is in Chemistry, but I dabble in various fields. I have little other choice, given the staffing of my laboratory.
+	    With that she means that she has nobody else to work with, from the looks of it. There is another lab coat hanging at the entrance, though. 
+	    Does she have an assistant, or is it just a spare?
+<< endif >>
+A nearby machine suddenly emits a beep. Aaldenburg turns her attention to it, turning a dial down and writing a reading from its display on her notebook.
+Aaldenburg: I would not mind chatting with you further on another occasion, but I am rather busy at this time, as you can see. Was there a reason you came to see me?
+
+-> “I just traveled back in time a full day after seeing the void destroy Solster.”
+        Aaldenburg: No, you did not. Anything else?
+	    If she were less busy, she might have been willing to indulge you, as an exercise in science fantasy, but she does not have the time to hear you out it seems.
+	    Your radio issues might get her attention better. Maybe you can circle back onto the whole ‘time travel’ issue once you have dealt with that.
+        -> “My radio is acting very strange. I thought maybe someone here at Nauka Square would now what is happening to it”
+            Aaldenburg: You have a radio? They are quite rare here in Solster. 
+	        Aaldenburg: I am not a repairwoman, but you have made me curious now. Show me.
+	        You take out the radio from your pocket. Compared to earlier, it has gone mostly silent, but when you put your ear close, you can still hear some static brewing. 
+        -> “Wisteria sent me here to get my radio fixed.”
+            Aaldenburg gives you a look as if she had bitten an onion the moment you mention Wisteria.
+	        Aaldenburg: Oh, of course she is behind this. She does not miss an opportunity to try to disrupt my work on the day of the parade.
+	        Aaldenburg: Fine. Show me that radio.
+	        You take out the radio from your pocket. Compared to earlier, it has gone mostly silent, but when you put your ear close, you can still hear some static brewing. 
+//Circles back to other two options
+-> “My radio is acting very strange. I thought maybe someone here at Nauka Square would now what is happening to it”
+    Aaldenburg: You have a radio? They are quite rare here in Solster. 
+	Aaldenburg: I am not a repairwoman, but you have made me curious now. Show me.
+	You take out the radio from your pocket. Compared to earlier, it has gone mostly silent, but when you put your ear close, you can still hear some static brewing. 
+-> “Wisteria sent me here to get my radio fixed.”
+    Aaldenburg gives you a look as if she had bitten an onion the moment you mention Wisteria.
+	Aaldenburg: Oh, of course she is behind this. She does not miss an opportunity to try to disrupt my work on the day of the parade.
+	Aaldenburg: Fine. Show me that radio.
+	You take out the radio from your pocket. Compared to earlier, it has gone mostly silent, but when you put your ear close, you can still hear some static brewing. 
+
+Aaldenburg: Ah, an Adalard 22. It is a good model, one of the better domestic radios one can find in the market. You have a good eye.
+<< if $TechMajor == true >>
+    She has a good eye for this as well, for someone whose speciality lies not in machines. Judging by all the contraptions in this lab, she must have a good amount of knowledge of electronics as well.
+<< endif >>
+Aaldenburg places the radio on her work desk and begins her examination. She looks at it from every angle, touching every button and turning every dial.
+In the meantime, you explain to her what you experienced, the sudden static and interference, and the voice mixed within.
+Eventually, she takes a screwdriver and opens it up, looking carefully at the mechanisms within without touching them.
+After a few minutes, she reassembles your radio and hands it back. Seems she put it back together perfectly, to your relief.
+Aaldenburg: There do not appear to be any defects or malfunctions on the radio itself. Thus, there is nothing to fix here.
+Aaldenburg: But… I admit I am curious about that interference you encountered. 
+Aaldenburg: As I said, there are very few radios in Solster outside of this laboratory. You might have stumbled upon a novel phenomenon that has not been recorded before. This warrants further exploration.
+Suddenly, she walks away deeper in her lab. She opens a cabinet and starts digging around for something inside, amongst a mess of wires and machine parts.
+Before you can ask for an explanation, she comes back just as quick and puts a small device into your hand. It has a screen, antenna, and some simple buttons and dials.
+Aaldenburg: You are going to do some field work. Take this GPS, and go into the town to find some places where the radio interference is present. Understood?
+
+-> “How does this ‘GPS’ work? I have never heard of it.”
+    Aaldenburg: It is a fairly new invention, with limited application. I got one for testing from my old university, as Solster is perfect grounds for a trial.
+	Aaldenburg: The GPS sends and receives constant signals to and from a receptor here at Nauka Square. 
+    Aaldenburg: By measuring the time between signals and their direction, the device can accurately display your exact coordinates within the town as a vector from the receptor.
+    Aaldenburg: It will let you note down your position in numbers, much more precise than using a map.
+    -> “What do I have to do exactly?”
+        Aaldenburg moves over to a map of Solster hanging on a nearby wall. The void lake is on the center, with the whole town built around it.
+	    Aaldenburg: We are going to triangulate the source of the radio interference, by finding several locations around Solster where your radio experiences said interference.
+	    Aaldenburg: We already know the Star Hospital is one such location. If you can find three more places where your radio reacts to the interference, we should be able to locate where it is coming from.
+	    Aaldenburg: Be precise. If your radio starts making that static noise, then move around your current area until you locate the exact position where the static is the strongest.
+	    Aaldenburg: Do you understand your task now?
+-> “What do I have to do exactly?”
+    Aaldenburg moves over to a map of Solster hanging on a nearby wall. The void lake is on the center, with the whole town built around it.
+	Aaldenburg: We are going to triangulate the source of the radio interference, by finding several locations around Solster where your radio experiences said interference.
+	Aaldenburg: We already know the Star Hospital is one such location. If you can find three more places where your radio reacts to the interference, we should be able to locate where it is coming from.
+	Aaldenburg: Be precise. If your radio starts making that static noise, then move around your current area until you locate the exact position where the static is the strongest.
+	Aaldenburg: Do you understand your task now?
+
+//Unlocks after “what do I do exactly?”
+-> “Any ideas of where I might find this static?”
+    Aaldenburg does not answer right away. She ponders, looking around her lab while she thinks.
+	Aaldenburg: The first time the static occurred while you were at the Hospital, right?
+	Aaldenburg: The hospital does have some machines in it that could have played a factor, but we can’t state that for certain.
+	Aaldenburg: My advice would be to stay observant of what is around you once you do find a place where the static is present. Perhaps in similar places, the static will be present too.
+	Aaldenburg: As to how you should find your first place with static, that is merely a matter of legwork. 
+    Aaldenburg: You could try to investigate areas of Solster that you have not gone to yet or have transited less since you came back. That would be a good course of action. 
+        -> “You’re not coming with me?”
+            Aaldenburg: Did you forget already when, approximately seven minutes ago, I said I was currently busy?
+	        Aaldenburg: I have already given you more of my time than I do most visitors. Now it is your turn to do your part.
+	        Aaldenburg: Plus, field work is good for you. It is good practice, builds experience. I imagine they did not send you outside in your study very often, no?
+            << if $PsychMajor == true >>
+                You did do some practical assignments, but you suspect her standards for what “practical” means are stricter than those of your teachers.
+	            It did not involve anywhere as much walking as she probably believes is necessary.
+            << elseif $ArtMajor == true >>
+                You’ve been to places for your study, though mainly museums and parks for live drawing. Not so much waddling in mud or climbing up trees to find a radio signal.
+            << elseif $TechMajor == true >>
+                They did not, no. Your practical assignments primarily took place in a workshop, one not too different from Nauka Square.
+            << endif >>
+-> “You’re not coming with me?”
+    Aaldenburg: Did you forget already when, approximately seven minutes ago, I said I was currently busy?
+	Aaldenburg: I have already given you more of my time than I do most visitors. Now it is your turn to do your part.
+	Aaldenburg: Plus, field work is good for you. It is good practice, builds experience. I imagine they did not send you outside in your study very often, no?
+    << if $PsychMajor == true >>
+        You did do some practical assignments, but you suspect her standards for what “practical” means are stricter than those of your teachers.
+	    It did not involve anywhere as much walking as she probably believes is necessary.
+    << elseif $ArtMajor == true >>
+        You’ve been to places for your study, though mainly museums and parks for live drawing. Not so much waddling in mud or climbing up trees to find a radio signal.
+    << elseif $TechMajor == true >>
+        They did not, no. Your practical assignments primarily took place in a workshop, one not too different from Nauka Square.
+    << endif >>
+	// Loops back, with this option removed
+        -> “Any ideas of where I might find this static?”
+            Aaldenburg does not answer right away. She ponders, looking around her lab while she thinks.
+	        Aaldenburg: The first time the static occurred while you were at the Hospital, right?
+	        Aaldenburg: The hospital does have some machines in it that could have played a factor, but we can’t state that for certain.
+	        Aaldenburg: My advice would be to stay observant of what is around you once you do find a place where the static is present. Perhaps in similar places, the static will be present too.
+	        Aaldenburg: As to how you should find your first place with static, that is merely a matter of legwork. 
+            Aaldenburg: You could try to investigate areas of Solster that you have not gone to yet or have transited less since you came back. That would be a good course of action. 
+
+//Unlocks when you have selected at least the “What do I do exactly” option.
+-> “Okay, I think I am ready to go out then.”
+	Aaldenburg: Good. You can come back once you have found three static locations, other than the hospital.
+	Aaldenburg: Be careful with the GPS. If you break it, you will pay for it.
+	Her frown seems to say that you’ll pay for it in more than just money.
+	Aaldenburg goes back to her workbench and resumes her tinkering, right back where she left off. 
+	You take a look at the device in your hand. The screen reads [2.38161, 5.19372]. 
+    << if $TechMajor == true >>
+        The display is likely the x and y factors of a distance vector between the device and one of the antennas you saw on the roof of the building.
+	    Is it connecting to that big, gold antenna you saw? This could be something to ask about later.
+    << else>> 
+	    You’re glad that you don’t need to understand how this works.
+	<< endif >>
+	
+	For now, it is time to leave this lab, and go out into Solster.
+
+
+===

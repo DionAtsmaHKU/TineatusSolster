@@ -70,7 +70,6 @@ Wisteria: So, what is wrong with you?
 
 Wisteria opens a drawer to reveal a stack of forms inside. 
 She takes one out, then pulls out a pen from her pocket and clicks it in one motion. 
-//<< set $ArtMajor = true >>
 Wisteria: First question, have you suffered any head trauma recently? 
 ->Yes 
     << set $SecondWisteriaOptionsPicked = 0 >>
