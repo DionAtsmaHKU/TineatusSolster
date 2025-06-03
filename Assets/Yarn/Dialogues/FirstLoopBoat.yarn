@@ -1,11 +1,9 @@
 title: FirstLoopBoat
 ---
-<<declare $SecondLoopBoat = true>>
 <<declare $sashaDick = false>>
-<<declare $SecretWord = true>>
+<<declare $SecretWord = false>>
 <<declare $DudeTheyJustSaidThat = false>>
-
-<<if $SecondLoopBoat == true>>
+<< if DoesHeKnow("SecondLoop") == true >>
 	<<jump SecondLoopBoat>>
 <<endif>>
 The air is thicker here, damp. It may be the water that laps easily by the shoreside, but you think that the giant dark lake is likely the cause of it. 

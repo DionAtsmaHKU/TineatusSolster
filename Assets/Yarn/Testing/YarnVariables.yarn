@@ -1,57 +1,81 @@
 ﻿title: Start
 ---
+<< if DoesHeKnow("SecondLoop") == true >>
+	<<jump ResetStats>>
+<<endif>>
+
 << declare $TestStat = 0 >>
 << declare $ArtMajor = false >>
 << declare $TechMajor = false >>
 << declare $PsychMajor = false >>
-
-
 // Fabian Related Variables
 << declare $FabianMood = 0 >> // Higher number means happier, lower means sadder
 << declare $FabianFamiliarity = 0 >> // Increases as you talk to him and he gets to know you. Does not go below 0. Resets only on loop
 
-Dion: Hi this is a placeholder for picking your major at the start of the game :D
--> Art!
+(Choose which Major Sasha studied in college.)
+-> Art
     << set $ArtMajor = true >>
--> Tech!
+	<< SetSashaSprite 0 >>
+-> Engineering
     << set $TechMajor = true >>
--> Psych!
+	<< SetSashaSprite 1 >>
+-> Psychology
     << set $PsychMajor = true >>
+	<< SetSashaSprite 2 >>
 
-<<if $ArtMajor == true>>
-    <<jump ArtDialogue>>
-<<endif>>
+The muted streets of Solster are finally before you. The square before the train station is faded, forgotten, and sparsely occupied. This might be the least trodden place in all of Solster. 
+The low light of an overcast sky brings back old memories. A childhood spent in the dark. A departure from this same square, 4 years younger yet barely changed.
+What was going through your mind the last time you stepped foot on these cobblestones, ready to leave for a brighter future?
 
-<<if $TechMajor == true>>
-    <<jump TechDialogue>>
-<<endif>>
+-> "That I would never look back. Figure how that went."
+    Sasha: ("That I would never look back. Figure how that went.")
+    You just had to get away. See the world, be more than you could ever be here, feel the warmth of the sun unfiltered by the void. 
+    You burnt every bridge you could possibly destroy, but in your mind, the world was worth it. You never expected to regret your decision. 
+    Is that still right? You never expected to step out onto this train station again either, after all…
+-> "I thought a part of me would stay in this town forever. Maybe it will rejoin me now."
+    Sasha: ("I thought a part of me would stay in this town forever. Maybe it will rejoin me now.")
+    Returning to the buzzing street lights of Solster is a bittersweet reunion. It was not an easy choice, to leave your whole world behind, to trade it for a brave new world unknown. 
+    You were never going to be fully satisfied, regardless of which decision you made, but you still had some regrets perhaps as to how your departure went. 
+    While you studied outside, in the back of your mind, a vision of Solster always lingered. Does that vision still reflect the town you see before you?
+-> "It had to be done. There was nothing left for me here. No hard feelings, it was just a fact."
+    Sasha: ("It had to be done. There was nothing left for me here. No hard feelings, it was just a fact.")
+    For you, it was nothing personal. You bear no resentment towards Solster, but you knew it was holding you back. There was so much potential in you that you had to explore, and leaving was the only way to do so. 
+    Now that your explorative journey has met a dead end, you return back to the start. You may bear no resentment, but does Solster bear resentment towards you?
 
 <<if $PsychMajor == true>>
-    <<jump PsychDialogue>>
+    There is just a single other occupant of the square besides you. A young peppy man, no older than 30. Dressed in a cloak you recognise as one of a priest or pastor of the Faith of Solster.
+    His clothes are a mix of formal and casual, trying to make an official attire as down to earth as possible. He's smiling, and genuinely so.
+    Yet there's still a nervous disposition in his posture that he barely manages to mask. This is a man who is terrified of disappointing people. An archetypal People-Pleaser perhaps?
+    He looks completely unfamiliar. You have never seen this man before at all.
+    He is waving at you.
+<<else>>
+    There is just a single other occupant of the square besides you. A young peppy man, no older than 30. Dressed in a cloak you recognise as one of a priest or pastor of the Faith of Solster.
+    His clothes are a mix of formal and casual, trying to make an official attire as down to earth as possible. He's smiling, and genuinely so.
+    He looks completely unfamiliar. You have never seen this man before at all.
+    He is waving at you.
 <<endif>>
-===
 
-title: ArtDialogue
+===
+title: ResetStats
 ---
-<< SetSashaSprite 0 >>
-Sasha: Art!
-art time
-<< Learn InfoA >>
-===
+<< set $TestStat = 0 >>
+<< set $ArtMajor = false >>
+<< set $TechMajor = false >>
+<< set $PsychMajor = false >>
+// Fabian Related Variables
+<< set $FabianMood = 0 >> // Higher number means happier, lower means sadder
+<< set $FabianFamiliarity = 0 >> // Increases as you talk to him and he gets to know you. Does not go below 0. Resets only on loop
 
-title: TechDialogue
----
-<< SetSashaSprite 1 >>
-Sasha: Technology!
-Tech time
-<< Learn InfoB >>
-===
+-> Art
+    << set $ArtMajor = true >>
+	<< SetSashaSprite 0 >>
+-> Engineering
+    << set $TechMajor = true >>
+	<< SetSashaSprite 1 >>
+-> Psychology
+    << set $PsychMajor = true >>
+	<< SetSashaSprite 2 >>
+	
+And just like that, the play has started all over again.
 
-title: PsychDialogue
----
-<< SetSashaSprite 2 >>
-Sasha: Psychology!
-psych time
-<< Learn InfoC >>
 ===
-
