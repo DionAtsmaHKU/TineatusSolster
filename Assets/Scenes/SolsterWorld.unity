@@ -1088,19 +1088,18 @@ MonoBehaviour:
   dialogueRunner: {fileID: 675925978}
   timerUI: {fileID: 26393423}
   playerTransform: {fileID: 321030748}
-  timeMultiplier: 2
+  timeMultiplier: 5
   timeToAdd: 0
   startTime:
     hours: 0
     minutes: 0
     timeInMinutes: 0
   endTime:
-    hours: 20
+    hours: 1
     minutes: 0
     timeInMinutes: 0
   events: []
-  originalObjects:
-  - {fileID: 0}
+  originalObjects: []
 --- !u!4 &34215887 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 673ec429599990e449ae3a9db7239b74, type: 3}
