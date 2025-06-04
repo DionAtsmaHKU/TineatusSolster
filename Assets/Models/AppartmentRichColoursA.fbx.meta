@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: e02c414bd2b8f7542bc81002c706e895
+guid: b7bafd763dfc09e4bbdf94277b9820c5
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ColdYellowWall
+    second: {fileID: -2813467912831258332, guid: 586b0a1301882a749b6f77e4bd97a8fe, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gavel
+    second: {fileID: -6478536213147159724, guid: 586b0a1301882a749b6f77e4bd97a8fe, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SandyWalls
+    second: {fileID: -6478536213147159724, guid: 586b0a1301882a749b6f77e4bd97a8fe, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -35,7 +50,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 1.55
     meshCompression: 0
     addColliders: 1
     useSRGBMaterialColor: 1
@@ -89,7 +104,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 1.55
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
