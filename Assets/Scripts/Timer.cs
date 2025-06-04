@@ -87,6 +87,7 @@ public class Timer : MonoBehaviour
         hours = startTime.hours;
         timer = startTime.minutes;
         totalTimer = startTime.hours * 60 + startTime.minutes;
+        timeInMinutes = (int)timer;
     }
 
     void SetText()
