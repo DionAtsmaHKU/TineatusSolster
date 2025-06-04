@@ -75,7 +75,7 @@ public class Knowledge : MonoBehaviour
         newInfoEvent.start();
         knowledgeBools[key] = true;
 
-        if (knowledgeList.ContainsKey(key))
+        if (knowledgeList[key] != null)
         {
             knowledgeList[key].SetActive(true);
         }
