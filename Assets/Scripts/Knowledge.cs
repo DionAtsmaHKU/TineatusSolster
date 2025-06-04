@@ -33,6 +33,12 @@ public class Knowledge : MonoBehaviour
         }
         dialogueRunner.AddCommandHandler<string>("Learn", Learn);
         dialogueRunner.AddFunction<string, bool>("DoesHeKnow", DoesHeKnowFunc);
+        VariableManager.onLoop += LearnLoop;
+    }
+
+    private void OnDestroy()
+    {
+        VariableManager.onLoop -= LearnLoop;
     }
 
     // Update is called once per frame
@@ -51,6 +57,12 @@ public class Knowledge : MonoBehaviour
                 inMenu = true;
             }
         }
+    }
+
+    private void LearnLoop()
+    {
+        Debug.Log("SecondLoop learned");
+        Learn("SecondLoop");
     }
 
     private void Learn(string key)
