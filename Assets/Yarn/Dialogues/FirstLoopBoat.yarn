@@ -1,8 +1,5 @@
 title: FirstLoopBoat
 ---
-<<declare $sashaDick = false>>
-<<declare $SecretWord = false>>
-<<declare $DudeTheyJustSaidThat = false>>
 << if DoesHeKnow("SecondLoop") == true >>
 	<<jump SecondLoopBoat>>
 <<endif>>
@@ -171,8 +168,12 @@ Dr. Boatguy phD: “Psst, hey, kid. Over here! Just ten moneys, I’ll give you 
 	They pause for a moment to catch their breath.
 	Dr. Boatguy phD: "Your best friend, I think."
 	Dr. Boatguy phD: "The secret word is uh, it's Sisyphus."
-	What a decadently pretentious word for a man like Boatguy. As an Art major, you can truly appreciate that type of dissipation <<if $ArtMajor == true>>
-	Sisyphus? Seriously? <<if $TechMajor == true>>
+	<<if $ArtMajor == true>>
+		What a decadently pretentious word for a man like Boatguy. As an Art major, you can truly appreciate that type of dissipation <<if $ArtMajor == true>>
+	<<endif>>
+	<<if $TechMajor == true>>
+		Sisyphus? Seriously? 
+	<<endif>>
 	Regardless, it would be nice to have someone on your side without having to have this entire conversation again. An oddly helpful thing from the resident nutcase.
 	-> "Noted."
 		Sasha: "Noted."
@@ -180,12 +181,12 @@ Dr. Boatguy phD: “Psst, hey, kid. Over here! Just ten moneys, I’ll give you 
 		Sasha: "..Sure."
 	They nod vehemently
 	<<set $DudeTheyJustSaidThat = true>>
-	<<set $SecretWord = true>>
+	<< Learn SecretWord >>
 -> "That’s alright."
-	<<close>>
--> "Hey, Boatguy.. Sisyphus." <<if $SecretWord == true>> //Knowledge
+	<<stop>>
+-> "Hey, Boatguy.. Sisyphus." <<if DoesHeKnow("SecretWord")>>
 	<<jump PRANKED>>
--> "Could you take me to the island? " <<if $IslandQuestActive == true>>
+-> "Could you take me to the island? " <<if DoesHeKnow("IslandQuest") == true>>
 
 ===
 

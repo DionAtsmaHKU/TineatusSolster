@@ -1,12 +1,6 @@
-﻿title: SecondLoopWisteria1
+﻿title: awawa
 tags:
 ---
-
-<< declare $KnowWisteria = false >>
-<< declare $ThisLoopMetWisteria = false >>
-<< declare $FirstWisteriaOptionsPicked = 0 >>
-<< declare $SecondWisteriaOptionsPicked = 0 >>
-
 << if $KnowWisteria == true && $ThisLoopMetWisteria== false >> //Met her in a previous loop 
 	Before you is a woman you have met before, if briefly, during the “parade”.
     Dr. Wisteria looks exactly how she did in your previous encounter. 

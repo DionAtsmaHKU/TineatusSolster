@@ -1,9 +1,6 @@
-﻿title: SecondLoopAaldenburg1
+﻿title: safahuifajz
 tags:
 ---
-
-<< declare $KnowAaldenburg = false >>
-<< declare $ThisLoopMetAaldenburg = false >>
 
 // plays when first talking to Aaldenburg, when getting the radio quest
 

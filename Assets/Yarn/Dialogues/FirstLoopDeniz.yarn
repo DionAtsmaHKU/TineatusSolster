@@ -1,14 +1,7 @@
 title: FirstLoopDeniz
 ---
-<<declare $SecondLoop = false>>
-<<declare $SeenDenizIntro = false>>
-<<declare $BoatDenizAnger = 0>>
-<<declare $BoatSashaAnger = false>>
-<<declare $BabushkaDeniz = false>>
-<<declare $IslandQuestDenizUnfinished = true>>
-<<declare $DenizKnowsSasha = false>>
 
-<<if $SecondLoop == true>> //<<if DoesHeKnow ("SecondLoop") == true>>
+<<if DoesHeKnow ("SecondLoop") == true>>
 	<<jump SecondLoopDeniz>>
 <<endif>>
 
@@ -17,10 +10,12 @@ You don’t remember there being many dogs in Solster, is it an import?
 Finally, the person looks up. You’ve seen them only a few times before, so their name escapes you.. But they were one of Dmitriy’s friends, you’re sure.
 <<set $SeenDenizIntro = true>>
 
-//<<if DoesHeKnow("DenizKnown") == true>>
-	//Then, you remember. This is who the doctor mentioned before, wasn’t it? Deniz Cansel.
-	//<<endif>>
-//<< Learn DenizKnown >>
+<<if DoesHeKnow("DenizKnown") == true>>
+	Then, you remember. This is who the doctor mentioned before, wasn’t it? Deniz Cansel.
+<<else>>
+	<< Learn DenizKnown >>
+<<endif>>
+
 -> "Who are you?"
 	Sasha: "Who are you?"
 	Deniz: “Deniz.”
@@ -53,10 +48,10 @@ Finally, the person looks up. You’ve seen them only a few times before, so the
 				Sasha: "Oh, okay."
 		-> "Alrighty then."
 			Sasha: "Alrighty then."
-
 -> Are you a doctor?
 	You’ve noted their garb, half a medical coat, half a trenchcoat. It’s an almost horrifying mismatch of fabrics. You’d be grossed out, if it wasn’t such spectacular fashion design.
 	They notice you looking, their eyes darting over your body in return as a quick once-over before they nod as an answer.
+
 Deniz: “Do you need something?”
 -> Why are you sitting all the way out here?
 	Sasha: "Why are you sitting all the way out here?"
@@ -67,7 +62,6 @@ Deniz: “Do you need something?”
 	-> Gotcha.
 	-> See you around.
 -> Nope, sorry for bothering.
-<<stop>>
 
 ===
 title: SecondLoopDeniz
@@ -75,23 +69,23 @@ title: SecondLoopDeniz
 <<if $DenizKnowsSasha == true>>
 	<<jump DenizKnowsSas>>
 <<endif>>
-<<if $SeenDenizIntro == true>>
+<<if DoesHeKnow("SeenDenizIntro")>>
 	Deniz looks up at you, and then looks down again. The dog wags its tail.
 <<else>>
 	There’s a person sitting by the water’s edge, all by themselves. They don’t notice you, but the adorable little white dog beside them wags its tail when you approach. 
 	You don’t remember there being many dogs in Solster, is it an import?
 	Finally, the person looks up. You’ve seen them only a few times before, so their name escapes you.. But they were one of Dmitriy’s friends, you’re sure.
-	<<set $SeenDenizIntro = true>>
+	<<Learn SeenDenizIntro>>
 <<endif>>
 
-//<<if DoesHeKnow("DenizKnown") == true>>
-	//This must be the Deniz you keep hearing mentioned.
-	//<<endif>>
-<<if $IslandQuestDenizUnfinished == true>>
--> You’re Boatguy’s cousin, aren’t you?
-	Sasha: "You're Boatguy's cousin, aren't you?"
-	<<jump IslandQuestDeniz>>
--> Hello.
+<<if DoesHeKnow("DenizKnown") == true>>
+	This must be the Deniz you keep hearing about.
+<<endif>>
+<<if $IslandQuestDenizUnfinished == true && DoesHeKnow("IslandQuest") == true>>
+	-> You’re Boatguy’s cousin, aren’t you?
+		Sasha: "You're Boatguy's cousin, aren't you?"
+		<<jump IslandQuestDeniz>>
+	-> (You don't want to ask).
 <<endif>>
 -> Hello.
 	Sasha: "Hello."
@@ -119,6 +113,7 @@ title: SecondLoopDeniz
 	Sasha: "Are you a doctor?"
 	You’ve noted their garb, half a medical coat, half a trenchcoat. It’s an almost horrifying mismatch of fabrics. You’d be grossed out, if it wasn’t such spectacular fashion design.
 	They notice you looking, their eyes darting over your body in return as a quick once-over before they nod as an answer.
+
 Deniz: “Do you need something?”
 -> Why are you sitting all the way out here?
 	Sasha: "Why are you sitting all the way out here?"
@@ -138,6 +133,7 @@ title: DenizKnowsSas
 Deniz glances up at you as you approach, their expression neutral but somehow.. less uneased.
 Deniz: "Hello, Sasha."
 You don't have anything else to say to them right now, so you just wave. They wave back.
+<<stop>>
 
 ===
 title: IslandQuestDeniz
@@ -240,7 +236,7 @@ There's a tremor in their tone.
 <<endif>>
 Deniz: “Look, I don't even care if Boat sent you anymore. Tell them this: not today. They should be doing their job, and me.. I should be.. staying far away from this nonsense.”
 They gesture around themselves in a wide arc, you're not sure if this nonsense refers to a parade or.. everything.
-//<<Learn DenizBoatHate>> (At this point, the player has what they need to talk to Boat about deniz, the rest is character building)
+<<Learn DenizBoatHate>> 
 -> "Are you not religious?"
 	Sasha: "Are you not religious?"
 	Deniz seems.. to put it quite obviously, uncomfortable to tell you. At the same time, they think they're hiding it really well.
@@ -255,6 +251,7 @@ They gesture around themselves in a wide arc, you're not sure if this nonsense r
 				Unamused, Deniz turns away from you again, turning their attention to picking at pebbles by their feet. 
 				You don't think they want to talk to you anymore.
 -> "Alright, well.. thank you for telling me."
+
 <<set $IslandQuestDenizUnfinished = false>>
 <<stop>>
 ===
@@ -285,7 +282,7 @@ Deniz: "What's.. what's your name? I guess I forgot to ask.."
 -> "Sasha."
 	Sasha: "Sasha."
 	<<set $DenizKnowsSasha = true>>
-	Deniz nods slowly, looking up from the sweet dog to meet your eyes. Notably, probably the first time they did that the entire conversation.
+	Deniz nods slowly, looking up from the sweet dog to meet your eyes directly. Notably, probably the first time they did that the entire conversation.
 	Deniz: "Sasha.. Okay, I'll try to remember that."
 -> "None of your business."
 	Sasha: "None of your business."

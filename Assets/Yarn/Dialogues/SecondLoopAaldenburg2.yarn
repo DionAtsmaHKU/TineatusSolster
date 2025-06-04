@@ -1,12 +1,6 @@
-﻿title: SecondLoopAaldenburg2
+﻿title: sgoiankmv
 tags:
 ---
-<< declare $AaldenburgLoop2Tree1Experience = false >>
-<< declare $AaldenburgLoop2Tree1Identity = false >>
-<< declare $AaldenburgLoop2Tree1Time = false >>
-
-<< declare $RadioQuestStarted = false >>
-<< declare $RadioQuestComplete = false >>
 
 Aaldenburg has not stopped tinkering since you last saw her. Does she ever take a break?
 The sound of the door opening gets her attention, and she turns to you to greet you.
@@ -91,7 +85,7 @@ This is not what you expected. Not what you could ever have expected. But this m
 << jump SecondLoopAaldenburg3 >>
 ===
 
-title: SecondLoopAaldenburg3
+title: fanjk
 tags:
 ---
 -> “How did you experience the loop? I just went to the parade, and then at the end suddenly the void came over the whole town. Then I was back at the train station this morning, when I arrived in town.” << if $AaldenburgLoop2Tree1Experience == false >>
@@ -160,14 +154,14 @@ Compartmentalizing the horror of the reality you are currently living, you ready
 
 ===
 
-title: SecondLoopAaldenburgQuit
+title: faisjnck
 tags:
 ---
 -> Leave quietly
     Behind you as you depart, science marches ever forwards.
 ===
 
-title: SecondLoopAaldenburg4
+title: pspspr
 tags:
 ---
 // When talking to Aaldenburg again after completing the radio quest

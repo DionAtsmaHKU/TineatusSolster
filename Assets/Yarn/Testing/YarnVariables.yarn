@@ -4,10 +4,54 @@
 	<<jump ResetStats>>
 <<endif>>
 
+//Sasha Variables
 << declare $TestStat = 0 >>
 << declare $ArtMajor = false >>
 << declare $TechMajor = false >>
 << declare $PsychMajor = false >>
+
+//Wisteria Variables
+<< declare $KnowWisteria = false >>
+<< declare $ThisLoopMetWisteria = false >>
+<< declare $FirstWisteriaOptionsPicked = 0 >>
+<< declare $SecondWisteriaOptionsPicked = 0 >>
+
+//firstloop
+<< declare $FirstLoopWisteriaOptionsPicked = 0 >>
+
+//Aald Variables
+<< declare $FirstLoopAaldenburgSaidHello = false >>
+<< declare $FirstLoopAaldenburgSaidDmitriy = false >>
+<< declare $KnowAaldenburg = false >>
+<< declare $ThisLoopMetAaldenburg = false >>
+
+<< declare $AaldenburgLoop2Tree1Experience = false >>
+<< declare $AaldenburgLoop2Tree1Identity = false >>
+<< declare $AaldenburgLoop2Tree1Time = false >>
+
+<< declare $RadioQuestStarted = false >>
+<< declare $RadioQuestComplete = false >>
+
+//Deniz Variables
+<<declare $SeenDenizIntro = false>>
+<<declare $BoatDenizAnger = 0>>
+<<declare $BoatSashaAnger = false>>
+<<declare $BabushkaDeniz = false>>
+<<declare $IslandQuestDenizUnfinished = true>>
+<<declare $DenizKnowsSasha = false>>
+
+//Boat Variables
+<<declare $sashaDick = false>>
+<<declare $SecretWord = false>>
+<<declare $DudeTheyJustSaidThat = false>>
+
+//Dmitriy Variables
+<<declare $NotSeenDmiHi = true>>
+<<declare $DmiAnnoyed = 0>>
+<<declare $BoatDmiTogether = false>>
+<<declare $Boatmad = true>>
+<<declare $SeenIslandDmi = false>>
+
 // Fabian Related Variables
 << declare $FabianMood = 0 >> // Higher number means happier, lower means sadder
 << declare $FabianFamiliarity = 0 >> // Increases as you talk to him and he gets to know you. Does not go below 0. Resets only on loop
@@ -62,10 +106,55 @@ title: ResetStats
 << set $ArtMajor = false >>
 << set $TechMajor = false >>
 << set $PsychMajor = false >>
+
+//Wisteria Variables
+<< set $KnowWisteria = false >>
+<< set $ThisLoopMetWisteria = false >>
+<< set $FirstWisteriaOptionsPicked = 0 >>
+<< set $SecondWisteriaOptionsPicked = 0 >>
+
+//firstloop
+<< set $FirstLoopWisteriaOptionsPicked = 0 >>
+
+//Aald Variables
+<< set $FirstLoopAaldenburgSaidHello = false >>
+<< set $FirstLoopAaldenburgSaidDmitriy = false >>
+<< set $KnowAaldenburg = false >>
+<< set $ThisLoopMetAaldenburg = false >>
+
+<< set $AaldenburgLoop2Tree1Experience = false >>
+<< set $AaldenburgLoop2Tree1Identity = false >>
+<< set $AaldenburgLoop2Tree1Time = false >>
+
+<< set $RadioQuestStarted = false >>
+<< set $RadioQuestComplete = false >>
+
+//Deniz Variables
+<<set $SeenDenizIntro = false>>
+<<set $BoatDenizAnger = 0>>
+<<set $BoatSashaAnger = false>>
+<<set $BabushkaDeniz = false>>
+<<set $IslandQuestDenizUnfinished = true>>
+<<set $DenizKnowsSasha = false>>
+
+//Boat Variables
+<<set $sashaDick = false>>
+<<set $SecretWord = false>>
+<<set $DudeTheyJustSaidThat = false>>
+
+//Dmitriy Variables
+<<set $NotSeenDmiHi = true>>
+<<set $DmiAnnoyed = 0>>
+<<set $BoatDmiTogether = false>>
+<<set $Boatmad = true>>
+<<set $SeenIslandDmi = false>>
+
 // Fabian Related Variables
 << set $FabianMood = 0 >> // Higher number means happier, lower means sadder
 << set $FabianFamiliarity = 0 >> // Increases as you talk to him and he gets to know you. Does not go below 0. Resets only on loop
 
+
+(Choose which Major Sasha studied in college.)
 -> Art
     << set $ArtMajor = true >>
 	<< SetSashaSprite 0 >>

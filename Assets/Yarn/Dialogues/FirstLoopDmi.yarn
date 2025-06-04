@@ -1,14 +1,9 @@
 title: FirstLoopDmi
 ---
-<<declare $NotSeenDmiHi = true>>
-<<declare $DmiAnnoyed = 0>>
-<<declare $BoatDmiTogether = false>>
-<<declare $Boatmad = true>>
-<<declare $SeenIslandDmi = false>>
-
-<<if $SecondLoop == true>> 
- 	<<jump SecondLoopDmi>>
+<<if DoesHeKnow ("SecondLoop") == true>>
+	<<jump SecondLoopDmi>>
 <<endif>>
+
 
 A cold chill sweeps over you now that some of the buildings have given way to the open air. 
 Hugging your coat tighter to your body, you approach the man you’ve been trying to find this whole time. 
@@ -179,7 +174,7 @@ title: SecondLoopDmi
 		<<jump SecondLoopDmi>>
 -> "I’ll be off now."
 	<<stop>>
--> "I need to go to the island." <<if $IslandQuest && !$SeenIslandDmi>> //IslandQuest perma learn
+-> "I need to go to the island." <<if DoesHeKnow("IslandQuest")>>
 	Dmitriy: "No."
 	-> No?
 		<<jump NoIslandForSasha>>
