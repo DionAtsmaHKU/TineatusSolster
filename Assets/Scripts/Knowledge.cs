@@ -74,7 +74,11 @@ public class Knowledge : MonoBehaviour
         Debug.Log("New info event");
         newInfoEvent.start();
         knowledgeBools[key] = true;
-        knowledgeList[key].SetActive(true);
+
+        if (knowledgeList.ContainsKey(key))
+        {
+            knowledgeList[key].SetActive(true);
+        }
     }
 
     public bool DoesHeKnow(string key)
