@@ -195,6 +195,14 @@ public class Timer : MonoBehaviour
         VariableManager.Instance.Loop(); // Reset PlayerPos, NPC's, Timer, Events
         dialogueRunner.StartDialogue("Start");
     }
+
+    public bool isPaused()
+    {
+        if (paused)
+            return true;
+
+        return false;
+    }
 }
 
 [Serializable]
