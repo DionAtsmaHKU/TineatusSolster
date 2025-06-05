@@ -30,7 +30,14 @@ public class NotebookManager : MonoBehaviour
         notebook.SetActive(isActive);
     }
 
-    public void FlipToPage(int page)
+    public void FlipNext(int pageChange)
+    {
+        pages[currentIndex].SetActive(false);
+        currentIndex += pageChange;
+        pages[currentIndex].SetActive(true);
+    }
+
+    public void FlipHere(int page)
     {
         pages[currentIndex].SetActive(false);
         currentIndex = page;
