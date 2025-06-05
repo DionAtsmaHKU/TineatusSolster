@@ -2,11 +2,14 @@
 tags:
 ---
 << LightOff Conquest >>
+<< Learn TarotA >>
 Conquest: Yo you just triggered this dialogue
 -> Hell yeah
     Sasha: Hell yeah
+    << Learn InfoB >>
 -> HELL YEAH!!!
     Sasha: HELL YEAH!!!
+    << Learn InfoC >>
 
 << if DoesHeKnow("InfoA") == true >>
     i mean HEEEEEEEEEEEELLLLLLLLL YEAHHHHHHHH

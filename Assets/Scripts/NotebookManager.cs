@@ -18,7 +18,12 @@ public class NotebookManager : MonoBehaviour
     private void Update()
     {
         if (timer.isPaused())
-            return;
+        {
+            if (isActive)
+            {
+                ToggleNotebook();
+            }
+        }
 
         if (Input.GetKeyDown(KeyCode.N))
             ToggleNotebook();
@@ -32,6 +37,9 @@ public class NotebookManager : MonoBehaviour
 
     public void FlipNext(int pageChange)
     {
+        if (currentIndex + pageChange < 0 || currentIndex + pageChange > 9)
+            return;
+
         pages[currentIndex].SetActive(false);
         currentIndex += pageChange;
         pages[currentIndex].SetActive(true);
