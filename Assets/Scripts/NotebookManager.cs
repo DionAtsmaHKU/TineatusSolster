@@ -9,6 +9,7 @@ public class NotebookManager : MonoBehaviour
     private Timer timer;
     private int currentIndex = 0;
     private bool isActive = false;
+    private bool firstOpen = true;
 
     private void Start()
     {
@@ -31,6 +32,12 @@ public class NotebookManager : MonoBehaviour
 
     public void ToggleNotebook()
     {
+        if (firstOpen)
+        {
+            FlipHere(0);
+            firstOpen = false;
+        }
+
         isActive = !isActive;
         notebook.SetActive(isActive);
     }

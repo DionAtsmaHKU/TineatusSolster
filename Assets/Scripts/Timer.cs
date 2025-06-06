@@ -61,7 +61,8 @@ public class Timer : MonoBehaviour
 
     void UpdateTime()
     {
-		if (paused)
+        SetText();
+        if (paused)
 			return;
 		
         totalTimer += Time.deltaTime * timeMultiplier;
@@ -73,8 +74,6 @@ public class Timer : MonoBehaviour
             hours++;
         }
         timeInMinutes = (int)timer;
-
-        SetText();
 
         if (totalTimer > endTime.timeInMinutes) 
         {
