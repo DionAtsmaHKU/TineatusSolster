@@ -2,16 +2,18 @@
 tags:
 ---
 << LightOff Conquest >>
-<< Learn TarotA >>
+<< Learn FabianTarot >>
 Conquest: Yo you just triggered this dialogue
 -> Hell yeah
     Sasha: Hell yeah
-    << Learn InfoB >>
+    << Learn FabianInfoA >>
+    << Learn ElegyInfoC >>
 -> HELL YEAH!!!
     Sasha: HELL YEAH!!!
-    << Learn InfoC >>
+    << Learn FabianInfoD >>
+    << Learn BoatguyInfoB >>
 
-<< if DoesHeKnow("InfoA") == true >>
+<< if DoesHeKnow("BoatguyInfoB") == true >>
     i mean HEEEEEEEEEEEELLLLLLLLL YEAHHHHHHHH
 << endif >>
 ===

@@ -453,12 +453,12 @@ GameObject:
   - component: {fileID: 3647340}
   - component: {fileID: 3647339}
   m_Layer: 5
-  m_Name: InfoC
-  m_TagString: Untagged
+  m_Name: WisteriaInfoC
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3647338
 RectTransform:
   m_ObjectHideFlags: 0
@@ -530,12 +530,12 @@ GameObject:
   - component: {fileID: 9937332}
   - component: {fileID: 9937331}
   m_Layer: 5
-  m_Name: InfoC
-  m_TagString: Untagged
+  m_Name: AaldenburgInfoC
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &9937330
 RectTransform:
   m_ObjectHideFlags: 0
@@ -595,46 +595,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9937329}
   m_CullTransparentMesh: 1
---- !u!1 &10392644
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 10392645}
-  m_Layer: 5
-  m_Name: Person A
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &10392645
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 10392644}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2042097761}
-  - {fileID: 1196817448}
-  - {fileID: 1837690669}
-  - {fileID: 1762253871}
-  m_Father: {fileID: 1264206721}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &24305918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,12 +1094,12 @@ GameObject:
   - component: {fileID: 48449886}
   - component: {fileID: 48449885}
   m_Layer: 5
-  m_Name: InfoB
-  m_TagString: Untagged
+  m_Name: FabianInfoB
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &48449884
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1211,12 +1171,12 @@ GameObject:
   - component: {fileID: 51048340}
   - component: {fileID: 51048339}
   m_Layer: 5
-  m_Name: InfoB
-  m_TagString: Untagged
+  m_Name: WisteriaInfoB
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &51048338
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1511,7 +1471,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 78dc02d5f0968c746b2dadbce00e397c, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78dc02d5f0968c746b2dadbce00e397c, type: 3}
       propertyPath: m_LocalScale.x
@@ -1624,12 +1584,12 @@ GameObject:
   - component: {fileID: 147882707}
   - component: {fileID: 147882706}
   m_Layer: 5
-  m_Name: InfoB
-  m_TagString: Untagged
+  m_Name: BabushkaInfoB
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &147882705
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1942,12 +1902,12 @@ GameObject:
   - component: {fileID: 165345348}
   - component: {fileID: 165345347}
   m_Layer: 5
-  m_Name: InfoD
-  m_TagString: Untagged
+  m_Name: ElegyInfoD
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &165345346
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2019,12 +1979,12 @@ GameObject:
   - component: {fileID: 167593786}
   - component: {fileID: 167593785}
   m_Layer: 5
-  m_Name: InfoA
-  m_TagString: Untagged
+  m_Name: AaldenburgInfoA
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &167593784
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2511,12 +2471,12 @@ GameObject:
   - component: {fileID: 251477758}
   - component: {fileID: 251477757}
   m_Layer: 5
-  m_Name: InfoD
-  m_TagString: Untagged
+  m_Name: AaldenburgInfoD
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &251477756
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2840,12 +2800,12 @@ GameObject:
   - component: {fileID: 271298904}
   - component: {fileID: 271298903}
   m_Layer: 5
-  m_Name: InfoB
-  m_TagString: Untagged
+  m_Name: DmitriyInfoB
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &271298902
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3133,12 +3093,12 @@ GameObject:
   - component: {fileID: 308560329}
   - component: {fileID: 308560328}
   m_Layer: 5
-  m_Name: InfoA
-  m_TagString: Untagged
+  m_Name: DenizInfoA
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &308560327
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3551,7 +3511,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 272940637}
   m_HandleRect: {fileID: 272940636}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -3606,11 +3566,11 @@ GameObject:
   - component: {fileID: 357650151}
   m_Layer: 5
   m_Name: AaldenburgPlageholder
-  m_TagString: Untagged
+  m_TagString: Deactivate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &357650151
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3926,12 +3886,12 @@ GameObject:
   - component: {fileID: 441460574}
   - component: {fileID: 441460573}
   m_Layer: 5
-  m_Name: Tarot
-  m_TagString: Untagged
+  m_Name: BoatguyTarot
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &441460572
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4198,12 +4158,12 @@ GameObject:
   - component: {fileID: 521825622}
   - component: {fileID: 521825621}
   m_Layer: 5
-  m_Name: InfoB
-  m_TagString: Untagged
+  m_Name: DenizInfoB
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &521825620
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4801,7 +4761,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602524420}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -4830,7 +4790,7 @@ RectTransform:
   m_Children:
   - {fileID: 1054674193}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5008,12 +4968,12 @@ GameObject:
   - component: {fileID: 617818392}
   - component: {fileID: 617818391}
   m_Layer: 5
-  m_Name: Tarot
-  m_TagString: Untagged
+  m_Name: AaldenburgTarot
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &617818390
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5206,11 +5166,11 @@ GameObject:
   - component: {fileID: 660457224}
   m_Layer: 5
   m_Name: ElegyPlageholder
-  m_TagString: Untagged
+  m_TagString: Deactivate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &660457224
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5383,12 +5343,12 @@ GameObject:
   - component: {fileID: 671406637}
   - component: {fileID: 671406636}
   m_Layer: 5
-  m_Name: Tarot
-  m_TagString: Untagged
+  m_Name: BabushkaTarot
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &671406635
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5537,12 +5497,12 @@ GameObject:
   - component: {fileID: 686729516}
   - component: {fileID: 686729515}
   m_Layer: 5
-  m_Name: InfoC
-  m_TagString: Untagged
+  m_Name: FabianInfoC
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &686729514
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6409,12 +6369,12 @@ GameObject:
   - component: {fileID: 749573578}
   - component: {fileID: 749573577}
   m_Layer: 5
-  m_Name: InfoC
-  m_TagString: Untagged
+  m_Name: BoatguyInfoC
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &749573576
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6621,12 +6581,12 @@ GameObject:
   - component: {fileID: 786276816}
   - component: {fileID: 786276815}
   m_Layer: 5
-  m_Name: InfoA
-  m_TagString: Untagged
+  m_Name: WisteriaInfoA
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &786276814
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6766,7 +6726,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &810689444
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7448,12 +7408,12 @@ GameObject:
   - component: {fileID: 893868284}
   - component: {fileID: 893868283}
   m_Layer: 5
-  m_Name: InfoC
-  m_TagString: Untagged
+  m_Name: DmitriyInfoC
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &893868282
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7660,12 +7620,12 @@ GameObject:
   - component: {fileID: 900913735}
   - component: {fileID: 900913734}
   m_Layer: 5
-  m_Name: Tarot
-  m_TagString: Untagged
+  m_Name: DmitriyTarot
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &900913733
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8570,12 +8530,12 @@ GameObject:
   - component: {fileID: 995052983}
   - component: {fileID: 995052982}
   m_Layer: 5
-  m_Name: InfoD
-  m_TagString: Untagged
+  m_Name: BabushkaInfoD
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &995052981
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8780,12 +8740,12 @@ GameObject:
   - component: {fileID: 1012647073}
   - component: {fileID: 1012647072}
   m_Layer: 5
-  m_Name: InfoC
-  m_TagString: Untagged
+  m_Name: DenizInfoC
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1012647071
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9280,11 +9240,11 @@ GameObject:
   - component: {fileID: 1054674193}
   m_Layer: 5
   m_Name: Notebook
-  m_TagString: Untagged
+  m_TagString: Deactivate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1054674193
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9844,12 +9804,12 @@ GameObject:
   - component: {fileID: 1098078017}
   - component: {fileID: 1098078016}
   m_Layer: 5
-  m_Name: Tarot
-  m_TagString: Untagged
+  m_Name: WisteriaTarot
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1098078015
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9920,12 +9880,12 @@ GameObject:
   - component: {fileID: 1102081683}
   - component: {fileID: 1102081682}
   m_Layer: 5
-  m_Name: Tarot
-  m_TagString: Untagged
+  m_Name: ElegyTarot
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1102081681
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10001,12 +9961,12 @@ GameObject:
   - component: {fileID: 1147336641}
   - component: {fileID: 1147336640}
   m_Layer: 5
-  m_Name: InfoA
-  m_TagString: Untagged
+  m_Name: DmitriyInfoA
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1147336639
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10193,12 +10153,12 @@ GameObject:
   - component: {fileID: 1171310987}
   - component: {fileID: 1171310986}
   m_Layer: 5
-  m_Name: InfoD
-  m_TagString: Untagged
+  m_Name: WisteriaInfoD
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1171310985
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10206,9 +10166,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171310984}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 866023299}
@@ -10217,7 +10177,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -99, y: -73}
+  m_AnchoredPosition: {x: -99.00002, y: -73}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1171310986
@@ -10373,141 +10333,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
---- !u!1 &1196817447
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1196817448}
-  - component: {fileID: 1196817450}
-  - component: {fileID: 1196817449}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1196817448
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196817447}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 10392645}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -228, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1196817449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196817447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Knowledge Card A Here
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1196817450
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196817447}
-  m_CullTransparentMesh: 1
 --- !u!1001 &1206090180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10619,7 +10444,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1215182002
 MonoBehaviour:
@@ -11221,108 +11046,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255676974}
   m_CullTransparentMesh: 1
---- !u!1 &1264206717
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1264206721}
-  - component: {fileID: 1264206720}
-  - component: {fileID: 1264206719}
-  - component: {fileID: 1264206718}
-  m_Layer: 5
-  m_Name: KnowledgeMenu
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1264206718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264206717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &1264206719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264206717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &1264206720
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264206717}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &1264206721
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264206717}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 10392645}
-  m_Father: {fileID: 1710879189}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1273888426
 GameObject:
   m_ObjectHideFlags: 0
@@ -11815,12 +11538,12 @@ GameObject:
   - component: {fileID: 1331151337}
   - component: {fileID: 1331151336}
   m_Layer: 5
-  m_Name: InfoD
-  m_TagString: Untagged
+  m_Name: DmitriyInfoD
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1331151335
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11892,12 +11615,12 @@ GameObject:
   - component: {fileID: 1333937524}
   - component: {fileID: 1333937523}
   m_Layer: 5
-  m_Name: InfoB
-  m_TagString: Untagged
+  m_Name: ElegyInfoB
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1333937522
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12104,12 +11827,12 @@ GameObject:
   - component: {fileID: 1349697070}
   - component: {fileID: 1349697069}
   m_Layer: 5
-  m_Name: InfoA
-  m_TagString: Untagged
+  m_Name: FabianInfoA
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1349697068
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12181,12 +11904,12 @@ GameObject:
   - component: {fileID: 1379837022}
   - component: {fileID: 1379837021}
   m_Layer: 5
-  m_Name: InfoA
-  m_TagString: Untagged
+  m_Name: BoatguyInfoA
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1379837020
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12276,7 +11999,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1407549360
 MonoBehaviour:
@@ -12596,12 +12319,12 @@ GameObject:
   - component: {fileID: 1549979044}
   - component: {fileID: 1549979043}
   m_Layer: 5
-  m_Name: InfoD
-  m_TagString: Untagged
+  m_Name: BoatguyInfoD
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1549979042
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13239,12 +12962,12 @@ GameObject:
   - component: {fileID: 1640803259}
   - component: {fileID: 1640803258}
   m_Layer: 5
-  m_Name: InfoC
-  m_TagString: Untagged
+  m_Name: ElegyInfoC
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1640803257
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13321,12 +13044,12 @@ GameObject:
   - component: {fileID: 1658513849}
   - component: {fileID: 1658513848}
   m_Layer: 5
-  m_Name: InfoD
-  m_TagString: Untagged
+  m_Name: DenizInfoD
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1658513847
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13530,11 +13253,11 @@ GameObject:
   - component: {fileID: 1677060453}
   m_Layer: 5
   m_Name: DmitriyPlageholder
-  m_TagString: Untagged
+  m_TagString: Deactivate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1677060453
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13816,11 +13539,11 @@ GameObject:
   - component: {fileID: 1691206043}
   m_Layer: 5
   m_Name: DenizPlageholder
-  m_TagString: Untagged
+  m_TagString: Deactivate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1691206043
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13945,21 +13668,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueRunner: {fileID: 2074839901}
-  knowledgeMenu: {fileID: 1264206717}
-  knowledgeDict:
-    items:
-    - name: TarotA
-      obj: {fileID: 1716886811}
-    - name: InfoA
-      obj: {fileID: 1349697067}
-    - name: InfoB
-      obj: {fileID: 48449883}
-    - name: InfoC
-      obj: {fileID: 686729513}
-    - name: InfoD
-      obj: {fileID: 2097684687}
-    - name: SecondLoop
-      obj: {fileID: 0}
 --- !u!4 &1710879189
 Transform:
   m_ObjectHideFlags: 0
@@ -13971,8 +13679,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1264206721}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14169,12 +13876,12 @@ GameObject:
   - component: {fileID: 1716886814}
   - component: {fileID: 1716886813}
   m_Layer: 5
-  m_Name: Tarot
-  m_TagString: Untagged
+  m_Name: FabianTarot
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1716886812
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14303,141 +14010,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1762253868
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1762253871}
-  - component: {fileID: 1762253870}
-  - component: {fileID: 1762253869}
-  m_Layer: 5
-  m_Name: Text (TMP) (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1762253869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762253868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Knowledge Card C Here
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1762253870
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762253868}
-  m_CullTransparentMesh: 1
---- !u!224 &1762253871
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762253868}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 10392645}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 211, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1772915909
 GameObject:
   m_ObjectHideFlags: 0
@@ -14482,11 +14054,11 @@ GameObject:
   - component: {fileID: 1774069138}
   m_Layer: 5
   m_Name: BoatguyPlageholder
-  m_TagString: Untagged
+  m_TagString: Deactivate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1774069138
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14612,11 +14184,11 @@ GameObject:
   - component: {fileID: 1793628147}
   m_Layer: 5
   m_Name: WisteriaPlageholder
-  m_TagString: Untagged
+  m_TagString: Deactivate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1793628147
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14870,12 +14442,12 @@ GameObject:
   - component: {fileID: 1830302202}
   - component: {fileID: 1830302201}
   m_Layer: 5
-  m_Name: InfoB
-  m_TagString: Untagged
+  m_Name: BoatguyInfoB
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1830302200
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14947,12 +14519,12 @@ GameObject:
   - component: {fileID: 1833503163}
   - component: {fileID: 1833503162}
   m_Layer: 5
-  m_Name: InfoB
-  m_TagString: Untagged
+  m_Name: AaldenburgInfoB
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1833503161
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15011,143 +14583,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833503160}
-  m_CullTransparentMesh: 1
---- !u!1 &1837690668
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1837690669}
-  - component: {fileID: 1837690671}
-  - component: {fileID: 1837690670}
-  m_Layer: 5
-  m_Name: Text (TMP) (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1837690669
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1837690668}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 10392645}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1837690670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1837690668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: 'Knowledge Card B HEre
-
-'
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1837690671
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1837690668}
   m_CullTransparentMesh: 1
 --- !u!1 &1842732094
 GameObject:
@@ -16072,12 +15507,12 @@ GameObject:
   - component: {fileID: 1968950479}
   - component: {fileID: 1968950478}
   m_Layer: 5
-  m_Name: InfoC
-  m_TagString: Untagged
+  m_Name: BabushkaInfoC
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1968950477
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16149,12 +15584,12 @@ GameObject:
   - component: {fileID: 1975465011}
   - component: {fileID: 1975465010}
   m_Layer: 5
-  m_Name: InfoA
-  m_TagString: Untagged
+  m_Name: ElegyInfoA
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1975465009
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16746,7 +16181,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2041644282
 GameObject:
@@ -16863,82 +16298,6 @@ Transform:
   m_Father: {fileID: 566953431}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 41.785, y: -89.625, z: -80.382}
---- !u!1 &2042097760
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2042097761}
-  - component: {fileID: 2042097763}
-  - component: {fileID: 2042097762}
-  m_Layer: 5
-  m_Name: TarotA
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &2042097761
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042097760}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 10392645}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2042097762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042097760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6fd167f8c86e9a64dbcfc0a87bc7837e, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2042097763
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042097760}
-  m_CullTransparentMesh: 1
 --- !u!1001 &2043858646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17198,12 +16557,12 @@ GameObject:
   - component: {fileID: 2076311492}
   - component: {fileID: 2076311491}
   m_Layer: 5
-  m_Name: InfoA
-  m_TagString: Untagged
+  m_Name: BabushkaInfoA
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2076311490
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17274,11 +16633,11 @@ GameObject:
   - component: {fileID: 2085404278}
   m_Layer: 5
   m_Name: BabushkaPlageholder
-  m_TagString: Untagged
+  m_TagString: Deactivate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2085404278
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17316,12 +16675,12 @@ GameObject:
   - component: {fileID: 2097684690}
   - component: {fileID: 2097684689}
   m_Layer: 5
-  m_Name: InfoD
-  m_TagString: Untagged
+  m_Name: FabianInfoD
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2097684688
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17680,12 +17039,12 @@ GameObject:
   - component: {fileID: 2105848354}
   - component: {fileID: 2105848353}
   m_Layer: 5
-  m_Name: Tarot
-  m_TagString: Untagged
+  m_Name: DenizTarot
+  m_TagString: Knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2105848352
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17755,11 +17114,11 @@ GameObject:
   - component: {fileID: 2128914716}
   m_Layer: 5
   m_Name: FabianPlageholder
-  m_TagString: Untagged
+  m_TagString: Deactivate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2128914716
 RectTransform:
   m_ObjectHideFlags: 0

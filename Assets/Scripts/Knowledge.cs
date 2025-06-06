@@ -10,10 +10,8 @@ using Yarn.Unity;
 public class Knowledge : MonoBehaviour
 {
     [SerializeField] DialogueRunner dialogueRunner;
-    [SerializeField] GameObject knowledgeMenu;
-    [SerializeField] CustomObjectDictionary knowledgeDict;
     private bool inMenu;
-    private Dictionary<string, GameObject> knowledgeList;
+    private Dictionary<string, GameObject> knowledgeDict = new Dictionary<string, GameObject>();
     private Dictionary<string, bool> knowledgeBools = new Dictionary<string, bool>();
     private Func<string, bool> DoesHeKnowFunc;
 
@@ -26,8 +24,20 @@ public class Knowledge : MonoBehaviour
         newInfoEvent = RuntimeManager.CreateInstance(newInfoPath);
 
         DoesHeKnowFunc += DoesHeKnow;
-        knowledgeList = knowledgeDict.ToDictionary();
-        foreach (var k in knowledgeList)
+        knowledgeDict.Add("SecondLoop", null);
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Knowledge"))
+        {
+            knowledgeDict.Add(obj.name, obj);
+            Debug.Log("Adding " + obj.name);
+            obj.SetActive(false);
+        }
+
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Deactivate"))
+        {
+            obj.SetActive(false);
+        }
+
+        foreach (var k in knowledgeDict)
         {
             knowledgeBools.Add(k.Key, false);
         }
@@ -39,24 +49,6 @@ public class Knowledge : MonoBehaviour
     private void OnDestroy()
     {
         VariableManager.onLoop -= LearnLoop;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            if (inMenu)
-            {
-                knowledgeMenu.SetActive(true);
-                inMenu = false;
-            }
-            else
-            {
-                knowledgeMenu.SetActive(false);
-                inMenu = true;
-            }
-        }
     }
 
     private void LearnLoop()
@@ -75,9 +67,9 @@ public class Knowledge : MonoBehaviour
         newInfoEvent.start();
         knowledgeBools[key] = true;
 
-        if (knowledgeList[key] != null)
+        if (knowledgeDict[key] != null)
         {
-            knowledgeList[key].SetActive(true);
+            knowledgeDict[key].SetActive(true);
         }
     }
 
@@ -89,28 +81,3 @@ public class Knowledge : MonoBehaviour
         return false;
     }
 }
-
-[Serializable]
-public class CustomObjectDictionary
-{
-    [SerializeField] List<CustomDictionaryObj> items;
-
-    public Dictionary<string, GameObject> ToDictionary()
-    {
-        Dictionary<string, GameObject> newDict = new Dictionary<string, GameObject>();
-
-        foreach (CustomDictionaryObj item in items)
-        {
-            newDict.Add(item.name, item.obj);
-        }
-        return newDict;
-    }
-}
-
-[Serializable]
-public class CustomDictionaryObj
-{
-    [SerializeField] public string name;
-    [SerializeField] public GameObject obj;
-}
-

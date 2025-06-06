@@ -13,19 +13,19 @@ public class NotebookManager : MonoBehaviour
     private void Start()
     {
         timer = FindAnyObjectByType<Timer>();
+        Canvas canvas = GetComponent<Canvas>();
+        canvas.enabled = true;
     }
 
     private void Update()
     {
-        if (timer.isPaused())
+        if (Input.GetKeyDown(KeyCode.N) && !timer.isPaused())
         {
-            if (isActive)
-            {
-                ToggleNotebook();
-            }
+            ToggleNotebook();
+            return;
         }
-
-        if (Input.GetKeyDown(KeyCode.N))
+            
+        if (timer.isPaused() && isActive)
             ToggleNotebook();
     }
 
