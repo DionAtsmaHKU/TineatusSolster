@@ -3,12 +3,7 @@ guid: 1312c7ba6d4f8b94ba68660dc9792870
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ColdYellowWall
-    second: {fileID: -6478536213147159724, guid: 586b0a1301882a749b6f77e4bd97a8fe, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
