@@ -6,15 +6,17 @@ using Yarn.Unity;
 public class SetAnimationTrigger : MonoBehaviour
 {
     [SerializeField] Animator animator;
+    [SerializeField] string characterName;
     [SerializeField] DialogueRunner runner;
 
     private void Awake()
     {
-        runner.AddCommandHandler<string>("SetTrigger", SetTrig);
+        runner.AddCommandHandler<string, string>("SetTrigger", SetTrig);
     }
 
-    private void SetTrig(string trigger)
+    private void SetTrig(string character, string trigger)
     {
-        animator.SetTrigger(trigger);
+        if (character == characterName) 
+            animator.SetTrigger(trigger);
     }
 }
