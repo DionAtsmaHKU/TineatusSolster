@@ -93,11 +93,11 @@ public class Timer : MonoBehaviour
     {
         if (timeInMinutes < 10)
         {
-            timerUI.text = "Time: " + hours.ToString() + ":0" + timeInMinutes.ToString();
+            timerUI.text = hours.ToString() + ":0" + timeInMinutes.ToString();
         }
         else
         {
-            timerUI.text = "Time: " + hours.ToString() + ":" + timeInMinutes.ToString();
+            timerUI.text = hours.ToString() + ":" + timeInMinutes.ToString();
         }
     }
 
