@@ -61,19 +61,19 @@ public class Timer : MonoBehaviour
 
     void UpdateTime()
     {
-        SetText();
-        if (paused)
-			return;
-		
-        totalTimer += Time.deltaTime * timeMultiplier;
-        timer += Time.deltaTime * timeMultiplier;
-
         if (timeInMinutes >= 60)
         {
             timer -= 60;
             hours++;
         }
         timeInMinutes = (int)timer;
+        SetText();
+
+        if (paused)
+			return;
+		
+        totalTimer += Time.deltaTime * timeMultiplier;
+        timer += Time.deltaTime * timeMultiplier;
 
         if (totalTimer > endTime.timeInMinutes) 
         {

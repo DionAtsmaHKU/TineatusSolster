@@ -1,15 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class NotebookManager : MonoBehaviour
 {
     [SerializeField] GameObject notebook;
+    [SerializeField] GameObject timerUI;
     [SerializeField] List<GameObject> pages = new List<GameObject>();
+    private DialogueRunner runner;
     private Timer timer;
     private int currentIndex = 0;
     private bool isActive = false;
     private bool firstOpen = true;
+    private bool uiActive = true;
+
+    private void Awake()
+    {
+        runner = FindAnyObjectByType<DialogueRunner>();
+        runner.onDialogueStart.AddListener(ToggleUI);
+        runner.onDialogueComplete.AddListener(ToggleUI);
+    }
 
     private void Start()
     {
@@ -57,5 +68,11 @@ public class NotebookManager : MonoBehaviour
         pages[currentIndex].SetActive(false);
         currentIndex = page;
         pages[currentIndex].SetActive(true);
+    }
+
+    private void ToggleUI()
+    {
+        uiActive = !uiActive;
+        timerUI.SetActive(uiActive);
     }
 }
