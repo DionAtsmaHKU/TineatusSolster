@@ -61,12 +61,13 @@ public class Timer : MonoBehaviour
 
     void UpdateTime()
     {
+        timeInMinutes = (int)timer;
         if (timeInMinutes >= 60)
         {
             timer -= 60;
             hours++;
+            timeInMinutes = (int)timer;
         }
-        timeInMinutes = (int)timer;
         SetText();
 
         if (paused)
