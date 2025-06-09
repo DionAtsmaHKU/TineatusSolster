@@ -12,6 +12,13 @@ public class DialogueAudio : MonoBehaviour
     private string newTextBoxPath = "event:/ui/new_text_box";
     EventInstance continueEv, newTextBoxEv;
 
+
+    private void Awake()
+    {
+        dialogueRunner.onDialogueStart.AddListener(PlayContinue);
+        dialogueRunner.onDialogueComplete.AddListener(PlayNext);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +28,11 @@ public class DialogueAudio : MonoBehaviour
 
     public void PlayContinue()
     {
-        //continueEv.start();
+        continueEv.start();
     }
 
     public void PlayNext()
     {
-        //newTextBoxEv.start();
+        newTextBoxEv.start();
     }
 }

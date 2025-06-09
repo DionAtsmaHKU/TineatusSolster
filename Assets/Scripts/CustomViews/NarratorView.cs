@@ -9,7 +9,6 @@ public class NarratorView : LineView
     {
         if (dialogueLine.CharacterName == null)
         {
-            dialogueAudio.PlayContinue();
             base.RunLine(dialogueLine, onDialogueLineFinished);
         }
     }

@@ -26,7 +26,6 @@ public class SpeechView : LineView
             layoutGroup.padding.right = 0;
             layoutGroup.padding.left = 80;
         }
-        dialogueAudio.PlayNext();
         base.RunLine(dialogueLine, onDialogueLineFinished);
     }
 }
