@@ -8,7 +8,7 @@ public class NotebookManager : MonoBehaviour
     [SerializeField] GameObject notebook;
     [SerializeField] GameObject timerUI;
     [SerializeField] List<GameObject> pages = new List<GameObject>();
-    private DialogueRunner runner;
+    [SerializeField] DialogueRunner runner;
     private Timer timer;
     private int currentIndex = 0;
     private bool isActive = false;
@@ -17,7 +17,6 @@ public class NotebookManager : MonoBehaviour
 
     private void Awake()
     {
-        runner = FindAnyObjectByType<DialogueRunner>();
         runner.onDialogueStart.AddListener(ToggleUI);
         runner.onDialogueComplete.AddListener(ToggleUI);
     }

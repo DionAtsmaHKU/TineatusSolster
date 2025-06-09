@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] DialogueRunner runner;
     public float moveSpeed = 5f;
     private CharacterController controller;
+    private Rigidbody rb;
     private bool inDialogue = false;
     
     public static event Action OnInteract;
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        rb = GetComponentInChildren<Rigidbody>();
         controller = GetComponent<CharacterController>(); // Get the CharacterController
     }
 
@@ -40,9 +42,9 @@ public class PlayerMovement : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
 
-        Vector3 move = new Vector3(moveX, 0, moveZ).normalized * moveSpeed;
-
-        controller.Move(move * Time.deltaTime); // Move while respecting collisions
+        Vector2 move = new Vector2(moveZ, -moveX).normalized * moveSpeed;
+        rb.velocity = new Vector3(move.x, rb.velocity.y, move.y);
+        // controller.Move(move * Time.deltaTime); // Move while respecting collisions
     }
 
     public void EnterExitDialogue()
