@@ -60,12 +60,15 @@
 -> Art
     << set $ArtMajor = true >>
 	<< SetSashaSprite 0 >>
+    << SetModel Art >>
 -> Engineering
     << set $TechMajor = true >>
 	<< SetSashaSprite 1 >>
+    << SetModel Tech >>
 -> Psychology
     << set $PsychMajor = true >>
 	<< SetSashaSprite 2 >>
+    << SetModel Psych >>
 
 The muted streets of Solster are finally before you. The square before the train station is faded, forgotten, and sparsely occupied. This might be the least trodden place in all of Solster. 
 The low light of an overcast sky brings back old memories. A childhood spent in the dark. A departure from this same square, 4 years younger yet barely changed.
@@ -158,12 +161,15 @@ title: ResetStats
 -> Art
     << set $ArtMajor = true >>
 	<< SetSashaSprite 0 >>
+    << SetModel Art >>
 -> Engineering
     << set $TechMajor = true >>
 	<< SetSashaSprite 1 >>
+    << SetModel Tech >>
 -> Psychology
     << set $PsychMajor = true >>
 	<< SetSashaSprite 2 >>
+    << SetModel Psych >>
 	
 And just like that, the play has started all over again.
 
