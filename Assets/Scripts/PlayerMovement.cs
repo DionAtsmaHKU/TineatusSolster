@@ -7,6 +7,7 @@ using FMODUnity;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] DialogueRunner runner;
+	Animator animator;
     public float moveSpeed = 5f;
     private CharacterController controller;
     private Rigidbody rb;
@@ -26,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+		animator = GetComponentInChildren<Animator>();
         idleEv = RuntimeManager.CreateInstance(idlePath);
         rb = GetComponentInChildren<Rigidbody>();
         controller = GetComponent<CharacterController>(); // Get the CharacterController
@@ -61,7 +63,6 @@ public class PlayerMovement : MonoBehaviour
         float moveZ = Input.GetAxis("Vertical");
 
         Vector2 move = new Vector2(moveZ, -moveX).normalized * moveSpeed;
-
         if (move.magnitude < 0.01 && !inDialogue)
         {
             idleTimer += Time.deltaTime;
@@ -69,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
 
         rb.velocity = new Vector3(move.x, rb.velocity.y, move.y);
         // controller.Move(move * Time.deltaTime); // Move while respecting collisions
+		animator.SetFloat("speed", move.magnitude);
     }
 
     public void EnterExitDialogue()
