@@ -75,6 +75,9 @@ public class Knowledge : MonoBehaviour
 
     public bool DoesHeKnow(string key)
     {
+        if (!knowledgeBools.ContainsKey(key))
+            return false;
+
         if (knowledgeBools[key])
             return true;
 
