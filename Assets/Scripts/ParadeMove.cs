@@ -6,7 +6,6 @@ public class ParadeMove : MonoBehaviour
 {
     [SerializeField] Knowledge knowledge;
     private Animator animator;
-    private bool standStill = true;
 
     private void Start()
     {
@@ -15,12 +14,9 @@ public class ParadeMove : MonoBehaviour
 
     private void Update()
     {
-        if (standStill) 
-            //
-
         if (knowledge.DoesHeKnow("SecondLoop"))
         {
-            standStill = false;
+            animator.SetFloat("speed", 1);
         }
     }
 }
