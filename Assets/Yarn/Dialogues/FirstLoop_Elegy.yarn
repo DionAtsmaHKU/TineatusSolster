@@ -1,43 +1,75 @@
 title: FirstLoop_Elegy
 ---
-Elegy: Welcome home, Sasha 
-Elegy: I guess death truly has its ways of bringing people back together again. Have you seen your brother yet?
+In front of you stands a tall and powerful figure, one known by every soul in Solster. 
+The radiant Elegy. It's impossible to not be starstruck in her presence. 
+The immortal who established the faith in Solster. A faith so interwoven into its culture that they are practically one in the same. 
+Elegy, a living idol of the church of Solster, and relevant to mention, your brother's boss.
+Elegy: Welcome home, Sasha Yildiz.
+Elegy: They say death brings reunion. Evidently it is true that it brings people together again.
+Alfonz was not the only reason you came back... But you don’t need to share your failures with everyone here.
+Elegy: Have you spoken to your brother?
 
-There she is standing in front of you tall and powerful. a figure so well known to all in solster it's impossible to not be starstruck. The Radiant Elegy, The immortal being who established the faith of Solster. A faith so deeply woven in the culture there is almost no distinction between religion and fact. Elegy, a living idol of the church and your brothers boss
+-> “Yeah, I have spoken to him…”
+    Sasha: “Yeah, I have spoken to him…”
+	Elegy: Was it not the welcome you expected?
+	Seems that you didn’t hide your disappointment well enough.
+	Elegy: I apologise on his behalf. I am partly to blame, with how busy I have kept him as of late. 
+	Elegy: But he has been a great help in our preparations for our festival. Once it is done, you shall have the time together that you desire.
+-> “Not yet.”
+    Sasha: “Not yet.”
+	Elegy: If you wish to, you can find him nearby. He is currently taking a break, I believe.
+	She turns her head as if to seek out where Dmitriy is. Her neck seems to barely turn. She doesn’t try very hard.
+	Elegy: I apologise for having kept him so busy. He has been a great help in our preparations for our festival. 
+    Elegy: Once it is done, you shall have the time together that you desire.
 
--> Yeah, i have 'seen' him..
-    You can't help but let your disappointment in your reunion with your brother be known. you can't hide it..
-    Elegy: Not the welcoming committee you had hoped for i see. I apologize, truly.
-    Elegy: i guess i am partly to blame. Making him run all over town like a headless chicken procuring all we need for the parade and fixing some unsightly details
--> No, not yet..
-    Elegy: Hmmm.. i see well, i guess i am partly to blame for that.
-    Elegy: Making him run all over town like a headless chicken procuring all we need for the parade and fixing some unsightly details.
-    She turns her devine head to the side for a small moment as if she is looking for someone.
-    Elegy: Dmitriy should still be on his smoke break right now. You should probably still try and talk to him before the parade starts Sasha.
-Elegy: this years parade is extra special you see. I need everything to be perfect.
+Elegy: The Parade this year shall be quite special, you see.
+Elegy: It needs to be perfect. That is an imperative. 
+She takes a couple steps closer to you. Her covered face now a breath away from yours, a freezing chill runs down your spine.
+Elegy: Wouldn't you agree, Sasha?
+Elegy: Considering our beloved Alfonz will participate this year as well.
+The air feels lighter as she takes a few steps back. With greater distance between you and her, you can take a deep breath again. 
+Alfonz… Hearing the name spoken by her sends a wave of shock over you. As if now his death has been declared official.
+You still can't believe he’s really gone. That you will never hear one of his lectures again. That you won’t hear his soft humming when he believes you to be asleep. 
+Elegy is right. No matter what, you won’t ever be able to forget this year’s Parade.
+Elegy: You shall attend the parade today, correct.
+It’s not a question, and she does not state it as such. Of course you have to be there. She knows that you have to go for Alfonz. 
+No matter your own feelings about the church or parade, it is what Alfonz would have wanted. It will not leave your mind until then.
 
-Elegy takes a couple steps closer to you. her covered face now inches away from yours, A freezing chill runs down your spine.
+-> “Yes, I will.”
+    Sasha: “Yes, I will.”
+	You think you see Elegy smile, behind the cover of her thick veil.
+	Elegy: Good.
+-> “Obviously, duh.”
+    Sasha: “Obviously, duh.”
+	You think you see Elegy smile, behind the cover of her thick veil.
+	Elegy: Good. 
+-> “Do I really have a choice?”
+    Sasha: “Do I really have a choice?”
+	Elegy: I suppose not. Not anymore.
+    << if $ArtMajor == true >>
+        There is a hidden meaning behind what she just said. One that you don’t have the means of knowing yet.
+	    The dramatic and narrative weight behind it is still palpable, even if you don’t understand why.
+    << endif >>
+	
+<< if $PsychMajor == true >>
+	She is used to getting her way. Inflexible, self-centered… If she were human, you could diagnose her with delusions of grandeur.
+	Mortal psychology might not apply well to an immortal, though. Her grandeur is well justified.
+<< elseif $TechMajor == true >>
+	What kind of logic gate is this? One where every input results in ‘True’? What is the use for that?
+	You have never understood why people ask questions when they will only accept one answer. In that sense, you welcome Elegy's lack of pretense. 
+<< endif >>
 
-Elegy: Wouldn't you agree, Sasha? Considering our beloved Alfonz will participate this year as well.
+She extends her hand, enticing you to move closer.
 
-The air feels lighter as she takes a few steps back, the return of the divide between you and her feels like you can finally take a deep breath again. Alfonz…The name sends a wave of shock over you. you still can't believe he’s really gone. fThat you will never hear one of his lectures again. Or hear his soft humming when he believed you to be asleep. Elegy is right. This year is special.
-
-Elegy: You ‘will’ attend the parade today right?
-
-her question sounds more like a demand. Of course you have to be there. She knows that You have to go for Alfonz. No matter your own feelings about the church and its parade. It is what Alfonz would have wanted. it's why you're here right?
-
--> Yes i will
--> Pff.. Ofcourse!
-
-Elegy smiles at you, while you cant see it clearly from behind her thick veil you know if for certain, She is smiling at your answer.
-
-Elegy: Good. 
-
-Elegy extends her hand, enticing you to move closer.
 
 -> Take her hand 
- You quickly shake her stone cold hand before you quickly step back to your original position. Before you can even properly process the interaction you just had she walks off. back to wandering the streets of Solster, making sure all is in order for the parade.   
+    Sasha: (Take her hand)
+    You quickly shake her hand, wanting not to extend this any longer than needed. It is cold as stone and just as hard. 
+    It feels like she could crush your hand if she wished to, with just a squeeze. Instead however, she withdraws and walks away.
+    Presumably she is back to wandering Solster as she often does, or she is making sure everything is in order for her ‘perfect’ parade.
 -> Do nothing 
-    Elegy: Very well.
-    And as quickly as she appeared she disappeared again, back to wandering the streets of Solster, making sure all is in order for the parade. 
+    Sasha: (Do nothing.)
+    She withdraws her hand after just a few seconds.
+	Elegy: Very well.
+    As quickly as she appeared, she disappears again. Presumably she is back to wandering Solster as she often does, or she is making sure everything is in order for her ‘perfect’ parade.
 ===
