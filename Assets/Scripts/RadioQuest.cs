@@ -1,12 +1,14 @@
 using UnityEngine;
 using FMOD.Studio;
 using FMODUnity;
+using System.Collections.Generic;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class RadioQuest : MonoBehaviour
 {
     [SerializeField] Knowledge knowledge;
     [SerializeField] Transform playerTransform;
-    [SerializeField] Transform radioSource;
+    [SerializeField] List<Transform> radioSources = new List<Transform>();
     [Range(0.01f, 0.05f)]
     [SerializeField] float multiplier;
 
@@ -42,8 +44,15 @@ public class RadioQuest : MonoBehaviour
 
     private void CheckDistance()
     {
-        float distance = Vector3.Distance(radioSource.position, playerTransform.position);
-        islandSignal = 1f - multiplier * distance;
+        float currentDistance = 100000;
+        foreach(Transform t in radioSources)
+        {
+            float distance = Vector3.Distance(t.position, playerTransform.position);
+            if (distance < currentDistance)
+                currentDistance = distance;
+        }
+
+        islandSignal = 1f - multiplier * currentDistance;
         radioEv.setParameterByName("island_signal", islandSignal);
     }
 }

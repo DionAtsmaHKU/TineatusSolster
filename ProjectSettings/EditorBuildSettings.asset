@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Oilpaint.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 4abbc98b2ded27546ae92033ab6bb0d9
+  - enabled: 1
+    path: Assets/Scenes/SolsterWorld.unity
+    guid: a10cb2f81bdef484c9a81c64a917ffa1
   m_configObjects: {}
