@@ -3,6 +3,7 @@ title: FirstLoopBoat
 << if DoesHeKnow("SecondLoop") == true >>
 	<<jump SecondLoopBoat>>
 <<endif>>
+<< Learn BoatguyTarot >>
 The air is thicker here, damp. It may be the water that laps easily by the shoreside, but you think that the giant dark lake is likely the cause of it. 
 As you pass by the pier, a sudden hiss cuts through your thoughts.
 DrBoatguy phD: “Psst, hey, kid. Over here!”
@@ -181,10 +182,10 @@ Dr. Boatguy phD: “Psst, hey, kid. Over here! Just ten moneys, I’ll give you 
 		Sasha: "..Sure."
 	They nod vehemently
 	<<set $DudeTheyJustSaidThat = true>>
-	<< Learn SecretWord >>
+	<< Learn BoatguyInfoD >>
 -> "That’s alright."
 	<<stop>>
--> "Hey, Boatguy.. Sisyphus." <<if DoesHeKnow("SecretWord")>>
+-> "Hey, Boatguy.. Sisyphus." <<if DoesHeKnow("BoatguyInfoD")>>
 	<<jump PRANKED>>
 -> "Could you take me to the island? " <<if DoesHeKnow("IslandQuest") == true>>
 

@@ -9,7 +9,7 @@ You see a woman before you that stands out.
 Her lab coat, her tidied hair bun, and the notebook she is frantically writing in would all place her in a laboratorium, rather than a parade.
 An id-card on her lapel identifies her as “Dr. Aaldenburg - Naturalist Physicist - Nauka Square”. 
 She makes no sign of noticing your presence. Her eyes are laser-focused on her notebook, occasionally looking up towards the lake.
-<< Learn AaldenburgKnown >>
+<< Learn AaldenburgTarot >>
 << jump FirstLoopAaldenburgTree1 >>
 ===
 
@@ -70,7 +70,7 @@ After a few minutes, the flaws in this hypothesis become clear.
 << set $ThisLoopMetAaldenburg = true >>
 
 //If the player knows her name from Loop 1
--> “Excuse me, Dr. Aaldenburg?” << if DoesHeKnow("AaldenburgKnown") == true >>
+-> “Excuse me, Dr. Aaldenburg?” << if DoesHeKnow("AaldenburgTarot") == true >>
     There is no sign that she has heard you, for a full minute afterwards.
 	Eventually however, she slowly comes to a stop, after finishing a few more tasks and clicking her pen for a last time.
 	Aaldenburg: What is the matter?
@@ -97,7 +97,7 @@ After a few minutes, the flaws in this hypothesis become clear.
     She raises her eyebrows in surprise now that she takes a good look at you as well.
     Aaldenburg: I have never seen you before. Are you from outside Solster?
 
-<<Learn AaldenburgKnown>>
+<<Learn AaldenburgTarot>>
 -> “I’m Sasha. I was born here, but I went to college away from here.”
     Aaldenburg: I suspected so. Your accent says Solster, your outfit says student. Graduate now I take it?
 	You can’t tell if that outfit comment was meant to be a dig at you or not. Having talked to Wisteria before might have predisposed you to see insults where none were intended.

@@ -10,7 +10,7 @@ You see a woman dressed in a white lab coat, standing around with her hands in h
 The id-card on her lapel says “Dr. Wisteria - General Practitioner - Star Hospital”. 
 There are some dark red stains at the bottom of her coat that imply she may do some more practical medicine than just consulting.
 She gives you a quick look up and down as you approach, before resuming looking around at nothing in particular.
-<< Learn WisteriaKnown >>
+<< Learn WisteriaTarot >>
 << jump FirstLoopWisteriaTree1 >>
 ===
 
@@ -38,7 +38,7 @@ title: FirstLoopWisteriaTree1
 title: SecondLoopWisteria1
 tags:
 ---
-<< if DoesHeKnow("WisteriaKnown") == true && $ThisLoopMetWisteria== false >> //Met her in a previous loop 
+<< if DoesHeKnow("WisteriaTarot") == true && $ThisLoopMetWisteria== false >> //Met her in a previous loop 
 	Before you is a woman you have met before, if briefly, during the “parade”.
     Dr. Wisteria looks exactly how she did in your previous encounter. 
     Same outfit, same name tag, same small bloodstains at the bottom of the labcoat. 
@@ -68,7 +68,7 @@ tags:
     She turns towards you as she notices you enter, and looks you up-and-down.
     Wisteria: Oh good. I was worried nobody would get maimed on the day of the Parade. 
     Wisteria: So, what is wrong with you?
-	<< Learn WisteriaKnown >>
+	<< Learn WisteriaTarot >>
 << endif >> 
 << set $ThisLoopMetWisteria = true >>
 
@@ -287,7 +287,7 @@ She turns back to her table without waiting for a reaction.
     Wisteria: Yes, anybody else but me.
 	By her increasingly impatient fidgeting, as soon as possible ideally.
 
-<< Learn DenizKnown>>
+<< Learn DenizTarot>>
 Wisteria: If you want a second opinion, go bother Deniz. I’m sure they’ll be delighted to hear about your dreams that felt “so real”.
 Wisteria: Now, leave.
 Her tone is intimidating and succinct. No more sarcastic retorts, just pure finality.

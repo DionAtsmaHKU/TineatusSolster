@@ -10,10 +10,10 @@ You don’t remember there being many dogs in Solster, is it an import?
 Finally, the person looks up. You’ve seen them only a few times before, so their name escapes you.. But they were one of Dmitriy’s friends, you’re sure.
 <<set $SeenDenizIntro = true>>
 
-<<if DoesHeKnow("DenizKnown") == true>>
+<<if DoesHeKnow("DenizTarot") == true>>
 	Then, you remember. This is who the doctor mentioned before, wasn’t it? Deniz Cansel.
 <<else>>
-	<< Learn DenizKnown >>
+	<< Learn DenizTarot >>
 <<endif>>
 
 -> "Who are you?"
@@ -69,16 +69,16 @@ title: SecondLoopDeniz
 <<if $DenizKnowsSasha == true>>
 	<<jump DenizKnowsSas>>
 <<endif>>
-<<if DoesHeKnow("SeenDenizIntro")>>
+<<if DoesHeKnow("DenizInfoA")>>
 	Deniz looks up at you, and then looks down again. The dog wags its tail.
 <<else>>
 	There’s a person sitting by the water’s edge, all by themselves. They don’t notice you, but the adorable little white dog beside them wags its tail when you approach. 
 	You don’t remember there being many dogs in Solster, is it an import?
 	Finally, the person looks up. You’ve seen them only a few times before, so their name escapes you.. But they were one of Dmitriy’s friends, you’re sure.
-	<<Learn SeenDenizIntro>>
+	<<Learn DenizInfoA>>
 <<endif>>
 
-<<if DoesHeKnow("DenizKnown") == true>>
+<<if DoesHeKnow("DenizTarot") == true>>
 	This must be the Deniz you keep hearing about.
 <<endif>>
 <<if $IslandQuestDenizUnfinished == true && DoesHeKnow("IslandQuest") == true>>

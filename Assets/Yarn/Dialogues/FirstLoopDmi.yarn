@@ -3,6 +3,7 @@ title: FirstLoopDmi
 <<if DoesHeKnow ("SecondLoop") == true>>
 	<<jump SecondLoopDmi>>
 <<endif>>
+<< Learn DmitriyTarot >>
 
 
 A cold chill sweeps over you now that some of the buildings have given way to the open air. 
