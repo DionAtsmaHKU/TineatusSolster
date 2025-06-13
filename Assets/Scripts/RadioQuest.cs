@@ -13,7 +13,7 @@ public class RadioQuest : MonoBehaviour
     [SerializeField] float multiplier;
 
     private bool questStarted = false;
-    private string radioPath = "event:/character/sasha/radio_sasha";
+    private string radioPath = "event:/characters/sasha/radio_sasha";
     private EventInstance radioEv;
     private float islandSignal;
 

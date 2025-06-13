@@ -24,7 +24,7 @@ public class Knowledge : MonoBehaviour
         newInfoEvent = RuntimeManager.CreateInstance(newInfoPath);
 
         DoesHeKnowFunc += DoesHeKnow;
-        knowledgeDict.Add("SecondLoop", null);
+        // knowledgeDict.Add("SecondLoop", null);
         foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Knowledge"))
         {
             knowledgeDict.Add(obj.name, obj);
@@ -59,13 +59,23 @@ public class Knowledge : MonoBehaviour
 
     private void Learn(string key)
     {
-        Debug.Log("LEARN" + key);
+        Debug.Log("LEARN " + key);
         if (knowledgeBools.ContainsKey(key) && knowledgeBools[key] == true)
             return;
 
         Debug.Log("New info event");
         newInfoEvent.start();
-        knowledgeBools[key] = true;
+
+        if (!knowledgeBools.ContainsKey(key))
+        {
+            knowledgeBools.Add(key, true);
+        }
+        else { knowledgeBools[key] = true; }
+
+        if (!knowledgeDict.ContainsKey(key))
+        {
+            knowledgeDict.Add(key, null);
+        }
 
         if (knowledgeDict[key] != null)
         {
