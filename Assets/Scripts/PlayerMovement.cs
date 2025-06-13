@@ -16,17 +16,25 @@ public class PlayerMovement : MonoBehaviour
     private string idlePath = "event:/ui/player_idling";
     private EventInstance idleEv;
     private bool isIdling;
+    private Vector3 startPos;
 
     public static event Action OnInteract;
 
     private void Awake()
     {
+        VariableManager.onLoop += ResetPlayerPos;
         runner.onDialogueComplete.AddListener(EnterExitDialogue);
         runner.onDialogueStart.AddListener(EnterExitDialogue);
     }
 
+    private void OnDestroy()
+    {
+        VariableManager.onLoop -= ResetPlayerPos;
+    }
+
     void Start()
     {
+        startPos = transform.position;
 		animator = GetComponentInChildren<Animator>();
         idleEv = RuntimeManager.CreateInstance(idlePath);
         rb = GetComponentInChildren<Rigidbody>();
@@ -71,6 +79,11 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector3(move.x, rb.velocity.y, move.y);
         // controller.Move(move * Time.deltaTime); // Move while respecting collisions
 		animator.SetFloat("speed", move.magnitude);
+    }
+
+    private void ResetPlayerPos()
+    {
+        transform.position = startPos;
     }
 
     public void EnterExitDialogue()
