@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
             OnInteract.Invoke();
         }
 
-        if (idleTimer > 10f && !isIdling)
+        if (idleTimer > 3000f && !isIdling)
         {
             isIdling = true;
             idleEv.start();

@@ -91,3 +91,4 @@ fmod_editor.log
 
 # ignore .idea files created by JetBrains
 **/.idea/
+Assets/StolenAssets

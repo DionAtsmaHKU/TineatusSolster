@@ -1,0 +1,57 @@
+﻿title: MeasurementsQuest1
+tags:
+---
+<< if DoesHeKnow("Measurement1") >>
+	You already took this measurement.
+<<elseif DoesHeKnow("Measurement1") && DoesHeKnow("Measurement2") && DoesHeKnow("Measurement3")>>
+	You already know all the measurements, better return to DR. AALDENBURG.
+<<else>>
+	NARRATOR: The radio static is louder and clearer here than ever before. You can make up words, yet they sound mixed up.
+	NARRATOR: This spot must be what Dr. Aaldenburg was talking about. One of those measurement spots.
+	->( Take out the GPS)
+		(SASHA takes out the GPS)
+		NARRATOR: You take the GPS out of your pocket, and turn it on. After a few seconds, the screen comes to live. Two numbers, with an obscene amount of decimals are shown on it. This must be the coordinates.
+
+	-> (Note down the numbers and put the GPS away.)
+		(SASHA notes down the coordinates)
+	<<Learn Measurement1>>
+<<endif>>
+===
+
+title: MeasurementsQuest2
+tags:
+---
+<< if DoesHeKnow("Measurement2") >>
+	You already took this measurement.
+<<elseif DoesHeKnow("Measurement1") && DoesHeKnow("Measurement2") && DoesHeKnow("Measurement3")>>
+	You already know all the measurements, better return to DR. AALDENBURG.
+<<else>>
+	NARRATOR: The static reaches a familiar peak here in volume and clarity. This has to be the spot.
+	-> Take out the GPS
+		(SASHA takes out the GPS)
+
+	-> (Note down the coordinates)
+		(SASHA notes down the coordinates)
+	<<Learn Measurement2>>
+<<endif>>
+
+===
+
+title: MeasurementsQuest3
+tags:
+---
+<< if DoesHeKnow("Measurement3") >>
+	You already took this measurement..
+<<elseif DoesHeKnow("Measurement1") && DoesHeKnow("Measurement2") && DoesHeKnow("Measurement3")>>
+	You already know all the measurements, better return to DR. AALDENBURG.
+<<else>>
+	You recognise an  perfect measurement spot right away. Your radio is going crazy.
+	-> (Take out the GPS)
+		(SASHA takes out the GPS)
+	-> (Note down the coordinates)
+		(SASHA notes down the coordinates)
+		NARRATOR: Hopefully, you'll get some answers.
+	<<Learn Measurement3>>
+<<endif>>
+
+===

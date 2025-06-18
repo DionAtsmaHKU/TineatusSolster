@@ -1,4 +1,3 @@
-using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using Yarn.Unity;
 using System;
@@ -23,6 +22,8 @@ public class VariableManager : MonoBehaviour
         {
             Instance = this;
         }
+		
+		// runner.AddCommandHandler("Loop", Loop);
     }
 
     // Start is called before the first frame update

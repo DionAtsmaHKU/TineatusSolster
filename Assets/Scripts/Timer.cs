@@ -31,6 +31,7 @@ public class Timer : MonoBehaviour
     private void Awake()
     {
         VariableManager.onLoop += Reset;
+		dialogueRunner.AddCommandHandler("Loop", LoopCutscene);
     }
 
     private void OnDestroy()
@@ -187,6 +188,7 @@ public class Timer : MonoBehaviour
 
     IEnumerator LoopCutsceneRoutine()
     {
+		yield return new WaitForSeconds(0.1f);
         paused = true; // Pause timer
         // Fade to black here
         yield return new WaitForSeconds(2f);

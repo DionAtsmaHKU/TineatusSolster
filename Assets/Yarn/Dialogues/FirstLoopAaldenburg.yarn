@@ -10,6 +10,7 @@ Her lab coat, her tidied hair bun, and the notebook she is frantically writing i
 An id-card on her lapel identifies her as “Dr. Aaldenburg - Naturalist Physicist - Nauka Square”. 
 She makes no sign of noticing your presence. Her eyes are laser-focused on her notebook, occasionally looking up towards the lake.
 << Learn AaldenburgTarot >>
+<< Learn AaldenburgInfoA>>
 << jump FirstLoopAaldenburgTree1 >>
 ===
 
@@ -281,6 +282,7 @@ Aaldenburg: You are going to do some field work. Take this GPS, and go into the 
 	<< endif >>
 	
 	For now, it is time to leave this lab, and go out into Solster.
+	END GAME FOR NOW
     << Learn $RadioQuestStarted >>
 ===
 

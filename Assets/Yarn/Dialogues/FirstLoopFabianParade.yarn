@@ -105,6 +105,28 @@ title: FirstLoopFabianParadeTree1
 	It doesn’t really work. Alfonz is going to be sent off faceless, muted, and blind, and it is your fault.
     Don't go into a self-loathing spiral. Stay steady for now. You'll have all the time to hate yourself after this Parade is over.
 	Fabian: On the topic of your brother… Did you find him? I haven’t seen him around yet, though I only just got here.
+	
+	<< if DoesHeKnow ("DmitriyTarot") >>
+		<<jump SeenDmitriyParadeTime>>
+	<<else>>
+		-> "No.."
+			Sasha: "No.."
+			He looks a little surprised- not so shocking considering all that was expected of you to do over the last couple of minutes was find this man.
+			Fabiam: Ah, well that's all right. I'm sure he's around here somewhere- speak to him first, and then we can talk about the parade.
+			He's not firm about it, but he's clearly not interested in continuing the conversation.
+		-> "Yes, I did."
+			Sasha: "Yes, I did."
+			Fabian: Oh, really?"
+			His eyes widen, but there's a moment of hesitation that follows soon after. He's not sure if he believes you.. maybe you looked too smug after that [i]Yes[/i]-noise.
+			Fabian: Well.. uh..
+			He clears his throat, then stands straighter.
+			Fabian: How about you come ask him to join us and watch the parade? I'm sure his break is over by now.
+			He's trying to be polite- almost too obviously so- but you can't get away with your poor lying in this situation.
+	<<endif>>
+	
+===
+title: SeenDmitriyParadeTime
+---
     -> “I did, just a moment ago.”
         Sasha: “I did, just a moment ago.”
         Fabian: Oh really? Wonderful! I was worried you wouldn’t be able to see him at all, that’s a relief.
@@ -154,6 +176,7 @@ title: FirstLoopFabianParadeTree1
         Sasha: “Sure. I’ll just wait until the parade”
         Fabian: Wonderful! I really hope you enjoy it. 
         Fabian: Now if you excuse me, I need to go find someone to help Babushka as I said...
-        DEBUG: This is the point when the game skips to the Parade cutscene
+        << Loop >>
+		
 
 ===

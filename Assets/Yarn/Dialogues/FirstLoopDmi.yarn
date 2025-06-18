@@ -4,6 +4,8 @@ title: FirstLoopDmi
 	<<jump SecondLoopDmi>>
 <<endif>>
 << Learn DmitriyTarot >>
+<< Learn DmitriyInfoA >> //My brother.
+<< Learn DmitriyInfoB>> //He's a ferryman now.
 
 
 A cold chill sweeps over you now that some of the buildings have given way to the open air. 
@@ -161,7 +163,8 @@ title: SecondLoopDmi
 	<<set $NotSeenDmiHi = false>>
 <<endif>>
 -> "Can you rell me about some things?"
-	DOESNTEXISTYET SORRYYY
+	He slowly shakes his head, looking apologetic.
+	Dmitriy: "Sorry kiddo, I don't have the time right now."
 	<<jump SecondLoopDmi>>
 ->"The world reset."
 	Dmitriy looks at you wordlessly for a few moments, his expression unreadable. Then, he looks out into the void once more.
