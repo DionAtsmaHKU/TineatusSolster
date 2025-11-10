@@ -80,6 +80,11 @@
 	<< SetSashaSprite 2 >>
     << SetModel Psych >>
 
+ART: art
+PSY: Psy
+TECH: tech
+SASHA: Sasha
+NARRATOR: Not sasha
 PROLOGUE SCENE 1
 SETTING - Outside of the SOLSTER Train Station. The air is damp, and drumbeats echo far off in the distance. 
 AT RISE - SASHA has just left the station. They are waved at by a young man in religious clothing.
