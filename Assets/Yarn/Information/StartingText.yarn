@@ -9,6 +9,7 @@
 << declare $ArtMajor = false >>
 << declare $TechMajor = false >>
 << declare $PsychMajor = false >>
+<< declare $RadioStopQuest = false>>
 
 //Wisteria Variables
 << declare $KnowWisteria = false >>
@@ -64,6 +65,7 @@
 << declare $IntroFabianTree2VoidLake = false >>
 << declare $IntroFabianTree2Elegy = false >>
 
+<< Learn RadioQuestStarted >>
 (Choose which Major Sasha studied in college.)
 -> Art
     << set $ArtMajor = true >>
@@ -78,30 +80,11 @@
 	<< SetSashaSprite 2 >>
     << SetModel Psych >>
 
-ACT 1 SCENE 1
-SETTING - The muted streets of Solster. The square before the train station is faded, forgotten, and sparsely occupied. 
+PROLOGUE SCENE 1
+SETTING - Outside of the SOLSTER Train Station. The air is damp, and drumbeats echo far off in the distance. 
+AT RISE - SASHA has just left the station. They are waved at by a young man in religious clothing.
+NARRATOR: Not to point out the obvious, but you don't know him. Still.. he looks awfully enthusiastic to speak to you.
 
-AT RISE - The low light of an overcast sky brings back old memories. A childhood spent in the dark. SASHA YILDIZ arrives back in their home town after being gone at college for four years. 
-
-NARRATOR: What was going through your mind the last time you stepped foot on these cobblestones, ready to leave for a brighter future?
-
--> "That I would never look back. Figure how that went."
-    SASHA: ("That I would never look back. Figure how that went.")
-	NARRATOR: You just had to get away, did you? See the world, be more than you could ever be here, feel the warmth of the sun unfiltered by the void. 
-    NARRATOR: You burnt every bridge you could possibly destroy, but in your mind, the world was worth it. You never expected to regret your decision. 
-    NARRATOR: Is that still right? You never expected to step out onto this train station again either, after all…
--> "I thought a part of me would stay in this town forever. Maybe it will rejoin me now."
-    SASHA: ("I thought a part of me would stay in this town forever. Maybe it will rejoin me now.")
-    NARRATOR: Returning to the buzzing street lights of Solster is a bittersweet reunion, isn'tit? It was not an easy choice, to leave your whole world behind, to trade it for a brave new world unknown. 
-    NARRATOR: You were never going to be fully satisfied, regardless of which decision you made, but you still had some regrets perhaps as to how your departure went. 
-    NARRATOR: While you studied outside, in the back of your mind, a vision of Solster always lingered. Does that vision still reflect the town you see before you?
--> "It had to be done. There was nothing left for me here. No hard feelings, it was just a fact."
-    SASHA: ("It had to be done. There was nothing left for me here. No hard feelings, it was just a fact.")
-    NARRATOR: For you, it was nothing personal. You bear no resentment towards Solster, but you knew it was holding you back. There was so much potential in you that you had to explore, and leaving was the only way to do so. 
-    NARRATOR: Now that your explorative journey has met a dead end, you return back to the start. You may bear no resentment, but does Solster bear resentment towards you?
-
-(Enter THE PASTOR, right)
-(THE PASTOR waves at you)
 
 ===
 title: ResetStats

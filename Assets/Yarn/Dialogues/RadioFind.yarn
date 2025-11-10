@@ -1,0 +1,48 @@
+title: RadioFind
+tags:
+---
+
+<<if $gotpole>>
+	<<jump PoleGotDialogue>>
+<<endif>> 
+<< LightOff RadioLight >>
+SETTING - Beneath the stained glass window in the Solster Train Station.
+
+AT RISE - SASHA's radio blares a grating noise that echoes through the entire hallway.
+
+NARRATOR: [i]This[/i] is [i]your[/i] radio. You thought that the kids who nicked it off of you would've sold it by now already, but it seems they were more intent on mischief rather than petty thievery.
+
+-> Thank god it's still here, how do I get it back?
+NARRATOR: It's laid close enough to the edge of the construction platform that you could potentially knock it down with some maneuvering and focus.
+NARRATOR: Or.. maybe someone could get it down for you? You don't want the radio to shatter, after all.
+
+-> Who even [i]were[/i] those kids?
+	NARRATOR: You didn't know them. Either they were babies when you left, or you didn't spend enough time with the children of this town.
+-> The nerve..
+
+<<if $ArtMajor == true>>
+		ART: All of it causes the need for some.. [i]creative[/i] thinking, heh heh.
+	<<elseif $TechMajor == true>>
+		TECH: This is ridiculous, where's the construction men? Surely they have some sort of doohickey.
+	<<elseif $PsychMajor == true>>
+		PSY: I hope none of the people around it realize it's mine. This sound is rather.. infuriating.
+	<<endif>>
+<<set $RadioStopQuest = true>>
+<<LightOn LanternShop>>
+===
+title: PoleGotDialogue
+---
+THE RADIO continues to hiss its static.
+
+<< LightOff RadioLight>>
+-> (Use the pole to knock down your radio.)
+	NARRATOR: Miraculously, you catch it in your hands.
+	NARRATOR: And finally...
+	NARRATOR: [i]Silence.[/i]
+	NARRATOR: Sweet, beloved silence.
+	NARRATOR: You can keep going with a healthy conscience now.
+-> (Leave it there for now.)
+	<<LightOn RadioLight>>
+
+
+===

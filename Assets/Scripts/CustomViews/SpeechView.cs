@@ -12,7 +12,7 @@ public class SpeechView : LineView
 
     public override void RunLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
     {
-        if (dialogueLine.CharacterName == null || dialogueLine.CharacterName == "Star")
+        if (dialogueLine.CharacterName == null || dialogueLine.CharacterName == "Star" || dialogueLine.CharacterName == "Narrator")
             return;
 
         if (dialogueLine.CharacterName == "Sasha")
@@ -20,6 +20,13 @@ public class SpeechView : LineView
             layoutGroup.padding.right = 80;
             layoutGroup.padding.left = 0;
         }
+		
+        if (dialogueLine.CharacterName == "Psy" || dialogueLine.CharacterName == "Art" || dialogueLine.CharacterName == "Tech")
+        {
+            layoutGroup.padding.right = 0;
+            layoutGroup.padding.left = 0;
+        }		
+			
         else 
         {
             layoutGroup.reverseArrangement = false;

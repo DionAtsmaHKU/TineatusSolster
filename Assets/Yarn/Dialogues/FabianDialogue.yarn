@@ -2,5 +2,328 @@ title: FirstLoopFabianIntro2
 tags:
 ---
 << LightOff Fab>>
-<< Learn SecondLoop>>
+<< if DoesHeKnow("SecondLoop") == true >>
+	<<jump SecondLoopFabian1>>
+<<endif>>
+<<if DoesHeKnow("FabianIntroSeen")>>
+	(Enter FABIAN GOLDHIRSCH.)
+	<<jump FabianReturnDialogue>>
+<<else>>
+	<< Learn FabianTarot >>
+	<< Learn FabianIntroSeen>>
+	(THE PASTOR continues waving, even as you approach him.)
+	-> "Hello?"
+		SASHA: "Hello?"
+		(THE PASTOR stops waving.)
+		<< if $PsychMajor == true >>
+			PSY: He seems relieved to be able to stop waving. He was afraid of making a bad first impression.. Perhaps not an unfounded fear.
+		<< endif >>
+		THE PASTOR: Hello to you too! It's a pleasure to finally meet you Sasha. 
+		FABIAN: I'm Pastor Fabian Goldhirsch, and I'm here to pick you up from station.
+		<< set $FabianMood += 1 >>
+	-> "Stop waving. I can see you."
+		SASHA: "Stop waving. I can see you."
+		(THE PASTOR obeys quickly)
+		THE PASTOR: (stunned) Right, I can see that you’ve seen me!
+		FABIAN: I'm Pastor Fabian Goldhirsch. I came here to pick you up from the station! Sasha, right?
+	-> Ignore him.
+		SASHA: (Ignores him)
+		(THE PASTOR continues to wave for a few more moments, then slowly stops and lets his arm drop back to his side.)
+		THE PASTOR: (clears throat) Uhm... Hi. You are Sasha, right? Sasha Yıldız?
+		FABIAN: I'm Pastor Fabian Goldhirsch. I came to pick you up from the station.
+		<< set $FabianMood -= 1 >>
+
+	<< if $FabianMood lte -1 >>
+		(FABIAN hesitantly reaches out for a handshake.)
+	<< elseif $FabianMood gte 1>>
+		(FABIAN enthusiastically reaches out for a handshake.)
+	<< else >>
+		(FABIAN extends his hand for a handshake.)
+	<< endif>>
+	<< if $PsychMajor == true >>
+		PSY: Solster pastors and other religious authorities usually greet strangers with a hug, as a sign of welcome to the community.
+		PSY: Is he unfamiliar with this tradition? Or does he think that you'd be more comfortable with this?
+	<< elseif $ArtMajor == true >>
+		ART:Seeing his cloak up-close, it is clearly a hand-me-down, not something he bought himself. 
+		ART: It's too big for him, sloppily stitched to fit him- and clearly unfitting for him aesthetically. It's like whoever stitched it just added random patterns for the sake of it, too.
+		ART: ...Something pastel would more his style.
+	<< elseif $TechMajor == true >>
+		TECH: His words and actions are pre-planned, much like an automaton following its programming.
+		TECH: He must have spent his time waiting for you preparing his whole introduction.
+	<< endif >>
+	-> Shake his hand.
+		SASHA: (Shakes his hand)
+		<< if $FabianMood <= -1 >>
+		(FABIAN is trembling slightly. He adds his other hand to the handshake to keep it steady.)
+		<< else >>
+			(His handshake is a little more restrained- yet still enthusiastic.)
+		<< endif >>
+		FABIAN: I hope you had good travels! It must have been a long journey to get here.
+	-> Continue ignoring him. << if $FabianMood <= -1 >>
+		SASHA: (Continues ignoring him)
+		(FABIAN puts his hand back down)
+		FABIAN: (Strained) Well, uhm, I hope you had good travels to here
+		<< set $FabianMood -= 1 >>
+	-> Ignore him. << if $FabianMood >= 0 >>
+		SASHA: (Ignores him.)
+		(FABIAN puts his hand back down)
+		FABIAN: (Slowly) Well, uhm, I hope you had good travels to here
+		<< set $FabianMood -= 1 >>
+
+	-> “I’m still not entirely sure who you are, or why you’re here.” << if $IntroFabianTree1WhoAreYou == false >>
+		SASHA: “I’m still not entirely sure who you are, or why you’re here.”
+		FABIAN: Oh-- Right. I'm new to you, aren't I? Ah.. I moved in after you left.
+		FABIAN: I have been the youth pastor of Solster since… Well, about less than a month. I believe you knew my predecessor, right?
+		NARRATOR: He's referring to Alfonz. A father to all the youth in this town.
+		NARRATOR: But for you especially, Sasha, he was the man who raised you.
+		NARRATOR: Besides your brother, he was the one person you were really looking forward to seeing again on your return. One of the only bright points of having to return to Solster.
+		NARRATOR: The news of his death arrived at your mailbox two weeks ago.
+		-> “Yes. I already heard of his passing.”
+			SASHA: “Yes. I already heard of his passing.”
+			FABIAN: (Apprehensively) Yes, I can imagine the news must have shaken you as much as it did me. 
+			FABIAN: For the past four years, Alfonz was my closest friend as well. He took me as his understudy, and he taught me everything I needed to know about Solster, its faith, and myself. 
+			<< if $PsychMajor == true >>
+				FABIAN: All that time, he never stopped talking about you as well. Talking about Sasha, the college student, out there studying psychology and exploring the open world. 
+			<< elseif $ArtMajor == true >>
+				FABIAN: All that time, he never stopped talking about you as well. Talking about Sasha, the college student, out there going to art school and exploring the open world. 
+			<< elseif $TechMajor == true >>
+				FABIAN: All that time, he never stopped talking about you as well. Talking about Sasha, the college student, out there studying engineering and exploring the open world. 
+			<< endif >>
+			FABIAN: If he were here now, I’m sure he’d be quite proud of how far you’ve come.
+			NARRATOR: A moment of silence passes.
+			NARRATOR: And another moment more. You’re not looking at him.
+			-> Say something. Anything.
+				// I intentionally did not repeat this option here as a "SASHA: " thing.
+				NARRATOR: You try to open your mouth, but you fail.
+				NARRATOR: This isn’t the moment. You can’t be breaking down immediately right as you are back in Solster. Not in front of someone you just met.
+				NARRATOR: You wipe your eyes, and tighten your heart. 
+				SASHA: “I want to talk about something else.”
+				<< set $IntroFabianTree1WhoAreYou = true >>
+	-> “Where’s Dmitriy? I was expecting he would greet me when I arrived.” << if $IntroFabianTree1WhereDmitriy == false >>
+		SASHA: “Where’s Dmitriy? I was expecting he would greet me when I arrived.”
+		(FABIAN mouths a silent ‘ah’, then stammers out a response)
+		FABIAN: Ah yes, he was supposed to come greet you yes. He fully intended to, too!
+		FABIAN: Unfortunately, his work got in the way. He’s helping set up the festivities for today, and he told me he wouldn’t be able to spare the time to come here if he wanted to finish in time for tonight.
+		NARRATOR: Did your brother ditch you because he had to work on the parade? 
+		NARRATOR: When was this decided? You haven't heard anything about this. 
+		-> “Was there really no way he could come?”
+			SASHA: “Was there really no way he could come?”
+			FABIAN: I wish I could tell you more than what I’ve said, but those were his exact words.
+			FABIAN: “You need to go meet Sasha at the station for me. I have to stay working here until late to finish the preparations in time for the Parade.”
+			NARRATOR: It does sound like something your brother would say. Especially the fact his request was phrased as a demand instead of a question.
+		-> “That’s unfortunate. I was looking forward to seeing him…”
+			SASHA: “That’s unfortunate. I was looking forward to seeing him…”
+			(FABIAN gestures patting you on the shoulder, though without actually touching you.)
+			FABIAN: You’ll have plenty of time to spend with him now that you’re back in Solster, so don’t let this sour your mood.
+		NARRATOR: In any case, it seems that this man is your sole greeting committee to Solster.
+		<< set $IntroFabianTree1WhereDmitriy = true >>	
+	
+	
+	-> “So Alfonz has already been replaced, and my brother didn’t even come to see his estranged sibling return. Wonderful welcome. Can I move on into the town now?”
+		SASHA: "So Alfonz has already been replaced, and my brother didn’t even come to see his estranged sibling return."
+		SASHA: "Wonderful welcome. Can I move on into the town now?"
+		FABIAN: I… That’s a bit of a harsh way to put it.
+		NARRATOR: He’s doing his best to make the best out of what has only been a steady stream of terrible news coming directly at you since you stepped out of the train.
+		NARRATOR: His best is woefully inadequate. 
+	-> “I don’t know what kind of reception I was expecting, but I thought I’d see at least a few more people around.”
+		SASHA: “I don’t know what kind of reception I was expecting, but I thought I’d see at least a few more people around.”
+		FABIAN: There's not a lot of people on this side of town today, true. It is the day of the parade after all.
+		FABIAN: I think most people are still preparing for it. Or they're still at work. 
+		NARRATOR: Even Solster's most important holiday isn't a free day for everyone. 
+	-> “Thank you for coming to greet me, at least.”
+		SASHA: “Thank you for coming to greet me, at least.”
+		FABIAN: (Relieved) It was no trouble at all. 
+<<endif>>
+
+FABIAN: Would you maybe like to sit down for a bit to continue talking?
+(He points to the bench by the pier. The void lake extends into the distant horizon before it, the town wrapping around it just as the void wraps around the town.)
+FABIAN: You must be tired from the journey here. You could rest for a moment while I catch you up on everything new here in Solster.
+Solster is not a place known for rapid change, but it has been four years since you’ve been gone. Some catching up to speed might be required.
+Besides, it’s not like you’re in a hurry. You’re probably going to have to wait to see your brother anyway.
+
+-> Sit down with him to talk.
+    SASHA: (Sit down with him to talk.)
+    NARRATOR: The metal bench is cold, but dry. The ornate patterns on it are designed more for aesthetics than actual comfort, but at least it comes with a good view.
+    NARRATOR: This bench must predate the void. You know the train station does in any case. You wonder what the view looked like back then, when this square began to be built.
+    NARRATOR: The view looks the same as it did when you last left. The void lake is dark, uninviting, yet comforting in a way. 
+    NARRATOR: Its still waters look like a big hole in the world seen from up here, an island floating on nothingness in the distance.
+    NARRATOR: The houses surrounding it are dimly visible in the clouded sunlight, with only a few windows shining light. Some people keep their lights on almost day-round in Solster.
+    << jump FabianIntroTree2 >>
+-> I'd rather leave now.
+    (FABIAN says his goodbyes as you walk away.)
+
+===
+title: FabianReturnDialogue
+---
+-> "Can you tell me about everything I've missed?"
+	SASHA: "Can you tell me about everything I've missed?"
+	FABIAN: Ah.. Of- of course! Here goes...
+	...
+	<< jump FabianIntroTree2 >>
+-> "Nevermind, see you later Fabian."
+
+
+===
+
+title: FabianIntroTree2
+---
+
+
+//will add a video here instead
+MISSING VIDEO
+
+FABIAN: Oh, I do have something I should mention
+FABIAN: Some people might be a bit, uh, unprepared for your return. You know how they can be, Solster’s a quite tight-knit community.
+FABIAN: But as long as you are cordial and kind to others, I’m sure you’ll be fully integrated back into the community in no time.
+FABIAN: Now, farewell Sasha! I’ll see you at the parade.
+(FABIAN nods, then leaves.)
+
+===
+
+title: SecondLoopFabian1
+tags:
+---
+The muted streets of Solster are before you, again. 
+The square before the train station is faded, empty, and an absolutely miraculous sight to see. 
+The void that just consumed the town moments before now lingers only in your mind. 
+The town before you is intact, lit by the low light of the Everwatcher’s light on the sky. 
+The same light you saw mere hours before, when you stepped out of the train station, for the first time. What in the world is going on?
+
+-> “I’ve gone insane. I lost my mind. This cannot be real”
+-> “I guess that must have been a dream… A very uncannily realistic dream.”
+-> “I’m suffering from delusions, possibly a symptom of stress and poor sleeping. I have no prior history of hallucinations, so it must be a one-time circumstantial event” << if $PsychMajor == true >>
+-> “I imagined a story in which Solster met its end by the hand of the consuming void. My imagination is too strong for my own good clearly, so I pictured it so vividly I actually believed it was real” << if $ArtMajor == true >>
+-> “The train was poorly ventilated, clearly. I think I could smell some smoke from the engine in my compartment at some point even. This hallucination was caused by light oxygen deprivation during the trip. Lucky that it didn’t get worse than this.” << if $TechMajor == true >>
+
+There is just one person in sight of you on the square. 
+Not your brother. A young peppy man, no older than 30. 
+A man you have never met before at all, and yet who is distressingly familiar all the same. 
+He smiles and waves cheerfully at you, as if his entire world had not just ended minutes ago.
+
+-> “Fabian?”
+    SASHA: “Fabian?”
+    Fabian’s smile turns to an surprised ‘oh’, and he stops waving 
+    FABIAN: Oh, you already knew my name? I didn’t realise Dmitriy had told you I’d be here to pick you up! 
+    FABIAN: Well, that is a relief, I was concerned that you’d be in for a surprise to see me here.
+    Fabian gives a light chuckle. He’s not pretending anything here. He is completely oblivious to his fate that you witnessed moments ago. 
+    FABIAN: I am indeed Fabian Goldhirsch, the, uhm, new youth pastor. 
+    FABIAN: It’s a pleasure to meet you, Sasha!.
+    He extends his hand for a handshake.
+-> “Are you okay? How… How are we still alive?”
+    SASHA: “Are you okay? How… How are we still alive?”
+    Fabian stops waving and expression changes as he raises his eyebrows in confusion
+    FABIAN: Oh, I mean yeah, I’m perfectly fine. Alfonz is the one who… Well, yes, I am still alive and kicking, as they say.
+    He tries to change course in the conversation awkwardly. 
+    He doesn’t know. He doesn’t know of the apocalypse that just befell Solster moments ago.
+    FABIAN: I am Fabian Goldhirsch, the new youth pastor as you seem to have surmised. 
+    FABIAN: I came here to greet you at the station, and I’m quite happy to meet you Sasha!
+    He extends his hand for a handshake.
+-> “What the fuck is going on? Why are we here?”
+    SASHA: “What the fuck is going on? Why are we here?”
+    Fabian’s smile weakens, and he stops waving.
+    FABIAN: Oh, I’m sorry… I know I’m not who you were expecting, but there’s no need to be so rude. 
+    FABIAN: I’m Fabian Goldhirsch, the youth pastor. The, uhm, new youth pastor.
+    He seems to be hurt by your brashness. 
+    He does not seem to be hurt however by having just died together with everyone in Solster just moments ago.
+    FABIAN: Your brother couldn’t make it here, unfortunately, so he asked me to come greet you at the station. 
+    FABIAN: Regardless of circumstance, I’m happy to make your acquaintance, Sasha.
+    He extends his hand for a handshake.
+
+-> Shake his hand
+	His hand is firm, not too tight, and distressingly familiar. A sense of terrible deja vu keeps growing in your stomach.
+	FABIAN: “Are you okay Sasha? Your hand is so shaky.”
+	You can’t stop it from trembling. Frankly, you are holding together quite strongly given the circumstances.
+-> “The world just ended. We all died.”
+	Fabian pulls his hand back, with a look of shock on his face.
+	FABIAN: I… Are you okay Sasha? 
+	His concern is painfully sincere. You’re not really worried about what you’re making him think of you right now, however.
+	FABIAN: The world is still here and we are all very much alive. I don’t really understand what you are talking about.
+-> “Didn’t we already meet a few hours ago? We’ve been through this before.”
+    Fabian pulls his hand back, a concerned look appearing on his face.
+    FABIAN: I… Are you okay Sasha? 
+    FABIAN: I’m quite sure this is our first time ever meeting. I’m sure I’d have remembered meeting someone like you!
+    That was meant as a compliment, but right now, he is not helping this confusion.
+-> “I… I think I need some space right now. I don’t know what is going on.”
+	Fabian pulls his hand back, a concerned look appearing on his face.
+	FABIAN: Oh, I’m sorry to hear that Sasha. Are you feeling okay?
+	FABIAN: What’s got you so troubled?
+
+-> “I am okay, yeah… I’m just a bit shaken by the trip”
+	Fabian smiles, relieved. A simple explanation, satisfactory for a simple man.
+	FABIAN: I’m sure it is just fatigue. I know I was a little clumsy after getting out of the train when I arrived here as well.
+	It’s pretty clear you are not going to convince him of anything, and perhaps you’d be better letting yourself be convinced by him.
+	Maybe it was just your imagination. What are the odds something so… Well, frankly, insane actually happened?
+	Either way, you’re best off acting normal for now. No need to stir other people into a panic. Or get into a panic yourself.
+	FABIAN: If you want, you could pass by the Star and get yourself checked out. That way you can be fully reassured everything is a-okay with you!
+	You remember the Star. The only hospital in Solster. You have some unpleasant memories of it, though not particularly special ones.
+	No child enjoys a trip to the doctor, and as you found out after seeing hospitals outside, they don’t even give kids candy at the Star too.
+	Still, going there might be a smart idea, so you can be completely sure that nothing is wrong with your brain.
+	Even if you suspect Fabian’s suggestion might have as much to do with reassuring himself that you are not a nutjob he is mistaking for “sasha” as with your own wellbeing.
+-> “I don’t think I’m feeling too well…”
+	FABIAN: I’m sorry to hear that, that is some unlucky timing
+	FABIAN: Do you think you might be sick? Maybe disoriented from the trip?
+	He’s not terribly helpful, but he is trying at least. You’re not going to get any answers about what is happening from him in any case.
+	Perhaps you should just play it normal for now, try to figure out what happened without causing a panic in the process.
+	Or maybe you really did just imagine everything. Can’t scrap that possibility just yet.
+	FABIAN: If you want, you could head over to the Star, get yourself checked out there. I’m sure the doctors there can help.
+	From what you remember, the Star is the only hospital in Solster. It has been years since your last trip there.
+	Going there could be a good next move. Even if it turns out there isn’t something wrong with your brain, they might have an idea of what is going on there. Doctors are smart.
+-> “No, I am not even remotely okay. I have already been here, and I died, and you died, and now I am back here again. I feel like I am in hell.”
+	SASHA: “No, I am not even remotely okay. I have already been here, and I died, and you died, and now I am back here again. I feel like I am in hell.”
+	SASHA: “How can you not remember that? You were there! We went to the parade, we got to the end, and the darkness started coming over all of us!”
+	SASHA: “It swarmed the whole town, everything was dark, it was so cold, and painful, and I tried to scream and nothing came out, and and”
+	SASHA: “I… This is impossible. We should be dead. We are dead right now. But we are back to this morning. Please tell me you remember it too. Please.”
+	Fabian is standing just a little further away from you than before. He gestures with his hand for you to lower your volume.
+	Are you shouting? Oh, you are, aren't you? It is hard to hear yourself, over the sound of your breathing, of your heartbeat. They are so loud right now.
+	FABIAN: “Sasha, nothing has happened. Everything is okay here, we are all alive and well”
+	FABIAN: “I… don’t know what you are feeling right now, but whatever happened to you must have been really upsetting.”
+	FABIAN: “It’s okay to vent out your feelings, but you don’t need to shout, please.”
+	Nothing you say is going to get through to him. From his perspective, maybe even for the whole town, everything is perfectly normal right now.
+	Gradually, you manage to bring down your breathing close to normal. You’re going to need to stay calm if you want to figure out what is going on.
+	Whatever the case, ranting to people about the end of the world that they can’t remember won’t get you any help.
+	FABIAN: “Maybe you should try going to the Star? If you are feeling unwell, the doctors there could help.”
+	The Star hospital, yes. That is a good idea. Maybe this really was a hallucination, a delusion. A doctor there could help you figure out whatever is wrong with your head right now.
+
+//After Fabian tells you about the star
+-> “I’m going to go to the Star hospital now, then. We can talk later.”
+	If everything really is repeating itself, you anticipate that Fabian was planning to sit down with you at the bench again to give you the whole news rundown.
+	Judging by the slight disappointment visible on his face, your supposition is spot on. Still, he is quite understanding.
+	FABIAN: That sounds like a great idea. Do you remember where the Hospital is? Just head south-east from here, there’s no missing it.
+	FABIAN: I’ll be heading to the parade later, if you need me. I take it that I’ll see you there later?
+	You nod in response. You don’t know if you really want to go to the parade again, after… well. That.
+	Fabian nods back, and turns around getting ready to leave, before he stops to say one last thing.
+	FABIAN: Oh right, and before I forget, your brother is working setting up the parade. If you want to talk to him, you can find him there!
+	You did not even ask why Fabian was here instead of Dmitriy, right.
+	Well, your ‘reunion’ will have to wait. First, it is time to follow the Star.
+-> “I need to talk to Dmitriy. Or anyone else. I think I am losing my mind here.”
+	FABIAN: I… I see. I understand, yes. It’s been a long trip for you, it makes sense you want to see your brother first.
+	He seems to think your frustration is impatience. In a sense he is right, though not about the source.
+	Will Dmitriy even listen to you? Judging by how your reunion went before… Maybe it would be smarter to go to the hospital first.
+	The Star is south-east from here in the Earth district, if you recall correctly. You could head there now.
+	FABIAN: Your brother should be still working on setting up the parade. 
+	FABIAN: I hope you can find him quickly. I’ll talk to you later, Sasha.
+-> “I am getting out of here, right now. I don’t want to die again.”
+    When is the first train out of Solster? You are not staying here a second longer. Screw coming back. 
+	You are not going to die here, especially not right after finishing college. You refuse to.
+	You turn around to look at the timetable, and are met with a grim sight. A simple piece of paper, attached to the table, likely just before you arrived, with an announcement.
+	‘Due to today’s festivities, the regular 16:00 train out of Solster shall depart tomorrow at 11:30 instead.’
+    The train out of the town is not going today. Because of the parade.
+    FABIAN: …And it would be a shame for your brother, wouldn’t it be?
+    Oh, Fabian has been talking to you the entire time while your back was turned. You had tuned out the entire town, immediately compartmentalising it the instant the idea to leave came to you.
+    But there is no escape. The town is doomed, and so are you.
+    FABIAN: …Sasha? Are you still with me?
+    You turn back to see Fabian’s tired face. Seems even he can get irritated, if he is ignored long enough.
+    FABIAN: I really think you should go to a doctor. If you can excuse me saying this, something seems not right with you.
+    FABIAN: I mean I have never met you before, but this does not seem like how I’d expect you to act from what Dmitriy had told me of you.
+    Fabian’s words sting, moreso after your instinct was to abandon the town and let everyone in it suffer a terrible fate.
+    Maybe you really should go to the star. Your head feels fuzzy. You can’t think straight. Something is very, very wrong here. With some luck, it might be you.
+    -> “I’m sorry.”
+        Fabian nods at your apology. He doesn’t seem too hurt, thankfully.
+	    FABIAN: It’s okay, Sasha. I understand you must still be feeling quite stressed, with so many big things happening lately. Alfonz, moving back to Solster, finishing your study…
+	    FABIAN: I hope that you will find some calm in the coming days. If I can help in any way, you can always come to talk to me.
+	    With a wave, you part ways from Fabian. You have somewhere to go, for now.  The Star is located south-east from here. No reason to not at least try going there.
+    -> Leave without a word.
+        Fabian stares in silence as you leave, unable to muster a complaint about it. From the look on his face, he seems hurt.
+		You don’t have space in your head to worry about that right now. Just visions of an apocalypse, playing on repeat before your eyes.
+		The Star is located south-east from here. No reason to not at least try going there. Let’s just hope you aren’t just waiting on the world to end again.
 ===
