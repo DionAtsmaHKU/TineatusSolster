@@ -65,21 +65,38 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void Move()
-    {
-        float moveX = Input.GetAxis("Horizontal");
-        float moveZ = Input.GetAxis("Vertical");
+	private void Move()
+	{
+		float moveX = Input.GetAxis("Horizontal");
+		float moveZ = Input.GetAxis("Vertical");
 
-        Vector2 move = new Vector2(moveZ, -moveX).normalized * moveSpeed;
-        if (move.magnitude < 0.01 && !inDialogue)
-        {
-            idleTimer += Time.deltaTime;
-        } else { idleTimer = 0f; }
+		// Calculate movement direction
+		Vector3 moveDir = new Vector3(moveX, 0f, moveZ).normalized;
 
-        rb.velocity = new Vector3(move.x, rb.velocity.y, move.y);
-        // controller.Move(move * Time.deltaTime); // Move while respecting collisions
-		animator.SetFloat("speed", move.magnitude);
-    }
+		// Update idle timer
+		if (moveDir.magnitude < 0.01f && !inDialogue)
+		{
+			idleTimer += Time.deltaTime;
+		}
+		else
+		{
+			idleTimer = 0f;
+		}
+
+		// Move the player
+		rb.velocity = moveDir * moveSpeed + new Vector3(0, rb.velocity.y, 0);
+
+		// ✅ Rotate to face movement direction (if moving)
+		if (moveDir != Vector3.zero)
+		{
+			Quaternion targetRotation = Quaternion.LookRotation(moveDir);
+			transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
+		}
+
+		// Update animation
+		animator.SetFloat("speed", moveDir.magnitude);
+	}
+
 
     private void ResetPlayerPos()
     {
