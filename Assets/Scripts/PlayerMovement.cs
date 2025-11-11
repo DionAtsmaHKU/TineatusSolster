@@ -71,7 +71,8 @@ public class PlayerMovement : MonoBehaviour
 		float moveZ = Input.GetAxis("Vertical");
 
 		// Calculate movement direction
-		Vector3 moveDir = new Vector3(moveX, 0f, moveZ).normalized;
+		Vector3 moveDir = new Vector3(moveZ, 0f, -moveX).normalized;
+
 
 		// Update idle timer
 		if (moveDir.magnitude < 0.01f && !inDialogue)
