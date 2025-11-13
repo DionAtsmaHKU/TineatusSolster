@@ -45,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (inDialogue)
             return;
-
         Move();
 
         if (Input.GetKeyDown(KeyCode.E))
