@@ -6,6 +6,11 @@ tags:
 	<<jump SecondLoopDeniz>>
 <<endif>>
 
+<<if $DenizKnowsSashaByFace == true>>
+	<<jump DenizKnowsSasKinda>>
+<<endif>>
+
+
 <<if DoesHeKnow("DenizSetting")>>	
 	(Enter DENIZ CANSEL)
 <<else>>
@@ -15,8 +20,6 @@ tags:
 	AT RISE - There's someone sitting by the edge of the water that SASHA hasn't met before. A small, [i]adorable[/i] white dog by their side. It wags its tail with a ferocity that shakes its body.
 
 	NARRATOR: You don’t remember there being many dogs in Solster, is it an import?
-
-	(The person looks up. Sasha does not recognize them, but knows DMITRIY is familiar with them.)
 
 	<<set $SeenDenizIntro = true>>
 
@@ -31,14 +34,14 @@ tags:
 -> "Who are you?"
 	SASHA: "Who are you?"
 	DENIZ: (slowly) Deniz.
-	(A long silence falls. DENIZ stares at you.)
+	DENIZ: (blank stare, long silence.)
 -> "Hello."
 	SASHA: "Hello."
-	(DENIZ nods.)
+	DENIZ: (nods)
 
 -> "Cute dog."
 	SASHA: "Cute dog."
-	(They nod.)
+	DENIZ: (nods)
 		-> What's her name?
 		SASHA: "What's her name?"
 		DENIZ: She’s not mine.
@@ -54,15 +57,15 @@ tags:
 							SASHA: "Excuse me?"
 						-> Checks out.
 							SASHA: "Checks out."
-				->Got it.
+				->"Got it."
 					SASHA: "Got it."
-			-> Oh, okay.
+			-> "Oh, okay."
 				SASHA: "Oh, okay."
 		-> "Alrighty then."
 			SASHA: "Alrighty then."
--> Are you a doctor?
+-> "Are you a doctor?"
 	SASHA: "Are you a doctor?"
-	(DENIZ is dressed oddly. Wearing one half of a medical coat, and another half of a trench coat. The fabrics are a horrifying sight.)
+	NARRATOR: DENIZ is dressed oddly. Wearing one half of a medical coat, and another half of a trench coat. The fabrics are a horrifying sight.
 	<<if $ArtMajor == true>>
 		ART: Yet, it's a wondrous example of impeccable fashion design.
 	<<elseif $TechMajor == true>>
@@ -70,22 +73,32 @@ tags:
 	<<elseif $PsychMajor == true>>
 		PSY: At the very least, the artist who made it it must have a wondrous personality.. or a terrible manic episode.
 	<<endif>>
-	(DENIZ nods, they look you up and down the same way you are, as if checking for injuries.)
-
+	DENIZ: (nods)
 DENIZ: Do you need something?
--> Why are you sitting all the way out here?
+-> "Why are you sitting all the way out here?"
 	SASHA: "Why are you sitting all the way out here?"
-	(They shrug, the move long and languid. As if they’re trying to very unsubtly show their disinterest in the conversation.)
+	DENIZ: (Shrugs slowly, very unsubtle in disinterest.)
 	<<if $PsychMajor == true>>
 		PSY: They probably just came here to sit alone.
 	<<endif>>
 	-> Gotcha.
 	-> See you around.
--> Nope, sorry for bothering.
+-> "Nope, sorry for bothering."
 
+<<set $DenizKnowsSashaByFace = true>>
+
+
+//SECONDLOOP DENIZ SECONDLOOP DENIZ SECONDLOOP DENIZ
 ===
 title: SecondLoopDeniz
 ---
+<<if $DenizKnowsSasha == true>>
+	<<jump DenizKnowsSas>>
+<<endif>>
+
+<<if $DenizKnowsSashaByFace == true>>
+	<<jump DenizKnowsSasKinda>>
+<<endif>>
 
 <<if DoesHeKnow("DenizSetting")>>
 	(Enter DENIZ CANSEL)
@@ -96,8 +109,6 @@ title: SecondLoopDeniz
 	AT RISE - There's someone sitting by the edge of the water that SASHA hasn't met before. A small, [i]adorable[/i] white dog by their side. It wags its tail with a ferocity that shakes its body.
 
 	NARRATOR: You don’t remember there being many dogs in Solster, is it an import?
-
-	(The person looks up. Sasha does not recognize them, but knows DMITRIY is familiar with them.)
 
 	<<set $SeenDenizIntro = true>>
 
@@ -118,14 +129,14 @@ title: SecondLoopDeniz
 -> "Who are you?"
 	SASHA: "Who are you?"
 	DENIZ: (slowly) Deniz.
-	(A long silence falls. DENIZ stares at you.)
+	DENIZ: (blank stare, long silence.)
 -> "Hello."
 	SASHA: "Hello."
-	(DENIZ nods.)
+	DENIZ: (nods)
 
 -> "Cute dog."
 	SASHA: "Cute dog."
-	(They nod.)
+	DENIZ: (nods)
 		-> What's her name?
 		SASHA: "What's her name?"
 		DENIZ: She’s not mine.
@@ -141,15 +152,15 @@ title: SecondLoopDeniz
 							SASHA: "Excuse me?"
 						-> Checks out.
 							SASHA: "Checks out."
-				->Got it.
+				-> "Got it."
 					SASHA: "Got it."
-			-> Oh, okay.
+			-> "Oh, okay."
 				SASHA: "Oh, okay."
 		-> "Alrighty then."
 			SASHA: "Alrighty then."
--> Are you a doctor?
+-> "Are you a doctor?"
 	SASHA: "Are you a doctor?"
-	(DENIZ is dressed oddly even for this town's standards. Wearing one half of a medical coat, and another half of a trench coat. The fabrics are a horrifying sight.)
+	NARRATOR: DENIZ is dressed oddly even for this town's standards. Wearing one half of a medical coat, and another half of a trench coat. The fabrics are a horrifying sight.)
 	<<if $ArtMajor == true>>
 		ART: Yet, it's a wondrous example of impeccable fashion design.
 	<<elseif $TechMajor == true>>
@@ -157,7 +168,7 @@ title: SecondLoopDeniz
 	<<elseif $PsychMajor == true>>
 		PSY: At the very least, the artist who made it it must have a wondrous personality.. or a terrible manic episode.
 	<<endif>>
-	(DENIZ nods, they look you up and down the same way you are, as if checking for injuries.)
+	DENIZ: (nods)
 
 DENIZ: Do you need something?
 -> Why are you sitting all the way out here?
@@ -166,16 +177,23 @@ DENIZ: Do you need something?
 	<<if $PsychMajor == true>>
 		PSY: They probably just came here to sit alone.
 	<<endif>>
-	-> Gotcha.
-	-> See you around.
+	-> "Gotcha."
+	-> "See you around."
 -> Nope, sorry for bothering.
 
 ===
 title: DenizKnowsSas
 ---
 
-(DENIZ Looks up, THE DOG sniffs at your leg.>>
 DENIZ: Hello, Sasha.
+-> "See you around."
+-> "Sorry, I'm just checking for more dialogue."
+
+===
+title: DenizKnowsSasKinda
+---
+
+DENIZ: (stares at you)
 -> "See you around."
 -> "Sorry, I'm just checking for more dialogue."
 
@@ -194,16 +212,13 @@ Deniz: (low, angry) Don’t.
 title: IslandQuestDeniz
 ---
 
-Their eyes flash with an emotion behind their glasses. Irritation? Unease? Plain and simple annoyance? You won’t get your answer to that quite yet, anyway.
-After a sigh, they turn their head to face you.
-
-
-Deniz: “What did they do now?”
+DENIZ: (head snaps towards SASHA, followed by a long sigh)
+DENIZ: (irritated) “What did they do now?”
 
 
 -> “No, no. Nothing at all.. I just wanted to know.”
 	SASHA: “No, no. Nothing at all.. I just wanted to know.”
-	They nod tensely, then avert their gaze again, returning to staring out into the water.
+	DENIZ: (nods, looks back at the water)
 	<<stop>>
 -> “Can you tell me a bit about them?”
 	SASHA: “Can you tell me a bit about them?”
@@ -217,7 +232,7 @@ title: DenizQuests
 
 -> “What’s their.. work?” <<if $DenizAnger1 == false>>
 	SASHA: “What’s their.. work?”
-	(They stare at you.)
+	DENIZ: (stares blankly in silence for a few seconds)
 	NARRATOR: This was, in fact, a stupid question, so this isn’t exactly a strange look to receive.
 	Deniz: “..A ferryman.”
 	<<set $DenizAnger1 = true>>
@@ -231,22 +246,21 @@ title: DenizQuests
 	<<jump DenizQuests>>
 -> “What’s their weird secret? They keep acting..”<<if $DenizAnger3 == false>>
 	SASHA: “What’s their weird secret? They keep acting..”
-	(DENIZ shrugs.)
+	DENIZ: (shrugs)
 	<<set $DenizAnger3 = true>>
 	<<set $BoatDenizAnger = $BoatDenizAnger + 1>>
 	<<jump DenizQuests>>
 -> “...Wait, why are you so mad?”
 	Sasha: “...Wait, why are you so mad?”
 	<<if $BoatDenizAnger == 3>>
-		Deniz stares at you for a few moments, thinking the conversation over in their head before suddenly coming to a conclusion that clearly irritates them.
-		They give a haughty sniff, then turn their face back to the water, jaw set.
-		Deniz: “What do you care? You’re probably just here on their request, anyway.”
-		Before you can object, they continue.
+		DENIZ: (Silence)
+		DENIZ: (Suddenly turns back to the water, visibly irritated)
+		Deniz: (scoff) “What do you care? You’re probably just here on their request, anyway.”
 		Deniz: “Tell them this: Shove it. I don’t want to talk to you anymore. Not now, not ever.”
 		-> Are you sure that’s.. what you want me to say?
 		-> No, I’m really not here because they..
-		Whatever it is you’re saying, they’re pointedly looking away from you, not giving a single flying fuck. Even the dog stops panting behind them- her big round eyes set on you in a curious, albeit unsure manner.
-		Perhaps this situation is a little more tender than you’d thought. 
+		NARRATOR: Whatever it is you’re saying, they’re pointedly looking away from you, not giving a single flying fuck. Even the dog stops panting behind them- her big round eyes set on you in a curious, albeit unsure manner.
+		NARRATOR: Perhaps this situation is a little more tender than you’d thought. 
 		<<set $BoatSashaAnger = true>>
 		<<stop>>
 	<<endif>>
@@ -254,35 +268,30 @@ title: DenizQuests
 ===
 title: ContDeniz
 ---
-They’re clearly surprised you said, eyebrows shooting up- the first true break in their constantly schooled expression.
-Deniz: “And what do you care?”
+Deniz: (after a moment of silence) “And what do you care?”
 -> "Just.. curious"
 	<<stop>>
 -> "What's going on between you two?"
 Sasha: "What's going on between you two?"
-Deniz scoffs, their eyes flickering away for a moment before they answer.
-Deniz: “That's none of your business, and even if it was..”
-They trail off, a forlorn look in their eyes.
-Deniz: “It doesn't matter anymore. Not now, anyway.”
+DENIZ: (scoffs) “That's none of your business, and even if it was..” (trail off, beat of silence)
+DENIZ: “It doesn't matter anymore. Not now, anyway.”
 -> Deniz, I've just watched the world end, and I'm back to see everything again as a sort of groundhog day. Please, for the love of god, indulge me.
 -> What if I said please?
-Deniz doesn't answer, gaze drifting off to the dog beside them. It is still wonderfully wagging its tail.
+DENIZ: (silence)
+DOG: (panting behind DENIZ, walks over to sniff SASHA's leg)
 
 -> What's the dog's name?
 	Deniz: “Lexa.”
 -> Deniz.. please.
-They sigh, continuing to speak in a low, hushed tone.
-Deniz: “Look.. I really don't want to talk about it alright? It's.. petty. And stupid.”
-They shake their head.
+Deniz: (sigh)“Look.. I really don't want to talk about it alright? It's.. petty. And stupid.”
 <<if $PsychMajor == true>>
-There's a tremor in their tone.
+PSY: There's a tremor in their tone.
 <<endif>>
 Deniz: “Look, I don't even care if Boat sent you anymore. Tell them this: not today. They should be doing their job, and me.. I should be.. staying far away from this nonsense.”
-They gesture around themselves in a wide arc, you're not sure if this nonsense refers to a parade or.. everything.
 <<Learn DenizBoatHate>> 
 -> "Are you not religious?"
 	Sasha: "Are you not religious?"
-	Deniz seems.. to put it quite obviously, uncomfortable to tell you. At the same time, they think they're hiding it really well.
+	DENIZ: (uncomfortable silence)
 		-> "It's okay, me neither."
 			Sasha: "It's okay, me neither."
 			<<jump ReligionDeniz>>
@@ -291,8 +300,6 @@ They gesture around themselves in a wide arc, you're not sure if this nonsense r
 			<<jump ReligionDeniz>>
 		-> "Booooo."
 				Sasha: "Booooo."
-				Unamused, Deniz turns away from you again, turning their attention to picking at pebbles by their feet. 
-				You don't think they want to talk to you anymore.
 -> "Alright, well.. thank you for telling me."
 
 <<set $IslandQuestDenizUnfinished = false>>
@@ -300,38 +307,28 @@ They gesture around themselves in a wide arc, you're not sure if this nonsense r
 ===
 title: ReligionDeniz
 ---
-They relax a little, though not enough to seem  completely at ease in your presence.
-
-Deniz: "I'm not.. religious, I guess. It's never been something I found interesting, in fact.."
-They frown- notably only with their eyebrows.
+Deniz: (hesitant) "I'm not.. religious, I guess. It's never been something I found interesting, in fact.."
 Deniz: "I think it's ridiculous, all of this. A whole waste of time and energy and- and frankly, I don't know why everyone likes it so much."
-This is a nuanced conversation you can't really be having with a stranger right now, but by God were you considering it.
-They continue speaking unprompted, a first.
 Deniz: "I really thought the only man who was worth my time with his whole religion thing was Alfonz, but he's.. well.. gone."
-They slowly shake their head
-Deniz: "And it's not like he could convince me or anything like that."
+Deniz: (slowly shakes head) "And it's not like he could convince me or anything like that."
 Deniz: "Alfonz was just..."
 Deniz: "Kind."
 -> "I understand. Alfonz was like my father."
-	Your voice broke, how embarrassing.
+	NARRATOR: Your voice broke, how embarrassing.
 	Deniz: "Oh.. I'm sorry to hear that."
 -> That's unfortunate.
-	They nod in response, turning their attention back to the white dog by their side who seemed to want their attention.
+	DENIZ: (nods, turns to the dog by their side.)
 
-They start petting the dog, their expression falling back to complete neutrality.
-A long silence falls between the two of you, though shockingly it's not because Deniz doesn't want to talk to you. You're just not sure if they know how.
-
-Deniz: "What's.. what's your name? I guess I forgot to ask.."
+DENIZ: (After some silence) "What's.. what's your name? I guess I forgot to ask.."
 -> "Sasha."
 	Sasha: "Sasha."
 	<<set $DenizKnowsSasha = true>>
-	Deniz nods slowly, looking up from the sweet dog to meet your eyes directly. Notably, probably the first time they did that the entire conversation.
+	DENIZ: (nods slowly, finally meets SASHA's eyes for the first time)
 	Deniz: "Sasha.. Okay, I'll try to remember that."
 -> "None of your business."
 	Sasha: "None of your business."
 	Deniz: "..Huh?"
-	They look back up at you, their expression particularly unreadable. In fact, it may even be slightly uncomfortable. They didn't find that half as funny as you probably did.
-	Deniz: "..Well, alright."
+	Deniz: (uncomfortable) "..Well, alright."
 <<set $IslandQuestDenizUnfinished = false>>
 (DENIZ leans back onto their hands, THE DOG crawls on their lap.)
 DENIZ: I'm uh.. sure you have better places to be than here. Goodbye.

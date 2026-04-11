@@ -5,11 +5,22 @@ tags:
 << if DoesHeKnow("SecondLoop") == true >>
 	<<jump SecondLoopFabian1>>
 <<endif>>
+
+
+
+// LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 
+
 <<if DoesHeKnow("FabianIntroSeen")>>
 	(Enter FABIAN GOLDHIRSCH.)
 	<<jump FabianReturnDialogue>>
 <<else>>
-	<< Learn FabianTarot >>
+	SETTING - Outside of the Solster Trainstation.
+
+	AT RISE - THE PASTOR waves enthusiastically at SASHA. He does not stop waving even when approached.
+
+	NARRATOR: The pastor is a complete stranger to you, only recognized by his profession by the outfit he's wearing.
+	NARRATOR: Who is this? Where is Dmitriy?
+
 	<< Learn FabianIntroSeen>>
 	(THE PASTOR continues waving, even as you approach him.)
 	-> "Hello?"
@@ -23,22 +34,23 @@ tags:
 		<< set $FabianMood += 1 >>
 	-> "Stop waving. I can see you."
 		SASHA: "Stop waving. I can see you."
-		(THE PASTOR obeys quickly)
-		THE PASTOR: (stunned) Right, I can see that you’ve seen me!
+		THE PASTOR: (hand slaps down to his side, stunned) Right, I can see that you’ve seen me!
 		FABIAN: I'm Pastor Fabian Goldhirsch. I came here to pick you up from the station! Sasha, right?
 	-> Ignore him.
 		SASHA: (Ignores him)
-		(THE PASTOR continues to wave for a few more moments, then slowly stops and lets his arm drop back to his side.)
+		THE PASTOR: (Continues waving, but slowly stops and drops arm back to side)
 		THE PASTOR: (clears throat) Uhm... Hi. You are Sasha, right? Sasha Yıldız?
 		FABIAN: I'm Pastor Fabian Goldhirsch. I came to pick you up from the station.
 		<< set $FabianMood -= 1 >>
+	<< Learn FabianTarot >>
+
 
 	<< if $FabianMood lte -1 >>
-		(FABIAN hesitantly reaches out for a handshake.)
+		FABIAN: (hesitantly reaches out for a handshake.)
 	<< elseif $FabianMood gte 1>>
-		(FABIAN enthusiastically reaches out for a handshake.)
+		FABIAN: (enthusiastically reaches out for a handshake.)
 	<< else >>
-		(FABIAN extends his hand for a handshake.)
+		FABIAN: (extends his hand for a handshake.)
 	<< endif>>
 	<< if $PsychMajor == true >>
 		PSY: Solster pastors and other religious authorities usually greet strangers with a hug, as a sign of welcome to the community.
@@ -51,6 +63,9 @@ tags:
 		TECH: His words and actions are pre-planned, much like an automaton following its programming.
 		TECH: He must have spent his time waiting for you preparing his whole introduction.
 	<< endif >>
+	
+	
+	
 	-> Shake his hand.
 		SASHA: (Shakes his hand)
 		<< if $FabianMood <= -1 >>
@@ -85,7 +100,7 @@ tags:
 			<< if $PsychMajor == true >>
 				FABIAN: All that time, he never stopped talking about you as well. Talking about Sasha, the college student, out there studying psychology and exploring the open world. 
 			<< elseif $ArtMajor == true >>
-				FABIAN: All that time, he never stopped talking about you as well. Talking about Sasha, the college student, out there going to art school and exploring the open world. 
+				FABIAN: All that time, he never stopped talking about you as well. Talking about Sasha, the college student, out there studying art and exploring the open world. 
 			<< elseif $TechMajor == true >>
 				FABIAN: All that time, he never stopped talking about you as well. Talking about Sasha, the college student, out there studying engineering and exploring the open world. 
 			<< endif >>
@@ -101,21 +116,16 @@ tags:
 				<< set $IntroFabianTree1WhoAreYou = true >>
 	-> “Where’s Dmitriy? I was expecting he would greet me when I arrived.” << if $IntroFabianTree1WhereDmitriy == false >>
 		SASHA: “Where’s Dmitriy? I was expecting he would greet me when I arrived.”
-		(FABIAN mouths a silent ‘ah’, then stammers out a response)
-		FABIAN: Ah yes, he was supposed to come greet you yes. He fully intended to, too!
+		FABIAN: (stammers) Ah yes, he was supposed to come greet you yes. He fully intended to, too!
 		FABIAN: Unfortunately, his work got in the way. He’s helping set up the festivities for today, and he told me he wouldn’t be able to spare the time to come here if he wanted to finish in time for tonight.
-		NARRATOR: Did your brother ditch you because he had to work on the parade? 
-		NARRATOR: When was this decided? You haven't heard anything about this. 
 		-> “Was there really no way he could come?”
 			SASHA: “Was there really no way he could come?”
 			FABIAN: I wish I could tell you more than what I’ve said, but those were his exact words.
 			FABIAN: “You need to go meet Sasha at the station for me. I have to stay working here until late to finish the preparations in time for the Parade.”
-			NARRATOR: It does sound like something your brother would say. Especially the fact his request was phrased as a demand instead of a question.
 		-> “That’s unfortunate. I was looking forward to seeing him…”
 			SASHA: “That’s unfortunate. I was looking forward to seeing him…”
 			(FABIAN gestures patting you on the shoulder, though without actually touching you.)
 			FABIAN: You’ll have plenty of time to spend with him now that you’re back in Solster, so don’t let this sour your mood.
-		NARRATOR: In any case, it seems that this man is your sole greeting committee to Solster.
 		<< set $IntroFabianTree1WhereDmitriy = true >>	
 	
 	
@@ -123,13 +133,10 @@ tags:
 		SASHA: "So Alfonz has already been replaced, and my brother didn’t even come to see his estranged sibling return."
 		SASHA: "Wonderful welcome. Can I move on into the town now?"
 		FABIAN: I… That’s a bit of a harsh way to put it.
-		NARRATOR: He’s doing his best to make the best out of what has only been a steady stream of terrible news coming directly at you since you stepped out of the train.
-		NARRATOR: His best is woefully inadequate. 
 	-> “I don’t know what kind of reception I was expecting, but I thought I’d see at least a few more people around.”
 		SASHA: “I don’t know what kind of reception I was expecting, but I thought I’d see at least a few more people around.”
 		FABIAN: There's not a lot of people on this side of town today, true. It is the day of the parade after all.
 		FABIAN: I think most people are still preparing for it. Or they're still at work. 
-		NARRATOR: Even Solster's most important holiday isn't a free day for everyone. 
 	-> “Thank you for coming to greet me, at least.”
 		SASHA: “Thank you for coming to greet me, at least.”
 		FABIAN: (Relieved) It was no trouble at all. 
@@ -143,14 +150,11 @@ Besides, it’s not like you’re in a hurry. You’re probably going to have to
 
 -> Sit down with him to talk.
     SASHA: (Sit down with him to talk.)
-    NARRATOR: The metal bench is cold, but dry. The ornate patterns on it are designed more for aesthetics than actual comfort, but at least it comes with a good view.
-    NARRATOR: This bench must predate the void. You know the train station does in any case. You wonder what the view looked like back then, when this square began to be built.
-    NARRATOR: The view looks the same as it did when you last left. The void lake is dark, uninviting, yet comforting in a way. 
-    NARRATOR: Its still waters look like a big hole in the world seen from up here, an island floating on nothingness in the distance.
-    NARRATOR: The houses surrounding it are dimly visible in the clouded sunlight, with only a few windows shining light. Some people keep their lights on almost day-round in Solster.
     << jump FabianIntroTree2 >>
 -> I'd rather leave now.
     (FABIAN says his goodbyes as you walk away.)
+
+
 
 ===
 title: FabianReturnDialogue
@@ -163,12 +167,13 @@ title: FabianReturnDialogue
 -> "Nevermind, see you later Fabian."
 
 
-===
 
+
+
+
+===
 title: FabianIntroTree2
 ---
-
-
 //will add a video here instead
 MISSING VIDEO
 
@@ -178,8 +183,18 @@ FABIAN: But as long as you are cordial and kind to others, I’m sure you’ll b
 FABIAN: Now, farewell Sasha! I’ll see you at the parade.
 (FABIAN nods, then leaves.)
 
-===
 
+
+
+
+
+
+
+
+
+
+// LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 
+===
 title: SecondLoopFabian1
 tags:
 ---

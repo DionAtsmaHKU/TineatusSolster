@@ -1,46 +1,66 @@
-﻿title: FirstLoopAaldenburg
+﻿title: AaldenburgDialogue
 tags:
 ---
-<< if DoesHeKnow("SecondLoop") == true >>
-	<<jump SecondLoopAaldenburg1>>
+
+<<if DoesHeKnow("AalSetting")>>	
+	(Enter DR. AALDENBURG)
+<<else>>
+	<<Learn AalSetting>>
+	SETTING - By a large, copper-plated building, and beneath a giant satellite disk.
+
+	AT RISE - A sharp-faced woman is frantic as she scribbles, walks around as if something is amiss, yet her face conceals any emotion.
+
+	NARRATOR: This woman is someone who would stand out regardless of how neutral she could be acting. She doesn't notice, or doesn't care, about your approach.
+	NARRATOR: An id-card on her lapel identifies her as “Dr. Aaldenburg - Naturalist Physicist - Nauka Square”. 
+	
+	<< Learn AaldenburgTarot >>
+	<< Learn AaldenburgInfoA>>
 <<endif>>
 
-You see a woman before you that stands out. 
-Her lab coat, her tidied hair bun, and the notebook she is frantically writing in would all place her in a laboratorium, rather than a parade.
-An id-card on her lapel identifies her as “Dr. Aaldenburg - Naturalist Physicist - Nauka Square”. 
-She makes no sign of noticing your presence. Her eyes are laser-focused on her notebook, occasionally looking up towards the lake.
-<< Learn AaldenburgTarot >>
-<< Learn AaldenburgInfoA>>
-<< jump FirstLoopAaldenburgTree1 >>
+
+<< if DoesHeKnow("SecondLoop") == true >>
+	<<jump SecondLoopAaldenburg1>>
+<<else>>
+	<<jump FirstLoopAaldenburgTree1>>
+<<endif>>
+
+//LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1
+
 ===
-
 title: FirstLoopAaldenburgTree1
+tags:
 ---
--> “Hello.” << if $FirstLoopAaldenburgSaidHello == false >>
-    She does not react. Unless turning to a new page in her notebook is a greeting in her language.
-	-> ”Dr. Aaldenburg?”
-	    Either she cannot hear you over the sounds of her own writing, or she is too focused on it to pay attention to you.
-	    Or she is just ignoring you. Who can say?
-        << set $FirstLoopAaldenburgSaidHello = true >>
-        << jump FirstLoopAaldenburgTree1 >>
--> “Do you know where Dmitriy Yildiz is?” << if $FirstLoopAaldenburgSaidDmitriy == false >>
-    If she does, she doesn’t tell you. Her writing stays constant, completely uninterrupted by your question.
-	-> “Big guy, black hair, was setting things up around here?”
-	    No reply. You have a feeling that she hasn’t seen him anyway. She has no eyes for anything besides her notebook, and the lake.
-        << set $FirstLoopAaldenburgSaidDmitriy = true >>
-        << jump FirstLoopAaldenburgTree1 >>
--> “What are you writing in that notebook?” << if $FirstLoopAaldenburgSaidHello == true && $FirstLoopAaldenburgSaidDmitriy == true >>
-    The woman turns towards you for the first time.
-    Aaldenburg: “Leave me alone. I am occupied.”
-    Then she turns back to her notebook and resumes work.
-    You might have to wait until after the parade if you want to know who she is, from the looks of it.
--> “I’ve done a technical study too. Just graduated.” << if $TechMajor == true && $FirstLoopAaldenburgSaidHello == true && $FirstLoopAaldenburgSaidDmitriy == true >>
-    The woman stops writing for a brief moment. She resumes at a faster pace, as if realising she betrayed the fact she did in fact notice you were present.
-    Aaldenburg: Come talk to me at Nauka Square then later.
-    Aaldenburg: I am engaged in field work at this moment. I cannot chit-chat.
-    You have an inkling that she will not elaborate on what that field work consists of at this moment.
-    You’ll have to wait until after the parade if you want to know who she is, then.
 
+	-> “Hello?” << if $FirstLoopAaldenburgSaidHello == false >>
+		SASHA: "Hello?"
+		DR. AALDENBURG: (continues writing)
+		-> ”Dr. Aaldenburg?”
+			DR. AALDENBURG: (continues writing)
+			<< set $FirstLoopAaldenburgSaidHello = true >>
+			<< jump FirstLoopAaldenburgTree1 >>
+	-> “Do you know where Dmitriy Yildiz is?” << if $FirstLoopAaldenburgSaidDmitriy == false >>
+		DR. AALDENBURG: (continues writing, glances up at lake)
+		-> “Big guy, black hair, was setting things up around here?”
+			DR. AALDENBURG: (stares at lake for a few moments, then continues writing)
+			<< set $FirstLoopAaldenburgSaidDmitriy = true >>
+			<< jump FirstLoopAaldenburgTree1 >>
+	-> “What are you writing in that notebook?” << if $FirstLoopAaldenburgSaidHello == true && $FirstLoopAaldenburgSaidDmitriy == true >>
+		DR. AALDENBURG: (pauses writing)
+		DR. AALDENBURG: “Leave me alone. I am occupied.”
+		DR. AALDENBURG: (continues writing)
+	-> “I’ve done a technical study too. Just graduated.” << if $TechMajor == true && $FirstLoopAaldenburgSaidHello == true && $FirstLoopAaldenburgSaidDmitriy == true >>
+		DR. AALDENBURG: (stops writing for a moment, then quickly continues as if pretending not to hear you)
+		DR. AALDENBURG: (exasparated.) Then we can talk later.
+		DR. AALDENBURG: I am engaged in field work at this moment. I cannot chit-chat.
+	
+	<<stop>>
+
+
+
+
+
+
+//LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 
 ===
 
 title: SecondLoopAaldenburg1

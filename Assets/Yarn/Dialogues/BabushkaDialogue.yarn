@@ -1,0 +1,94 @@
+title: BabushkaDialogue
+---
+
+<<if DoesHeKnow("BABASetting")>>	
+	(Enter BABUSHKA)
+<<else>>
+	<<Learn BABASetting>>
+	SETTING - Beneath a dim streetlight in the River District. Next to a well.
+
+	AT RISE - A weary dame, known to all the younger generation as BABA, notices SASHA's approach.
+
+	NARRATOR: Clutching in her wrinkled hands, a matryoshka grieving doll that is cherished by all those who have lost one dear.
+	NARRATOR: But Baba sitting alone like this-- she's not only lost a loved one.
+	<< Learn BabushkaTarot >>
+	<< Learn BabushkaInfoA >> // The Grandmother of the town.
+
+	<< if $PsychMajor == true >>
+		PSY: Even with that puppy-dog sadness, she has some relief in that blind gaze of hers.
+	<< elseif $ArtMajor == true >>
+		ART: Whoever is in the urn wasn't native to Solster. Only those born here have their urns painted in their semblance, and this one looks like a typical Matryoshka doll.
+		ART: The paint looks barely dry, and not to mention shaky.. she must have barely gotten it done in time for the parade.
+	<< elseif $TechMajor == true >>
+		TECH: The craftsmanship of that doll is almost shabby. Surely no one made her make it herself?
+	<< endif >>
+
+	BABA: (silence)
+	SASHA: ...
+	BABA: ...
+	BABA: (sudden gasp, looks at SASHA)
+	BABA: Oh! Bless mothers threads. Hello there, child.
+	BABA: It is not often mother blesses us with visitors from outside the void.
+	BABA: (a little mellower) And on the day of the parade, nonetheless! 
+	BABA: Oh! How incredibly wonderful!
+	BABA: It has been years since we have had someone from outside of Solster join the parade.
+	BABA: (gazes down at the doll) How incredibly wonderful, and today of all days..
+
+	-> “Well, I was actually born here in Solster.”
+		Sasha: “Well, I was actually born here in Solster.”
+	-> Say nothing
+		Sasha: (Say nothing.)
+
+	BABA: (continuing, as if not realized) Most people around here won't be as kind to an outsider like you 
+	BABA: An odd thing really, I have never understood. Our most cherished things come from the outside.
+	BABA: Without brave Dynnra we would have never learned the power of the void.
+	BABA: Without the radiant Elegy and the Everwatcher we would be lost in the dark, we would have no power, and no one to look up to for protection.
+
+	-> “Yes, I understand, but I’m from Solster--”
+		Sasha: “Yes, I understand, but I’m from Solster--”
+	-> Say nothing and accept the situation.
+
+	BABA: (intenser, offended at the thought you would be supposedly discriminated against) Who knows, maybe you will be the next outsider to make a difference. 
+	BABA: Since you are new here, many things must still be confusing to you.
+	BABA: If you have any questions about Solster and its customs, I will be here for you, child.
+	BABA: Don't be afraid to ask something, anything.
+	BABA: It can get a bit lonely sometimes, haha.. (slow, slightly pained)
+
+	NARRATOR: It was hard to recognise her at first with her discolored, marbling and plastic looking skin. Her nose seems sharper and her eyes and cheeks are sunken in. 
+	NARRATOR: But behind all of that sits a woman who would always give out bandaids and quick prayers to the kids who scraped their knees while playing. 
+	NARRATOR: The woman who would watch over them while their parents worked hard to put food on the table. 
+	NARRATOR: The woman whose freshly baked pastries would sit in the window sill, spreading a sweet smell of cinnamon, vanilla and roasted nuts throughout the streets of the River District.
+
+	BABA: Oh, but I do make sure to catch the parade today, so let’s not get too carried away with chatting.
+	BABA: It is quite a sight to behold I tell you. 
+	BABA: (silence)
+	<< if $PsychMajor == true >>
+		PSY: The silence is almost overwhelming. Was it always this quiet in the district? It's as if she notices too.
+	<< elseif $ArtMajor == true >>
+		ART: In this moment you can look through the district and its.. decrepitness. Was it always this run down?
+	<< elseif $TechMajor == true >>
+		TECH: The lamplight above her is flickering almost dangerously. Someone should get that checked out, before the darkness consumes this area.
+	<< endif >>
+
+	BABA: (slight pause, gasp) Oh mother, forgive me, I almost forgot! The name is Maacah, …. but please just call me Babushka.
+
+	-> "Nice to meet you. My name is Sasha"
+	-> "I'm pretty sure you already know me."
+
+	<< if $PsychMajor == true >>
+		PSY: It feels bad to do this, but you only have so much time before the parade. You leave, with her barely noticing.
+	<< elseif $ArtMajor == true >>
+		ART: It feels bad to do this, but you only have so much time before the parade. You leave, with her barely noticing.
+	<< elseif $TechMajor == true >>
+		TECH: It feels bad to do this, but you only have so much time before the parade. You leave, with her barely noticing.
+	<< endif >>
+	<<stop>>
+<<endif>>
+
+BABA: (hopeful) Yes..?
+
+-> "Just checking up on you."
+-> Sit by her side for a moment.
+
+
+===

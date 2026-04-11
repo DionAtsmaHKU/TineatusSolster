@@ -1,0 +1,283 @@
+title: DmitriyDialogue
+---
+<<if DoesHeKnow ("SecondLoop") == true>>
+	<<jump SecondLoopDmi>>
+<<endif>>
+
+
+
+// LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 LOOP 1 
+<<if DoesHeKnow ("DmiSetting")>>
+	(Enter DMITRIY)
+	Dmitriy: ...
+	<<stop>>
+<<else>>
+	<< Learn DmiSetting>>
+	<< Learn DmitriyTarot >>
+	<< Learn DmitriyInfoA >> //My brother.
+	<< Learn DmitriyInfoB>> //He's a ferryman now.
+	
+	SETTING - An open clearing overlooking the dark-painted plains.
+
+	AT RISE - A man is standing with his back to SASHA. 
+
+	NARRATOR: A cold chill sweeps over you now that some of the buildings have given way to the open air. 
+	NARRATOR: Hugging your clothes tighter to your body, you approach the man you’ve been trying to find this whole time. 
+	NARRATOR: Like a lighthouse, his large frame breaks through the expanse of the void before him, a familiar and comforting sight- yet hauntingly dispassionate.
+	NARRATOR: Your brother is turned with his back to you, as tall as imposing as he’s always been. He’s not paying attention to his surroundings, but turns as the sound of your footsteps break the eerie silence that the wind brought here. 
+	NARRATOR: His shoulders tense briefly- though they drop when he recognizes you.
+
+
+	DMITRIY: ..Sasha?
+	DMITRIY: Oh, hey. You’re back.
+
+
+	<< if $PsychMajor == true >>
+		PSY: You note that he seems weary, there are deep circles beneath his eyes. The way he’s standing, back to the commotion of the town, it’s almost like he’s taking a break from the festivities.
+		PSY: Though the cigarette is a first.
+	<< elseif $ArtMajor == true >>
+		ART: He doesn’t seem that impressed to see you, strangely apathetic.. Is he upset with you?
+		ART: And since when does he smoke?
+	<< elseif $TechMajor == true >>
+		TECH: Your brother is wearing newer clothes than when you last saw him, even if they are an odd, shabby style. Has he become well-off in your absence? You remember not being able to afford new clothes.
+		TECH: To continue his hypocrisy, why is he smoking? 
+	<< endif >>
+
+
+	-> "Hi."
+		SASHA: "Hi."
+		DMITRIY: Hey kiddo.
+		NARRATOR: He smiles at you, though it doesn’t quite reach his eyes. In fact, it seems more like an uncomfortable grimace than a smile in earnest- though your brother has always just been like that. 
+		NARRATOR: You don’t think you remember ever seeing him push past a smirk before, and his eyebrows never lifted to make him seem happier. 
+		NARRATOR: Maybe a squint would be added, if he was pleased.
+		NARRATOR: This smile, though, is completely impersonal.
+		DMITRIY: I’m sure you’re wondering why I didn’t come see you at the station.
+	-> "Why didn’t you come to see me at the station?"
+		SASHA: "Why didn’t you come to see me at the station?"
+		<<set $DmiAnnoyed = $DmiAnnoyed + 1>>
+
+
+	DMITRIY: “Yeah, sorry about that. Shi-- Stuff was a bit hectic with the parade, you know how it is.”
+
+	-> "You should’ve come to see me."
+		SASHA: "You should’ve come to see me."
+		<<set $DmiAnnoyed = $DmiAnnoyed + 1>>
+		DMITRIY: (looks out into the distance)
+		DMITRIY: (after a long silence, apologetically) I know, kiddo. I know. I wish I had the time to come and get you myself, but I didn’t. I’ve been swamped with work and everything.
+		<< if $PsychMajor>>
+			 PSY: By the way his shoulders slump and the dark circles under his eyes seem to get darker with how his eyebrows overcast them, you don’t think he’s lying about how overworked he’s been.
+		<<endif>>
+		DMITRIY: At least you’re back, though.
+	-> "I understand."
+		SASHA: "I understand."
+	-> "What’s the parade like this year?"
+		SASHA: "What’s the parade like this year?"
+		DMITRIY: It’s same old, really. People die, we throw ‘em into the water. I can’t really make any special notes about it. (shrugs haphazardly)
+		-> "Alfonz died, though."
+			SASHA: "Alfonz died, though."
+			DMITRIY: Yeup, that he did.
+		-> "Fair enough."
+			SASHA: "Fair enough."
+
+	DMITRIY: (takes long drag of cigarette, before dropping it and grinding it down with his foot)
+	DMITRIY: Was Pastor Fabian kind to you? I know you haven’t seen him before, but he’s a good man.
+
+
+	-> "It should’ve been you, not him, to get me."
+		SASHA: "It should’ve been you, not him, to get me."
+		<<if $DmiAnnoyed == 2 >>
+			NARRATOR: He turns towards you, gaze sharp and lips pressed into a fine line. Like a storm breaking over the horizon in the blink of an eye, a sudden thunderclap of an expression alerts you to his overwhelming irritation.
+			DMITRIY: I get it, Sasha. Drop it.
+			NARRATOR: And just like that, his annoyance has vanished, his face steeled into its usual apathy. It’s as if he’s decided in a blink of an eye he doesn’t care that much, and thus let the anger wash out of his body with a single breath.
+			<<jump EndingFirstDmi>>
+		<<else>>
+			DMITRIY: (slowly shakes his head, stuffing his hands deep into his pockets as he lets out a low sigh.)
+			DMITRIY: I’m sorry, kiddo. Sometimes things just turn out this way. If I had a bit of free time I would’ve, but this is my first five minute break the whole day- and I had to have my own moment to think.
+		<<endif>>
+	-> "He seems nice."
+		SASHA: "He seems nice."
+		DMITRIY: (slightly pleased) He is nice. Pastor Fabian may be new, but he’s been picking up everything just about as fast as you could ever expect of an outsider. He’s a believer, through and through.”
+		NARRATOR: You don’t remember your brother ever caring any particular amount about being faithful, but the way he mentions it like it’s the weather- it seems to just be one of those things that may have shifted just a little in the time that you were away.
+		DMITRIY: But he’s good, though. He’s good with the kids, which is what matters as far as I’m aware. Not that we have that many kids to begin with. You’re still among the youngest kids here, I think.”
+	-> "Is this the guy replacing Alfonzo?"
+		SASHA: "Is this the guy replacing Alfonzo?"
+		DMITRIY: Is everything alright? You sound..”
+		-> "Disappointed?"
+			SASHA: "Disappointed?"
+		-> "I don’t sound like anything. Stop it."
+			SASHA: "I don’t sound like anything. Stop it."
+			DMITRIY: Look, I get it. I was a little surprised how quick they decided this guy could be the new Youth Pastor no problem- but he’s doing his best! Sure, he’s no Alfonzo, but I don’t think anyone could be.
+			DMITRIY: (pitying) Especially not to you, Sasha.
+	<<jump EndingFirstDmi>>
+<<endif>>
+
+
+
+
+===
+title: EndingFirstDmi
+---
+NARRATOR: He looks back into the distance one last time, letting the silence stretch between you both like an uncomfortable blanket that muffles your ears. 
+NARRATOR: It feels much like hiding beneath a blanket, too. Too warm, too clammy, too everything. Yet there’s an innate sense of comfort from standing beside your brother like this. 
+NARRATOR: He’s different, sure, but he’s still your brother. Grounded, soothing, alive. 
+NARRATOR: This is without a doubt your Mitya.
+
+
+DMITRIY: “Is there anything I can do for you, kid? I’ve gotta go back to work soon, so..”
+
+	-> "Where’s the parade this year?"
+		SASHA: "Where’s the parade this year?"
+		DMITRIY: (nods to a point over your shoulder)
+		<<if $TechMajor == true>>
+			TECH: Rather crude, but you know he’s not doing it on purpose. He’s just like you from time to time. Lost in his thoughts, he’s working out some sort of plan or mechanism to make the rest of the day run smoother. 
+		<<endif>>
+		DMITRIY: “They’re holding it just past Nauka Square this time. Elegy said they wanna celebrate their new architectural feat.. Because the doctors care, of course.”
+		-> "Architectural feat?"
+			SASHA: "Architectural feat?"
+			DMITRIY: (Scoff? Snort?) “Oh yes, you should go see it... It’s quite the spectacle. Hope it was worth it, really. That’s all we can hope for.”
+			ART: Was that a tremor in his tone? You could swear there was a moment that his melodic rumble hitched from a twitch in his breathing. Does he not like the building? He never was much for the arts. <<if $ArtMajor>>
+		-> "Ok, thanks."
+			SASHA: "Ok, thanks."
+			DMITRIY: “Mhm.”
+	-> Will you have some time for me later?
+		DMITRIY: “Kid, I- of course I will. I’m just busy right now, don’t you get that?”
+		NARRATOR: He’s deflecting.
+		NARRATOR: He’s guilty.
+		NARRATOR: He thinks you’re stupid.
+		DMITRIY: (Sighs, shakes his head)
+		DMITRIY: “Look, right now I’m busy. Even you can get that, can’t you? After the parade, sure, we’ll hang out, but right now..”
+		
+DMITRIY: (fully trails off, clear that you've lost him to his thoughts)
+
+-> “Bye, Mitya.”
+-> Leave.
+
+
+
+
+
+
+
+
+// LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 
+===
+title: SecondLoopDmi
+---
+<<if $SeenIslandDmi == true>>
+	DMITRIY: ...
+	DMITRIY: (quickly lights cigarette to avoid talking)
+	<<stop>>
+<<endif>>
+
+<<if $NotSeenDmiHi == true>>
+	“Sasha.. You’re back.”
+	<<set $NotSeenDmiHi = false>>
+<<endif>>
+-> "Can you rell me about some things?"
+	He slowly shakes his head, looking apologetic.
+	Dmitriy: "Sorry kiddo, I don't have the time right now."
+	<<jump SecondLoopDmi>>
+->"The world reset."
+	Dmitriy looks at you wordlessly for a few moments, his expression unreadable. Then, he looks out into the void once more.
+	Dmitriy: "I guess.. it can feel like that, yeah. I'm sorry you're feeling so lost, kiddo."
+	-> "No.. literally. I'm experiencing a timeloop."
+		He slowly raises a hand to pinch the bridge of his nose.
+		Dmitriy: "Sasha.. seriously. Don't. Not this type of nonsense, not right now."
+		Dmitriy: "I'm having a hectic enough day as it is, I don't feel like joking around."
+		<<jump SecondLoopDmi>>
+	-> "..Yeah, I guess."
+		<<jump SecondLoopDmi>>
+-> "I’ll be off now."
+	<<stop>>
+-> "I need to go to the island." <<if DoesHeKnow("IslandQuest")>>
+	Dmitriy: "No."
+	-> No?
+		<<jump NoIslandForSasha>>
+	-> Oh, okay.
+		<<stop>>
+-> "Boatguy wants to talk to you." <<if $Boatmad>>
+	He frowns, dark eyes brewing some sort of storm of irritation- while it's subdued by a same sort of odd...
+	Fondness? <<if $PsychMajor>>
+	Admiration? <<if $ArtMajor>>
+	Reverence? <<if $TechMajor>>
+	Dmitriy: "What about?"
+	-> "They wouldn't say."
+		He clenches his jaw, the subdued look vanishing into true irritation.
+	-> "Boatguy thinks you should let me go to the island."
+		Dmitriy: "Sasha.."
+		His voice drops a tone lower, threatening.
+		-> "[i]And[/i] they think you're being ridiculous."
+			Dmitriy: "Being ridiculous? Are you [i]fucking[/i]--"
+			He takes in a sharp breath and holds it, his eyes widening as he does.
+			There's a moment of long, tense silence. One where you can see he's debating whether or not he should rip you a new one or whether he should let it go.
+			Then, he lets all of his breath out in a long sigh.
+		-> "I need to go!"
+
+		Dmitriy: "Fine. I'll go talk to Boatguy. [i]Stay.[/i]"
+		His final word snaps like a cracked whip in the air, not unlike how someone would talk down to a particularly bad dog.
+		Then, he turns on his heel and storms off into the direction of Boatguy's pier.
+		<<set $BoatDmiTogether = true>>
+		<<stop>>
+===
+title: NoIslandForSasha
+---
+Dmitriy: "You heard me, no."
+-> Well, why not?
+-> Mitya...
+	Dmitriy: "Oh, don't Mitya me.."
+	He looks away for a moment, a true flicker of guilt crossing his face, before he regards you again.
+
+Dmitriy: "You know the customs- Elegy wants to keep everyone on the mainland for as long as the parade is going."
+-> Alright.. fair enough.
+	<<stop>>
+-> "But I [i]need[/i] to go."
+	Dmitriy: "[i]Why?[/i]"
+	-> I.. please?
+		Dmitriy: "Are you seriously trying to convince me with puppy-dog eyes and zero argument? Kid, for the love of god, you-"
+		He grits his teeth, a look of hurt crossing his face.
+		Dmitriy: "You didn't even say [i]hi[/i] before starting to ask about the island. Is whatever you're up to more important than your own [i]brother[/i]?"
+		-> If I don't go, the world will end.
+			He stares at you for a few moments, before his expression breaks into a look of rage.
+			He does [i]not[/i] believe you.
+		-> Of course not, Dmitriy.. I'm sorry.
+			He shakes his head and raises a hand palm-forward to you.
+			Unfortunately, you've unlocked one of his bouts of anger with your questioning, and there's no use trying to backpedal.
+			His hand clenches into a fist, dropping back to his side with a certain force behind it, as if he's attempting to punish the air for it.
+	-> There's a someone stuck on the island.
+		His eyes widen, looking at you with a renewed interest.
+		Dmitriy: "Someone was left behind on the island? It can't be.. I thought I was.."
+		Dmitriy: "..God, I missed someone? Wait, you're right, actually."
+		Dmitriy: "The.. the guy there, the uh.. I remember someone.. [i]damn it[/i], who was it?"
+		He seems to be getting a little distressed, closing his eyes for a moment to try and rethink the mess of his day.
+		Dmitriy: "How'd you even find out?"
+		-> "Through my radio."
+		-> "Here, look."
+		You turn the dial to the station Rayna had used to communicate with you.
+		...
+		There's nothing but the crackle of static.
+		-> "Rayna?"
+		-> Shake the radio. 
+		Dmitriy: "Is it.. supposed to do something?"
+		You ignore him for a moment, focusing your attention on the radio.
+		-> [i]Rayna.[/i]
+		->Hit the radio.
+			It makes a dull 'thunk' noise when you do, followed by a brief adjustment of the pitch in the static noise. Dmitriy winces.
+		Dmitriy: "Kiddo..."
+		Defeated, you turn off the radio, lifting your head to look at him. He stares at you blankly.
+		Then a sudden anger crosses his expression.
+		Dmitriy: "You really had me worried there for a second, are you kidding me? I have no time for your pranks!"
+		-> But it's not a prank!
+		-> [i]Mitya![/i]
+			Dmitriy: "[i]Don't[/i] Mitya me, Sasha!"
+		He takes a deep breath, shaking his head.
+		Dmitriy: "Look, even if it was true- which it [i]can't be[/i] because radios don't [i]work like that[/i]- I wouldn't let you go to the island anyway."
+		
+Dmitriy: "Maybe, for a change, you could sit still in one place and- [i]I don't know[/i]- talk to the people who fucking [i]raised you[/i] for MORE THAN FIVE MINUTES?!"
+..Ouch.
+Dmitriy doesn't get it. He can't get it. He doesn't know what you've been through and even if he did, his mind never comprehends like yours. <<if $TechMajor>>
+You understand inherently- from his point of view you ran off to god knows where for four years and kept minimal contact. But god, if only you could explain to him.. <<if $PsychMajor>>
+He wouldn't get it. He thinks it's just your intrinsic mind creating a grand tale to play out. He'd be right any other day. <<if $ArtMajor>>
+He takes a deep breath.
+Dmitriy: "The answer is no, Sasha. That's final. Go make some friends, or do literally [i]anything[/i] but bother me with your bullshit."
+<<set $SeenIslandDmi = true>>
+===

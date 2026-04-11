@@ -9062,7 +9062,7 @@ PrefabInstance:
       objectReference: {fileID: 675925978}
     - target: {fileID: 8632916947056777303, guid: 0b7a60122352d024c9324ef10d429455, type: 3}
       propertyPath: eventName
-      value: FirstLoopWisteria
+      value: WisteriaDialogue
       objectReference: {fileID: 0}
     - target: {fileID: 8632916947056777303, guid: 0b7a60122352d024c9324ef10d429455, type: 3}
       propertyPath: portraits
@@ -44510,7 +44510,7 @@ PrefabInstance:
       objectReference: {fileID: 675925978}
     - target: {fileID: 8632916947056777303, guid: 0b7a60122352d024c9324ef10d429455, type: 3}
       propertyPath: eventName
-      value: FirstLoopFabianParade
+      value: FabianParadeDialogue
       objectReference: {fileID: 0}
     - target: {fileID: 8632916947056777303, guid: 0b7a60122352d024c9324ef10d429455, type: 3}
       propertyPath: portraits
@@ -46345,18 +46345,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &675925979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675925974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d25727c21a4ad2e4b8eac8be08a78fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &676501180
@@ -63015,7 +63003,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815542806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.029675, y: -0.42, z: 54.627678}
+  m_LocalPosition: {x: -33.1, y: -0.42, z: 65.2}
   m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -119454,7 +119442,7 @@ PrefabInstance:
       objectReference: {fileID: 675925978}
     - target: {fileID: 8632916947056777303, guid: 0b7a60122352d024c9324ef10d429455, type: 3}
       propertyPath: eventName
-      value: FirstLoop_Babushka
+      value: BabushkaDialogue
       objectReference: {fileID: 0}
     - target: {fileID: 8632916947056777303, guid: 0b7a60122352d024c9324ef10d429455, type: 3}
       propertyPath: portraits
@@ -128115,7 +128103,7 @@ PrefabInstance:
       objectReference: {fileID: 675925978}
     - target: {fileID: 8632916947056777303, guid: 0b7a60122352d024c9324ef10d429455, type: 3}
       propertyPath: eventName
-      value: FirstLoopAaldenburg
+      value: AaldenburgDialogue
       objectReference: {fileID: 0}
     - target: {fileID: 8632916947056777303, guid: 0b7a60122352d024c9324ef10d429455, type: 3}
       propertyPath: portraits
@@ -171214,7 +171202,7 @@ PrefabInstance:
       objectReference: {fileID: 675925978}
     - target: {fileID: 8632916947056777303, guid: 0b7a60122352d024c9324ef10d429455, type: 3}
       propertyPath: eventName
-      value: FirstLoopDmi
+      value: DmitriyDialogue
       objectReference: {fileID: 0}
     - target: {fileID: 8632916947056777303, guid: 0b7a60122352d024c9324ef10d429455, type: 3}
       propertyPath: portraits
@@ -193960,7 +193948,7 @@ PrefabInstance:
       objectReference: {fileID: 675925978}
     - target: {fileID: 8632916947056777303, guid: 0b7a60122352d024c9324ef10d429455, type: 3}
       propertyPath: eventName
-      value: FirstLoop_Elegy
+      value: ElegyDialogue
       objectReference: {fileID: 0}
     - target: {fileID: 8632916947056777303, guid: 0b7a60122352d024c9324ef10d429455, type: 3}
       propertyPath: portraits
