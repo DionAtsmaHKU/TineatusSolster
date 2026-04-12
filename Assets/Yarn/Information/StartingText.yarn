@@ -16,6 +16,8 @@
 << declare $ThisLoopMetWisteria = false >>
 << declare $FirstWisteriaOptionsPicked = 0 >>
 << declare $SecondWisteriaOptionsPicked = 0 >>
+<< declare $SashaAutismDiagnosis = false>>
+<< declare $SashaNonAutismDiagnosis = false>>
 
 //firstloop
 << declare $FirstLoopWisteriaOptionsPicked = 0 >>
@@ -30,6 +32,7 @@
 << declare $AaldenburgLoop2Tree1Identity = false >>
 << declare $AaldenburgLoop2Tree1Time = false >>
 
+<< declare $ThisLoopRadioTrigger = false>>
 << declare $RadioQuestStarted = false >>
 << declare $RadioQuestComplete = false >>
 
@@ -64,6 +67,8 @@
 << declare $IntroFabianTree2Dmitriy = false >>
 << declare $IntroFabianTree2VoidLake = false >>
 << declare $IntroFabianTree2Elegy = false >>
+<< declare $FirstLoopFabianParadeTree1Ashes = false >>
+<< declare $FirstLoopFabianParadeTree1Face = false >>
 
 << Learn RadioQuestStarted >>
 (Choose which Major Sasha studied in college.)

@@ -151,7 +151,7 @@ DR. BOATGUY PHD: Say hi for me when you see him!
 
 
 
-
+// LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2  LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2 LOOP 2
 
 ===
 title: SecondLoopBoat
@@ -159,44 +159,48 @@ title: SecondLoopBoat
 
 DR. BOATGUY PHD: Psst, hey, kid. Over here! Just ten moneys, I’ll give you a ride from all the way point A to B. What are points A and B? That’s up to you- but I’m the cheapest. Don’t listen to the others. Seriously, they’ll chat your ear off. Real annoying if you ask me.
 
--> "Could you tell me about something?"
-	SASHA: "Could you tell me about something?"
-	DR. BOATGUY PHD: Mhm? What is it?
-	<<jump MisinformationBoat>>
--> "I just went back in time, I think. I'm reliving the same day."
-	SASHA: "I just went back in time, I think. I'm reliving the same day."
-	(Boatguy raises their eyebrows.)
-	DR. BOATGUY PHD: Ohhh, uh-huh? Dude, I was [i]waiting[/i] for this day to come, seriously!
-	NARRATOR: Their eyes start sparkling with a sudden, unadulterated glee.
-	DR. BOATGUY PHD: (Quickly) Is it.. can you do that all the time? Like.. Go back in time? See the past? The dinosaurs?
-	-> "No.. just back to when I came here."
-		Sasha: "No, just when I came here."
-		(Boatguy beams.)
-	-> "You seem to be enjoying this way too much."
-		SASHA: "You seem to be enjoying this way too much."
-		NARRATOR: You're upset, naturally. You just watched everybody die and here's Boatguy bouncing up and down like you're a creature of legend. 
-	DR. BOATGUY PHD: Dude, dude, seriously. You know- I was prepared for this exact moment.
-	DR. BOATGUY PHD: Next time you come see me, seriously, tell me my secret word. I have a secret word for this! Then- then I'll be like, (pauses to gasp for breath)
-	DR. BOATGUY PHD: "Your best friend, I think."
-	DR. BOATGUY PHD: The secret word is uh, it's Sisyphus.
-	<<if $ArtMajor == true>>
-		What a decadently pretentious word for a man like Boatguy. As an Art major, you can truly appreciate that type of dissipation <<if $ArtMajor == true>>
-	<<endif>>
-	<<if $TechMajor == true>>
-		Sisyphus? [i]Seriously?[/i]
-	<<endif>>
-	NARRATOR: Regardless, it would be nice to have someone on your side without having to have this entire conversation again. An oddly helpful thing from the resident nutcase.
-	-> "Noted."
-		Sasha: "Noted."
-	-> "..Sure."
-		Sasha: "..Sure."
-	(DR. BOATGUY PHD nods)
-	<<set $DudeTheyJustSaidThat = true>>
-	<< Learn BoatguyInfoD >> //Their secret word is "sisyphus"
--> "That’s alright."
--> "Hey, Boatguy.. Sisyphus." <<if DoesHeKnow("BoatguyInfoD")>>
-	<<jump PRANKED>>
-
+<<if DoesHeKnow("BoatguyInfoD")>>
+	-> "Could you tell me about something?"
+		SASHA: "Could you tell me about something?"
+		DR. BOATGUY PHD: Mhm? What is it?
+		<<jump MisinformationBoat>>
+	-> "That’s alright."
+	-> "Hey, Boatguy.. Sisyphus." <<if DoesHeKnow("BoatguyInfoD")>>
+		<<jump PRANKED>>
+<<else>>
+	-> "Could you tell me about something?"
+		SASHA: "Could you tell me about something?"
+		DR. BOATGUY PHD: Mhm? What is it?
+		<<jump MisinformationBoat>>
+	-> "I just went back in time, I think. I'm reliving the same day."
+		SASHA: "I just went back in time, I think. I'm reliving the same day."
+		(Boatguy raises their eyebrows.)
+		DR. BOATGUY PHD: Ohhh, uh-huh? Dude, I was [i]waiting[/i] for this day to come, seriously!
+		NARRATOR: Their eyes start sparkling with a sudden, unadulterated glee.
+		DR. BOATGUY PHD: (Quickly) Is it.. can you do that all the time? Like.. Go back in time? See the past? The dinosaurs?
+		-> "No.. just back to when I came here."
+			SASHA: "No, just when I came here."
+			(Boatguy beams.)
+		-> "You seem to be enjoying this way too much."
+			SASHA: "You seem to be enjoying this way too much."
+		DR. BOATGUY PHD: Dude, dude, seriously. You know- I was prepared for this exact moment.
+		DR. BOATGUY PHD: Next time you come see me, seriously, tell me my secret word. I have a secret word for this! Then- then I'll be like, (pauses to gasp for breath)
+		DR. BOATGUY PHD: Your best friend, I think."
+		DR. BOATGUY PHD: The secret word is uh, it's Sisyphus.
+		<<if $ArtMajor == true>>
+			ART: What a decadently pretentious word for a man like Boatguy. As an Art major, you can truly appreciate that type of dissipation 
+		<<elseif $TechMajor == true>>
+			TECH: Sisyphus? [i]Seriously?[/i]
+		<<endif>>
+		-> "Noted."
+			SASHA: "Noted."
+		-> "..Sure."
+			SASHA: "..Sure."
+		(DR. BOATGUY PHD nods)
+		<<set $DudeTheyJustSaidThat = true>>
+		<< Learn BoatguyInfoD >> //Their secret word is "sisyphus"
+	-> "That’s alright."
+<<endif>>
 
 
 
@@ -207,13 +211,13 @@ title: MisinformationBoat
 ---
 
 -> "What's with (blank)"
-	Sasha: "What's with (blank)"
+	SASHA: "What's with (blank)"
 -> "What do you think of (blank)"
-	Sasha: "What do you think of (blank)"
+	SASHA: "What do you think of (blank)"
 -> "Who's (blank)"
-	Sasha: "Who's (blank)"
+	SASHA: "Who's (blank)"
 -> "Nevermind"
-	Sasha: "Nevermind."
+	SASHA: "Nevermind."
 	DR. BOATGUY PHD: "Oh.. okay :("
 	<<stop>>
 
@@ -233,19 +237,22 @@ title: MisinformationBoat
 title: PRANKED
 ---
 <<if $DudeTheyJustSaidThat == true>>
-	(DR. BOATGUY PHD stares at you blankly.)
-	DR. BOATGUY PHD: Yeah?
+	DR. BOATGUY PHD: (stares blankly) Yeah?
 	-> "The secret time travel word?"
-		Sasha: "The secret time travel word?"
+		SASHA: "The secret time travel word?"
 	-> "That's what you told me I should say if I was in a timeloop."
-		Sasha: "That's what you told me I should say if I was in a timeloop."
-		(They nod, confused.)
+		SASHA: "That's what you told me I should say if I was in a timeloop."
+		DR. BOATGUY: (nods, visibly confused)
 			-> "Don't you believe me?"
-				Sasha: "Don't you believe me?"
+				SASHA: "Don't you believe me?"
 	DR. BOATGUY PHD: Dude.. I JUST told you that.
-	ART: Doesn't anyone appreciate trying all the choices in dialogue despite nonsensicality anymore?
-	TECH: You're a moron, Sasha.
-	PSY: You were just curious as to what they'd say.. now you feel like an idiot.
+	<<if $ArtMajor == true>>
+		ART: Doesn't anyone appreciate trying all the choices in dialogue despite nonsensicality anymore?
+	<<elseif $PsyMajor == true>>
+		PSY: You were just curious as to what they'd say.. now you feel like an idiot.
+	<<elseif $TechMajor == true>>
+		TECH: You're a moron, Sasha.
+	<<endif>>
 	<<stop>>
 <<else>>
 	<<Learn BoatguyInfoB>> //Easily spreads misinformation.
@@ -260,11 +267,17 @@ title: PRANKED
 	-> "You [i]definitely[/i] told me that."
 		SASHA: "You [i]definitely[/i] told me that."
 		Dr. Boatguy: Nuh-Uh. What even [i]is[/i] a Sisyphus? I've never heard of that in my life.
-		(They cross their arms.)
-		DR. BOATGUY PHD: (pouting) Are you making fun of me? What the heck, dude?
-		NARRATOR: You suppose that perhaps Boatguy from the last loop had not properly communicated their knowledge.
-		ART: Or perhaps you've been.. [i]pranked.[/i]<<if $ArtMajor == true>>
+		DR. BOATGUY PHD: (crosses arms, pouting) Are you making fun of me? What the heck, dude?
 	-> "Oh god damn it, Boatguy.."
+	
+	<<if $ArtMajor == true>>
+		ART: Doesn't anyone appreciate trying all the choices in dialogue despite nonsensicality anymore?
+		ART: Or perhaps you've been.. [i]pranked.[/i]<<if $ArtMajor == true>>
+	<<elseif $PsyMajor == true>>
+		PSY: You suppose that perhaps Boatguy from the last loop had not properly communicated their knowledge.
+	<<elseif $TechMajor == true>>
+		TECH: You suppose that perhaps Boatguy from the last loop had not properly communicated their knowledge.
+	<<endif>>
 <<endif>>
 
 ===

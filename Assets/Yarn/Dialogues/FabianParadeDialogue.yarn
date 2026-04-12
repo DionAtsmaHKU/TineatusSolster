@@ -1,181 +1,205 @@
-﻿title: FirstLoopFabianParade
+﻿title: FabianParadeDialogue
 tags:
 ---
 
-Amongst the hustle and bustle of the parade preparations, you see Fabian standing around holding something in his hands. 
-He’s looking here and there, as if trying to find somewhere he can help, but ending up stuck in paralysis. 
-Once you approach him, he notices you and stops his constant turning.
+<< if DoesHeKnow ("SpokenToFabianParade") >>
+	<<jump ReturningFabianParade >>
+<<endif>>
+
+SETTING - Beside a bridge that juts out into the great expense of the void lake. The Parade ends here.
+
+AT RISE - FABIAN looking here and there, as if trying to find somewhere he can help, but ending up stuck in paralysis. Once approached, he stops turning.
+
+
 << if $FabianMood lte -2 >> //Unhappy
-	A faint smile forms in his face. He seems unsure first of whether to address you or not
-	Fabian: I’m glad to see that you came, Sasha. Have you talked to your brother yet?
+	FABIAN: (Visibly hesitant) I’m glad to see that you came, Sasha. Have you talked to your brother yet?
 << elif $FabianMood gte 2>> //Happy
-	A cheerful smile opens on his face. He attempts to wave at you with his hand only unsuccessfully.
-	Fabian: Sasha! Just who I wanted to see!
+	FABIAN: (smiling, attempting to wave with one hand) Sasha! Just who I wanted to see!
 << else >> //Perfectly neutral
-	He greets you with a nod and a smile.
-	Fabian: Sasha! I’d give a wave, but my hands are currently occupied.
+	FABIAN: (nods) Sasha! I’d give a wave, but my hands are currently occupied.
 << endif >>
-Now that you are closer to him, you can see the object in his hands is an urn.
-It is painted with the appearance of a priest, wearing a similar attire to Alfonz himself, a black priest’s garb with a small symbol of a star on the lapel.
-The drawn figure is lacking a face. Despite this, it is quite familiar to you.
 
 -> ”What are you holding?”
-    Sasha: ”What are you holding?”
-    You know his answer already before his mouth opens.
-	Fabian: It’s the urn.
-	Fabian: Alfonz’s urn.
+    SASHA: ”What are you holding?”
+	FABIAN: (stammers slightly) It’s the urn.
+	FABIAN: Alfonz’s urn.
 -> ”Is that his…?”
-    Sasha: ”Is that his…?”
-	You know his answer already before his mouth opens.
-	Fabian: Yes. It’s Alfonz.
+    SASHA: ”Is that his…?”
+	FABIAN: Yes. It’s Alfonz.
 
 << if $FabianMood lte -2 >> //Unhappy
-	His faint smile fades. He looks into your eyes for a moment, then averts his gaze.
+	FABIAN: (averts gaze) I'm sorry for your loss.
 << elif $FabianMood gte 2>> //Happy
-	His cheerful smile fades. He looks into your eyes for a moment, then averts his gaze.
+	FABIAN: (cheerful smile slowly fades) I'm sorry for your loss.
 << else >> //Perfectly neutral
-	His smile fades. He looks into your eyes for a moment, then averts his gaze.
+	FABIAN: (polite smile fades) I'm sorry for your loss.
 << endif >>
 
+
+
 << if $PsychMajor == true >>
-	Avoiding eye contact, a sign of shame, a feeling that you have done something wrong.
-	Does he feel that he is intruding in your reunion with Alfonz? 
-    Or perhaps is he ashamed that this is the best reunion he can provide for you with your old friend?
-    His shoulders shrink, he makes himself small. A feeling of inadequacy, powerlessness. It’s the latter.
-    It's only now that you realise that you misjudged.
-    You are projecting. It is you who is feeling small. So, so small.
-    You stomach twists. Your breathing is tense, and fast, and faster, and faster.
-    Act normal. You know how to act normal. You studied this. This is what you know. Focus.
-    You wipe your eyes, and steady your nerves. You'll be okay. 
+	PSY: Avoiding eye contact, a sign of shame, a feeling that you have done something wrong.
+	PSY: Does he feel that he is intruding in your reunion with Alfonz? 
+    PSY: Or perhaps is he ashamed that this is the best reunion he can provide for you with your old friend?
+    PSY: His shoulders shrink, he makes himself small. A feeling of inadequacy, powerlessness. It’s the latter.
+    PSY: It's only now that you realise that you misjudged.
+    PSY: You are projecting. It is you who is feeling small. So, so small.
+    PSY: You stomach twists. Your breathing is tense, and fast, and faster, and faster.
+    PSY: Act normal. You know how to act normal. You studied this. This is what you know. Focus.
+    PSY: You wipe your eyes, and steady your nerves. You'll be okay. 
 << elseif $ArtMajor == true >>
-	It is an odd sort of reunion. Instead of Alfonz, you are greeting this painted mimicry of him. 
-    In the details you can see subtle changes to him in the years you were away. 
-    His hands gained more wrinkles. His garb gained more creases. The most crucial part is left to your imagination.
-    You try filling in that detail. From the recesses of your memory, you project Alfonz's face onto the blank canvas.
-    His friendly, smiling face, looking into your eyes.
-    His smiling face that you have not seen in years.
-    His face that you will never see again.
-    His face that you have been denied a final chance to glimpse.
-    His crying, twisting face... No, no, he didn't cry. He's not the one crying.
-    Fabian says nothing, and gives you some needed space.
-    Your sleeve is a little wetter now. But you are okay. It's just a wooden urn.
+	ART: It is an odd sort of reunion. Instead of Alfonz, you are greeting this painted mimicry of him. 
+    ART: In the details you can see subtle changes to him in the years you were away. 
+    ART: His hands gained more wrinkles. His garb gained more creases. The most crucial part is left to your imagination.
+    ART: You try filling in that detail. From the recesses of your memory, you project Alfonz's face onto the blank canvas.
+    ART: His friendly, smiling face, looking into your eyes.
+    ART: His smiling face that you have not seen in years.
+    ART: His face that you will never see again.
+    ART: His face that you have been denied a final chance to glimpse.
+    ART: His crying, twisting face... No, no, he didn't cry. He's not the one crying.
+    ART: Fabian says nothing, and gives you some needed space.
+    ART: Your sleeve is a little wetter now. But you are okay. It's just a wooden urn.
 << elseif $TechMajor == true >>
-	The urn is handcrafted. You can see flaws in the woodwork that a factory build would lack. Some stone seems to be worked into it too, to allow it to sink.
-	The painting of the urns is done by those close to the defunct, so it makes sense that their construction would be too.
-	why does the urn look so shabby? Why are the edges so sharp, why is the varnish so sloppy?
-    Did they not care? Did they not care at all about the vessel where your dead, gone friend would be laid to rest?
-    He doesn't deserve this. He deserves so, so much more. He deserves the best, most perfect urn that he could have gotten.
-    He didn't deserve any of this. He didn't deserve to die. He didn't need to die. Not before you could ever meet him again.
-    Not before you could have met him again, seen him again, saw how he looked now so you could make him the best urn in the whole damn world.
-    You feel your heart beating fast. Indignation flows through your veins. 
-    You need to channel this feeling into something, do something with it, you have to. You feel like exploding, like blowing up, like destroying something.
-    You need... You need to calm down. You focus your breathing, slower, and slower. This is no time for anger.
-    You wipe your eyes and steady yourself. You are in control again. You'll be okay.
+	TECH: The urn is handcrafted. You can see flaws in the woodwork that a factory build would lack. Some stone seems to be worked into it too, to allow it to sink.
+	TECH: The painting of the urns is done by those close to the defunct, so it makes sense that their construction would be too.
+	TECH: why does the urn look so shabby? Why are the edges so sharp, why is the varnish so sloppy?
+    TECH: Did they not care? Did they not care at all about the vessel where your dead, gone friend would be laid to rest?
+    TECH: He doesn't deserve this. He deserves so, so much more. He deserves the best, most perfect urn that he could have gotten.
+    TECH: He didn't deserve any of this. He didn't deserve to die. He didn't need to die. Not before you could ever meet him again.
+    TECH: Not before you could have met him again, seen him again, saw how he looked now so you could make him the best urn in the whole damn world.
+    TECH: You feel your heart beating fast. Indignation flows through your veins. 
+    TECH: You need to channel this feeling into something, do something with it, you have to. You feel like exploding, like blowing up, like destroying something.
+    TECH: You need... You need to calm down. You focus your breathing, slower, and slower. This is no time for anger.
+    TECH: You wipe your eyes and steady yourself. You are in control again. You'll be okay.
 << endif >>
 
 << jump FirstLoopFabianParadeTree1 >>
+
+
+
+
 
 ===
 
 title: FirstLoopFabianParadeTree1
 ---
 
-<< declare $FirstLoopFabianParadeTree1Ashes = false >>
-<< declare $FirstLoopFabianParadeTree1Face = false >>
+<<if $FirstLoopFabianParadeTree1Ashes == true && $FirstLoopFabianParadeTree1Face == true>>
+	<<jump FirstLoopFabianParadeTree1Cont>>
+<<else>>
+	-> “Is there anything inside? Since there can’t be any ashes...” << if $FirstLoopFabianParadeTree1Ashes == false >>
+		SASHA: “Is there anything inside? Since there can’t be any ashes...”
+		FABIAN: There is. When we have no ashes to put in an urn, we put a star token inside to represent them.
+		FABIAN: One of the members of his congregation made it with clay. A girl who cared quite strongly about him. Said he was like a father to her.
+		FABIAN: I wish you could have seen it before we sealed the urn. It was quite beautiful.
+		<< if $PsychMajor == true >>
+			You feel the weight of four years of history that you missed in his words. 
+			You are far from the last person Alfonz made an impact on
+		<< elseif $ArtMajor == true >>
+			You feel the weight of four years of history that you missed in his words.
+			Almost pettily, your brain insists that you would have made it even more beautiful than she did.
+		<< elseif $TechMajor == true>>
+			You feel the weight of four years of history that you missed in his words.
+			Though if people cared so much, why was the urn so damn imperfect?
+		<<endif>>
+		<< set $FirstLoopFabianParadeTree1Ashes = true >>
+		<< jump FirstLoopFabianParadeTree1 >>
+	-> “Why does it have no face?” << if $FirstLoopFabianParadeTree1Face == false >>
+		SASHA: “Why does it have no face?”
+		FABIAN: Oh, right. The face…
+		FABIAN: (slowly, hesitantly) It was your brother’s idea. He thought you’d like to be the one to paint his face onto the urn.
+		FABIAN: We did think that you’d arrive a little sooner.
+		FABIAN: But it was just an unfortunate miscommunication. (quickly adds) There is nobody to blame here.
+		<< if $PsychMajor == true >>
+			Alfonz is going to be sent off faceless, muted, and blind, and it is your fault.
+		<< elseif $ArtMajor == true >>
+			Alfonz is going to be sent off faceless, muted, and blind, and it is your fault.
+		<< elseif $TechMajor == true>>
+			Alfonz is going to be sent off faceless, muted, and blind, and it is your fault.
+		<<endif>>
+		<<set $FirstLoopFabianParadeTree1Face = true>>
+		<< jump FirstLoopFabianParadeTree1 >>
+<<endif>>
 
--> “Is there anything inside? Since there can’t be any ashes...” << if $FirstLoopFabianParadeTree1Ashes == false >>
-    Sasha: “Is there anything inside? Since there can’t be any ashes...”
-	Fabian: There is. When we have no ashes to put in an urn, we put a star token inside to represent them.
-	Stars are one of the main symbols of the Solster faith. 
-    It’s a strange tradition, given you never saw a real night sky star until you left Solster.
-	Fabian: One of the members of his congregation made it with clay. A girl who cared quite strongly about him. Said he was like a father to her.
-	Fabian: I wish you could have seen it before we sealed the urn. It was quite beautiful.
-	You feel the weight of four years of history that you missed in his words. 
-    You are far from the last person Alfonz made an impact on…
-    << set $FirstLoopFabianParadeTree1Ashes = true >>
-    << jump FirstLoopFabianParadeTree1 >>
--> “Why does it have no face?” << if $FirstLoopFabianParadeTree1Face == false >>
-    Sasha: “Why does it have no face?”
-	Fabian: Oh, right. The face…
-	He seems hesitant to answer your question. In the end, he continues.
-	Fabian: It was your brother’s idea. He thought you’d like to be the one to paint his face onto the urn.
-	Fabian: We did think that you’d arrive a little sooner.
-	Fabian: But it was just an unfortunate miscommunication. There is nobody to blame here.
-	He adds that second part hurriedly, maybe realising that he does not want to make you feel guilty about it.
-	It doesn’t really work. Alfonz is going to be sent off faceless, muted, and blind, and it is your fault.
-    Don't go into a self-loathing spiral. Stay steady for now. You'll have all the time to hate yourself after this Parade is over.
-	Fabian: On the topic of your brother… Did you find him? I haven’t seen him around yet, though I only just got here.
+===
+
+title: FirstLoopFabianParadeTree1Cont
+---
+
+	FABIAN: Right, your brother… Did you find him? I haven’t seen him around yet, though I only just got here.
 	
 	<< if DoesHeKnow ("DmitriyTarot") >>
 		<<jump SeenDmitriyParadeTime>>
 	<<else>>
+		<< Learn SpokenToFabianParade >>
 		-> "No.."
-			Sasha: "No.."
-			He looks a little surprised- not so shocking considering all that was expected of you to do over the last couple of minutes was find this man.
-			Fabiam: Ah, well that's all right. I'm sure he's around here somewhere- speak to him first, and then we can talk about the parade.
-			He's not firm about it, but he's clearly not interested in continuing the conversation.
+			SASHA: "No.."
+			Fabian: (slight surprise) Ah, well that's all right. I'm sure he's around here somewhere- speak to him first, and then we can talk about the parade.
 		-> "Yes, I did."
-			Sasha: "Yes, I did."
-			Fabian: Oh, really?"
-			His eyes widen, but there's a moment of hesitation that follows soon after. He's not sure if he believes you.. maybe you looked too smug after that [i]Yes[/i]-noise.
-			Fabian: Well.. uh..
-			He clears his throat, then stands straighter.
-			Fabian: How about you come ask him to join us and watch the parade? I'm sure his break is over by now.
-			He's trying to be polite- almost too obviously so- but you can't get away with your poor lying in this situation.
+			SASHA: "Yes, I did."
+			FABIAN: Oh, really?"
+			FABIAN: (slightly unsure) Well.. uh..
+			FABIAN: How about you come ask him to join us and watch the parade? I'm sure his break is over by now.
+			NARRATOR: Tough luck, Fabian has a sixth sense for liars.
 	<<endif>>
+
+
+===
+title: ReturningFabianParade
+---
+FABIAN: Ah, hello Sasha. Have you spoken to your brother yet?
+
+	<< if DoesHeKnow ("DmitriyTarot") >>
+		<<jump SeenDmitriyParadeTime>>
+	<<else>>
+		-> "Not yet."
+		-> "Oh, right. That's what I was doing."
+	<<endif>>
+	
+	
 	
 ===
 title: SeenDmitriyParadeTime
 ---
     -> “I did, just a moment ago.”
-        Sasha: “I did, just a moment ago.”
-        Fabian: Oh really? Wonderful! I was worried you wouldn’t be able to see him at all, that’s a relief.
-        Fabian: So, how was it talking to him again?
+        SASHA: “I did, just a moment ago.”
+        FABIAN: Oh really? Wonderful! I was worried you wouldn’t be able to see him at all, that’s a relief.
+        FABIAN: So, how was it talking to him again?
         -> “He was distant.”
-            Sasha: “He was distant.”
-        	He seems genuinely surprised.
-        	Fabian: Really? I… Well…
-        	He trails off into silence. He wasn’t prepared for this.
-	        His voice is equal parts confusion and pity.
-	        Fabian: I’m really sorry Sasha.
-	        Fabian: He’ll come around. I’m sure he just needs a bit of time.
+            SASHA: “He was distant.”
+        	FABIAN: Really? I… Well… (trails off into silence)
+	        FABIAN: I’m really sorry Sasha.
+	        FABIAN: He’ll come around. I’m sure he just needs a bit of time.
 	        << if $FabianMood gte 1 >>
 	        	<< set $FabianMood -= 1 >>
 	        << elseif $FabianMood lte -1 >>
 	        	<< set $FabianMood += 1 >>
 	        << endif >>
         -> “Same as I remembered him.”
-            Sasha: “Same as I remembered him.”
-	        Fabian: So he’s always been the same jolly chum I see!
-	        There is no sarcasm in his voice, but you can tell he’s not being fully serious. You would hardly have called your brother ‘jolly’ in the past.
-	        You weren’t honest either, but you have your reasons. There is no need to share everything with him.
-	        Fabian: He’s a bit of a closed book sometimes, but I knew he’d cheer up when seeing his lost sibling again.
-	        He’s filling in details into your response that were not present. You decide not to correct him.
+            SASHA: “Same as I remembered him.”
+	        FABIAN: So he’s always been the same jolly chum I see! 
+	        FABIAN: He’s a bit of a closed book sometimes, but I knew he’d cheer up when seeing his lost sibling again.
             << set $FabianMood += 1 >>
         -> “None of your business.”
-            Sasha: “None of your business.”
-		    Fabian: Alright, no need to be so harsh about it.
-		    Fabian: If you’d rather keep this to yourself, I understand.
-            Fabian seems disappointed. Either by your tone, or by not hearing about how your meeting with Dmitriy went.
+            SASHA: “None of your business.”
+		    FABIAN: (startled) Alright, no need to be so harsh about it.
+		    FABIAN: If you’d rather keep this to yourself, I understand.
             << set $FabianMood -= 1 >>
     ->  “I don’t want to talk about it.”
-        Sasha: “I don’t want to talk about it.”
-        Fabian: Oh, alright. I hope that isn’t a bad sign
-        Fabian: If you haven’t found him yet, we can go look for him together later, after the parade.
+        SASHA: “I don’t want to talk about it.”
+        FABIAN: Oh, alright. I hope that isn’t a bad sign
+        FABIAN: If you haven’t found him yet, we can go look for him together later, after the parade.
     << set $FirstLoopFabianParadeTree1Face = true >>
-    << jump FirstLoopFabianParadeTree1 >>
--> “When does the Parade start?” << if $FirstLoopFabianParadeTree1Ashes == true && $FirstLoopFabianParadeTree1Face == true >>
-    Sasha: “When does the Parade start?”
-    Fabian looks around, scouting the parade grounds for information before replying
-    Fabian: I think it will still be a few hours. Most of the other participants of the parade still have to arrive too.
-    Fabian: Babushka still needs to come from the River district, and she’ll need help to carry her urn here.
-    Fabian: If you wish, you can find a good seat already and wait for the parade to begin.
-    You don’t really have much more to do now before the parade, and you have some thoughts to mull over.
-    This might be the time to sit down and wait for the parade to start.
-    -> “Sure. I’ll just wait until the parade”
-        Sasha: “Sure. I’ll just wait until the parade”
-        Fabian: Wonderful! I really hope you enjoy it. 
-        Fabian: Now if you excuse me, I need to go find someone to help Babushka as I said...
+
+	-> “When does the Parade start?”
+		SASHA: “When does the Parade start?”
+		FABIAN: (while looking around) I think it will still be a few hours. Most of the other participants of the parade still have to arrive too.
+		FABIAN: Babushka still needs to come from the River district, and she’ll need help to carry her urn here.
+		FABIAN: If you wish, you can find a good seat already and wait for the parade to begin.
+		-> “Sure. I’ll just wait until the parade”
+			SASHA: “Sure. I’ll just wait until the parade”
+			FABIAN: Wonderful! I really hope you enjoy it. 
+			FABIAN: Now if you excuse me, I need to go find someone to help Babushka as I said...
         << Loop >>
 		
 
